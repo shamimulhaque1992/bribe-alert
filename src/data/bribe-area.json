@@ -1,0 +1,268 @@
+[
+  {
+    "Airports": [
+      "Customs",
+      "Airport facilities",
+      "Immigration",
+      "Airlines and Baggage"
+    ]
+  },
+  {
+    "Banking": [
+      "Rules and Regulations",
+      "Loans",
+      "Form",
+      "Withdrawal",
+      "Deposit"
+    ]
+  },
+  {
+    "Bureau of Immigration": ["Visa", "Form"]
+  },
+  {
+    "Commercial Tax, Sales Tax, VAT": [
+      "VAT",
+      "Service Tax",
+      "Professional Tax",
+      "Sales Tax",
+      "Commercial Tax"
+    ]
+  },
+  {
+    "Customs, Excise, and Service Tax": [
+      "Service TAX",
+      "Excise",
+      "Customs, Check & Clearance"
+    ]
+  },
+  {
+    "Education": [
+      "School or College Related",
+      "Scholarships",
+      "Pension Processing",
+      "Marks Cards and Transcripts",
+      "Employee Grievances",
+      "Certificates"
+    ]
+  },
+  {
+    "Electricity and Power Supply": [
+      "Transformers",
+      "Services",
+      "Policies and Procedures",
+      "Payment and Arrears",
+      "Employee Grievances",
+      "Electricity Connection",
+      "Electric Meters",
+      "Domestic",
+      "Commercial and Industrial"
+    ]
+  },
+  {
+    "Food and Drug Administration": [
+      "Policies and Procedures",
+      "Pharmacy",
+      "Food License",
+      "Drugs License"
+    ]
+  },
+  {
+    "Food, Civil Supplies, and Consumer Affairs": [
+      "Ration Card",
+      "LPG Gas Cylinder",
+      "Food and Supply",
+      "Fire License"
+    ]
+  },
+  {
+    "Foreign Trade": ["Policies and Procedures"]
+  },
+  {
+    "Forest": [
+      "Saplings and Tree Cover",
+      "Timber Related",
+      "Protected Forest and Sanctuaries"
+    ]
+  },
+  {
+    "Health and Family Welfare": [
+      "Pest Control",
+      "Health and Family",
+      "Health Services",
+      "Hospitals and Medical Care",
+      "Government Schemes",
+      "Disability Related",
+      "Employee Grievances"
+    ]
+  },
+  {
+    "Income Tax": ["Policies and Procedures", "Income TAX"]
+  },
+  {
+    "Insurance": ["Applications", "Claims"]
+  },
+  {
+    "Judiciary": [
+      "Policies and Procedures",
+      "Services",
+      "Public Interest Litigations",
+      "Notary",
+      "Court Related"
+    ]
+  },
+  {
+    "Labour": [
+      "Employee Insurance",
+      "Pension",
+      "Registrations and Licenses",
+      "Provident Fund",
+      "Policies and Procedures",
+      "Employee Grievances"
+    ]
+  },
+  {
+    "Municipal Services": [
+      "Voter Registration",
+      "TAX",
+      "Services",
+      "Registration and Licenses",
+      "Policies and Procedures",
+      "Land Registration",
+      "Certificates",
+      "Caste, Community, and Income",
+      "Building and Housing",
+      "Births, Family and Care",
+      "National ID"
+    ]
+  },
+  {
+    "Passport": [
+      "Policies and Procedures",
+      "Certificates",
+      "Passport Status and Delivery",
+      "Issue and Renewal of Passport"
+    ]
+  },
+  {
+    "Pension": ["Transfer", "Settlement", "Processing"]
+  },
+  {
+    "Police": [
+      "Policies and Procedures",
+      "General Dairy",
+      "Verification and Certificates",
+      "Traffic Fines, Penalties, Rules",
+      "Registrations and Licenses",
+      "Complaints"
+    ]
+  },
+  {
+    "Post Office": [
+      "Policies and Procedures",
+      "Savings Scheme",
+      "Post and Parcel",
+      "Money Order and Passbook"
+    ]
+  },
+  {
+    "Public Sector Undertakings": ["Policies and Procedures"]
+  },
+  {
+    "Public Services": [
+      "Policies and Procedures",
+      "Certificates",
+      "Rules and Regulations",
+      "Government Personnel"
+    ]
+  },
+  {
+    "Public Works Department": [
+      "Policies and Procedures",
+      "Rules",
+      "Government Personnel"
+    ]
+  },
+  {
+    "Railways": [
+      "Policies and Procedures",
+      "Railway Services",
+      "Transport of Luggage and Goods",
+      "Ticket and Seat Related",
+      "Fines, Penalties and Rules"
+    ]
+  },
+  {
+    "Religious Trusts": ["Policies and Procedures"]
+  },
+  {
+    "Revenue": [
+      "Land Registrations",
+      "Certificates",
+      "Caste, Community, and Income"
+    ]
+  },
+  {
+    "Slum Development": ["Rules and Regulations", "Housing"]
+  },
+  {
+    "Social Welfare": [
+      "Registrations and Licenses",
+      "Certificates",
+      "Government Schemes"
+    ]
+  },
+  {
+    "Stamps and Registration": [
+      "Marriage Certificate and Registration",
+      "Certificates",
+      "Property Registration",
+      "Policies and Procedures",
+      "Registrations and Licenses"
+    ]
+  },
+  {
+    "Telecom Services": [
+      "Telephone Connection",
+      "Bills & Payment",
+      "Internet Connection"
+    ]
+  },
+  {
+    "Transport": [
+      "Vehicle Insurance",
+      "Vehicle Fitness",
+      "Traffic Fines, Penalties, Rules",
+      "Tax and Permits",
+      "Services",
+      "Public Transport",
+      "Number Plates and Vehicle Registration",
+      "Driving Licenses and Tests",
+      "Driving and Transport Business"
+    ]
+  },
+  {
+    "Urban Development Authorities": [
+      "Registrations and Licenses",
+      "Services",
+      "Policies and Procedures",
+      "Certificates",
+      "Land Related",
+      "Building and Housing"
+    ]
+  },
+  {
+    "Water and Sewage": [
+      "Water Supply",
+      "Water Meters",
+      "Water Connection",
+      "Sewage Connection",
+      "Services",
+      "Rules and Regulations",
+      "Rainwater Harvesting",
+      "Bills and Payment"
+    ]
+  },
+  {
+    "Others": []
+  }
+]
