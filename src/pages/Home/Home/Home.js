@@ -13,12 +13,14 @@ import ProgressArea from "./ProgressArea/ProgressArea";
 import Projects from "./Projects/Projects";
 import ServiceArea from "./ServiceArea/ServiceArea";
 import Testimonial from "./Testimonial/Testimonial";
+import HeroMapSection from "./HeroMapSection/HeroMapSection";
 
 const Home = () => {
   return (
     <>
       <Navigation />
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <HeroMapSection></HeroMapSection>
       <CtaArea />
       <AboutArea />
       <BannerArea />

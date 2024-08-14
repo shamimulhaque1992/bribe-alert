@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import divisions from "../../../../data/district-division-bangladesh.json";
 import governmentAreas from "../../../../data/bribe-area.json";
@@ -13,6 +13,7 @@ const CtaArea = () => {
     formState: { errors },
   } = useForm();
   const [showContactInfo, setShowContactInfo] = useState(false);
+  const [isAnonymous, setIsAnonymous] = useState(true);
 
   const onSubmit = async (data) => {
     console.log("amar data", data);
@@ -28,7 +29,11 @@ const CtaArea = () => {
 
   const selectedGovernmentArea = watch("governmentArea");
   const selectedDivision = watch("division");
-  const isAnonymous = watch("shareStory") === "anonymous";
+  const isAnonymousRadio = watch("shareStory") === "anonymous";
+
+  useEffect(() => {
+    setIsAnonymous(isAnonymousRadio);
+  }, [isAnonymousRadio]);
 
   // Find the reasons for the selected government area
   const getReasons = (area) => {
