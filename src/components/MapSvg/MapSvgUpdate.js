@@ -6,7 +6,7 @@ const MapSvgUpdate = ({ setHoveredDivision }) => {
       xmlns="http://www.w3.org/2000/svg"
       className="humanFemaleBodyImg"
       width="80%"
-      height="80%"
+      height="85%"
       viewBox="0 0 1550.242 2149.604"
       enable-background="new 0 0 1550.242 2149.604"
       xmlSpace="preserve"
