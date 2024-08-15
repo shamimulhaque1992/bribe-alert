@@ -14,6 +14,7 @@ import Projects from "./Projects/Projects";
 import ServiceArea from "./ServiceArea/ServiceArea";
 import Testimonial from "./Testimonial/Testimonial";
 import HeroMapSection from "./HeroMapSection/HeroMapSection";
+import { Toaster } from "react-hot-toast";
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
       {/* <HeroSection /> */}
       <HeroMapSection></HeroMapSection>
       <CtaArea />
-      <AboutArea />
+      {/* <AboutArea /> */}
       <BannerArea />
       <ServiceArea />
       <ChoseArea />
@@ -33,6 +34,7 @@ const Home = () => {
       <ProgressArea />
       <Blogs />
       <Footer />
+      <Toaster></Toaster>
     </>
   );
 };

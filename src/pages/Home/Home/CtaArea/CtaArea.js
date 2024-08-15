@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import divisions from "../../../../data/district-division-bangladesh.json";
 import governmentAreas from "../../../../data/bribe-area.json";
 import instance from "../../../../instance/api_instance";
-
+import toast, { Toaster } from "react-hot-toast";
 const CtaArea = () => {
   const {
     register,
@@ -17,13 +17,54 @@ const CtaArea = () => {
 
   const onSubmit = async (data) => {
     console.log("amar data", data);
+    const postData = {
+      form_type: "paid_a_bribe", // paid_a_bribe
+      form_data: {
+        governmentArea: data.governmentArea,
+        bribeReason: data.bribeReason,
+        division: data.division,
+        district: data.district,
+        date: data.date,
+        amount: data.amount,
+        reportTitle: data.reportTitle,
+        reportDetails: data.reportDetails,
+        officerDetails: data.officerDetails,
+        shareStory: data.shareStory,
+        privacyPolicy: data.privacyPolicy,
+        keepUpdated: data.keepUpdated,
+      },
+      applicant: {
+        contactName: data.contactName,
+        contactEmail: data.contactEmail,
+        contactNumber: data.contactNumber,
+      },
+      applicant_visibility: 1, // 1= Visible, 0 = Hide
+      approval_status: "Pending", // Pending, Processing, Approved, Canceled
+      amount: data.amount,
+      status: 1,
+    };
     try {
-      const response = await instance
-        .post("/forms", data, {})
-        .then((result) => {
-          reset();
-        })
-        .catch((err) => {});
+      toast.promise(
+        instance.post("/bribeformdata", postData, {
+          headers: { "Content-Type": "application/json" },
+        }),
+        {
+          loading: "Sending report...",
+          success: (response) => `Report sent successfully!`,
+          error: (error) => {
+            return "Failed to send report. Please try again.";
+          },
+        },
+        {
+          style: {
+            minWidth: "250px",
+          },
+          success: {
+            duration: 5000,
+          },
+        }
+      );
+      reset();
     } catch (error) {}
   };
 

@@ -1,0 +1,68 @@
+/* styles.css */
+.map_container {
+  position: relative;
+}
+
+.division_button {
+  position: absolute;
+  color: rgb(255, 145, 0);
+  border: none;
+  cursor: pointer;
+}
+
+/* Adjust the positions for each division button */
+.division_button[data-division="division1"] {
+  top: 12%;
+  left: 15%;
+}
+
+.division_button[data-division="division2"] {
+  top: 60%;
+  left: 22%;
+}
+.division_button[data-division="division3"] {
+  top: 68%;
+  left: 38%;
+}
+.division_button[data-division="division4"] {
+  top: 32%;
+  left: 14%;
+}
+.division_button[data-division="division5"] {
+  top: 29%;
+  left: 37%;
+}
+.division_button[data-division="division6"] {
+  top: 48%;
+  left: 33%;
+}
+.division_button[data-division="division7"] {
+  top: 61%;
+  left: 54%;
+}
+.division_button[data-division="division8"] {
+  top: 31%;
+  left: 60%;
+}
+.division_button[data-division="division9"] {
+  top: 50%;
+  left: 16%;
+}
+.division_button[data-division="division10"] {
+  top: 57%;
+  left: 20%;
+}
+.division_button[data-division="division11"] {
+  top: 70%;
+  left: 42%;
+}
+.division_button[data-division="division12"] {
+  top: 65%;
+  left: 77%;
+}
+.division_button[data-division="division13"] {
+  top: 75%;
+  left: 81%;
+}
+
+/* Add more styles for other divisions */

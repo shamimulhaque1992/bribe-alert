@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ModalVideo from "react-modal-video";
 import "react-modal-video/scss/modal-video.scss";
 // import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,12 +13,20 @@ import SwiperCore, {
 } from "swiper";
 import { Carousel } from "react-bootstrap";
 import HomeHeroSingleSlide from "../../../../components/HomeHeroSingleSlide/HomeHeroSingleSlide";
+import MapComponent from "../../../../components/MapComponent/MapComponent";
+import instance from "../../../../instance/api_instance";
 
 // install Swiper modules
 SwiperCore.use([Pagination, Autoplay, A11y, EffectFade, EffectCards]);
 
 const HeroMapSection = () => {
   const [isOpen, setOpen] = useState(false);
+  const [hoveredDivision, setHoveredDivision] = useState("Dhaka");
+  const [showRdBtn, setShowRdBtn] = useState(false);
+  const [allReports, setAllReports] = useState([]);
+  const [allReportsByDivision, setAllReportsByDivision] = useState([]);
+  const [sidebarContent, setSidebarContent] = useState({});
+  const [loading, setLoading] = useState(false);
   const divisionData = {
     divisionName: "Dhaka",
     totalReports: 120,
@@ -29,10 +37,79 @@ const HeroMapSection = () => {
     bribeHotline: "1234",
   };
 
+  useEffect(() => {
+    const getAllReports = () => {
+      try {
+        setLoading(true);
+        const req = instance.get("/bribeformdata?approval_status=Approved", {
+          method: "get",
+          headers: {
+            Accept: "application/json",
+          },
+        });
+        req
+          .then((response) => {
+            console.log("your log output", response);
+            setAllReports(response.data);
+            setLoading(false);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            setLoading(false);
+          });
+      } catch (error) {
+        setLoading(false);
+      }
+    };
+    getAllReports();
+  }, []);
+
+  useEffect(() => {
+    const getAllReportsByDivision = () => {
+      try {
+        if (hoveredDivision) {
+          setLoading(true);
+          const req = instance.get(
+            `/bribeformdata?division=${hoveredDivision}`,
+            {
+              method: "get",
+              headers: {
+                Accept: "application/json",
+              },
+            }
+          );
+          req
+            .then((response) => {
+              setAllReportsByDivision(response.data);
+              setLoading(false);
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              setLoading(false);
+            });
+        }
+      } catch (error) {
+        setLoading(false);
+      }
+    };
+    getAllReportsByDivision();
+  }, [hoveredDivision]);
+  console.log("your log output", allReportsByDivision);
+  const divisions = [
+    { id: "division1", name: "Rangpur" },
+    { id: "division2", name: "Khulna" },
+    { id: "division3", name: "Barishal" },
+    { id: "division4", name: "Rajshahi" },
+    { id: "division5", name: "Mymensingh" },
+    { id: "division6", name: "Dhaka" },
+    { id: "division7", name: "Chittagong" },
+    { id: "division8", name: "Sylhet" },
+  ];
+
   return (
     <>
       <section
-        className="tp-slider-area fix pt-5 pb-5"
+        className="tp-slider-area fix pt-5 pb-5 wow fadeInUp"
         style={{ backgroundColor: "#edf3f1" }}
       >
         <div className="container tp-slider-active home_hero_slide swiper-container common-dots pb-5">
@@ -45,13 +122,13 @@ const HeroMapSection = () => {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                backgroundColor: "#850d0d",
+                backgroundColor: "#232323",
                 padding: "20px 0 0 0",
               }}
             >
               <div style={{ textAlign: "center", flex: 1 }}>
                 <h3 style={{ color: "#ffffff" }}>Cities</h3>
-                <p style={{ color: "#ffffff" }}>10</p>
+                <p style={{ color: "#ffffff" }}>{allReports?.total_cities}</p>
               </div>
               <div
                 style={{
@@ -63,7 +140,9 @@ const HeroMapSection = () => {
               ></div>
               <div style={{ textAlign: "center", flex: 1 }}>
                 <h3 style={{ color: "#ffffff" }}>Reports</h3>
-                <p style={{ color: "#ffffff" }}>120</p>
+                <p style={{ color: "#ffffff" }}>
+                  {allReports?.total_submission}
+                </p>
               </div>
               <div
                 style={{
@@ -75,7 +154,7 @@ const HeroMapSection = () => {
               ></div>
               <div style={{ textAlign: "center", flex: 1 }}>
                 <h3 style={{ color: "#ffffff" }}>Taka</h3>
-                <p style={{ color: "#ffffff" }}>500,000</p>
+                <p style={{ color: "#ffffff" }}>{allReports?.total_amount}</p>
               </div>
             </div>
 
@@ -86,18 +165,19 @@ const HeroMapSection = () => {
                 justifyContent: "space-between",
                 marginTop: "40px",
               }}
+              className="d-flex flex-column flex-lg-row justify-content-between"
             >
               {/* Left Section: Statistics */}
               <div
                 style={{
-                  width: "50%",
+                  width: "100%",
                   paddingRight: "20px",
                 }}
                 className="d-flex justify-content-center pr-5"
               >
                 <div className="d-inline-block pr-5">
                   <div>
-                    <h2>{divisionData.divisionName}</h2>
+                    <h2>{hoveredDivision}</h2>
                     <hr
                       style={{
                         height: "10px",
@@ -110,19 +190,19 @@ const HeroMapSection = () => {
                   <div style={{ marginTop: "20px" }}>
                     <h4 style={{ fontWeight: "400" }}>Total Reports</h4>
                     <p style={{ fontWeight: "900" }}>
-                      {divisionData.totalReports}
+                      {allReportsByDivision?.total_submission}
                     </p>
                   </div>
                   <div>
                     <h4 style={{ fontWeight: "400" }}>Total Amount</h4>
                     <p style={{ fontWeight: "900" }}>
-                      {divisionData.totalAmount} Taka
+                      {allReportsByDivision?.total_amount} Taka
                     </p>
                   </div>
                   <div>
                     <h4 style={{ fontWeight: "400" }}>Bribes Paid</h4>
                     <p style={{ fontWeight: "900" }}>
-                      {divisionData.bribesPaid}
+                      {allReportsByDivision?.total_submission}
                     </p>
                   </div>
                   <div>
@@ -145,38 +225,12 @@ const HeroMapSection = () => {
                   </div>
                 </div>
               </div>
-
               {/* Right Section: Map */}
-              <div
-                className="d-flex justify-content-center"
-                style={{
-                  width: "50%",
-                  paddingLeft: "20px",
-                  backgroundColor: "#f0f0f0",
-                }}
-              >
-                <img
-                  style={{ width: "80%" }}
-                  src="assets/img/map/Bangladesh_divisions_english.svg"
-                  alt=""
-                />
-              </div>
+              <MapComponent
+                setHoveredDivision={setHoveredDivision}
+              ></MapComponent>
             </div>
           </div>
-          {/* <Carousel interval={3000} fade={true} indicators={true}>
-            <Carousel.Item>
-              <HomeHeroSingleSlide setOpen={setOpen} />
-            </Carousel.Item>
-
-            <Carousel.Item>
-              <HomeHeroSingleSlide setOpen={setOpen} />
-            </Carousel.Item>
-
-            <Carousel.Item>
-              <HomeHeroSingleSlide setOpen={setOpen} />
-            </Carousel.Item>
-          </Carousel> */}
-
           <div className="swiper-paginations slide-dots"></div>
         </div>
       </section>
