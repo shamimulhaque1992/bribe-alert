@@ -70,9 +70,9 @@ const HomeThreeNavBar = () => {
                                     </ul>
                                  </li>
                                  <li className="menu-item-has-children">
-                                    <NavLink to="/blogSidebar">Blog</NavLink>
+                                    <NavLink to="/blogs">Blog</NavLink>
                                     <ul className="sub-menu">
-                                       <li><NavLink to="/blogSidebar">Blog Sidebar</NavLink>
+                                       <li><NavLink to="/blogs">Blog Sidebar</NavLink>
                                        </li>
                                        <li><NavLink to="/blogDetails">Blog Details</NavLink>
                                        </li>

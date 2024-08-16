@@ -50,10 +50,10 @@ const Navigation = () => {
                           Email us
                         </span>
                         <a
-                          href="mailto:info@klenar.com"
+                          href="mailto:email@bribealert.com"
                           className="tp-header-top-info-single-content font-medium text-white"
                         >
-                          info@klenar.com
+                          email@bribealert.com
                         </a>
                       </div>
                     </div>
@@ -161,7 +161,7 @@ const Navigation = () => {
                               </li>
                             </ul> */}
                           </li>
-                          <li className="menu-item-has-children">
+                          {/* <li className="menu-item-has-children">
                             <NavLink to="/services">Services </NavLink>
                             <ul className="sub-menu">
                               <li>
@@ -173,25 +173,38 @@ const Navigation = () => {
                                 </NavLink>
                               </li>
                             </ul>
+                          </li> */}
+                          <li className="menu-item-has-children">
+                            <NavLink to="/resource">Resource </NavLink>
+                            {/* <ul className="sub-menu">
+                              <li>
+                                <NavLink to="/services">Services</NavLink>
+                              </li>
+                              <li>
+                                <NavLink to="/servicesDetails">
+                                  Services Details
+                                </NavLink>
+                              </li>
+                            </ul> */}
                           </li>
                           <li className="menu-item-has-children">
-                            <NavLink to="/projects">Projects</NavLink>
-                            <ul className="sub-menu">
+                            <NavLink to="/partnerships">Partnerships</NavLink>
+                           {/*  <ul className="sub-menu">
                               <li>
-                                <NavLink to="/projects">Projects</NavLink>
+                                <NavLink to="/partnerships">Partnerships</NavLink>
                               </li>
                               <li>
                                 <NavLink to="/projectsDetails">
                                   Projects Details
                                 </NavLink>
                               </li>
-                            </ul>
+                            </ul> */}
                           </li>
                           <li className="menu-item-has-children">
-                            <NavLink to="/blogSidebar">Blog</NavLink>
-                            <ul className="sub-menu">
+                            <NavLink to="/blogs">Blog</NavLink>
+                            {/* <ul className="sub-menu">
                               <li>
-                                <NavLink to="/blogSidebar">
+                                <NavLink to="/blogs">
                                   Blog Sidebar
                                 </NavLink>
                               </li>
@@ -200,7 +213,7 @@ const Navigation = () => {
                                   Blog Details
                                 </NavLink>
                               </li>
-                            </ul>
+                            </ul> */}
                           </li>
                           <li>
                             <NavLink to="/contact">Contact</NavLink>

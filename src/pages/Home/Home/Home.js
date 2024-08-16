@@ -26,12 +26,12 @@ const Home = () => {
       {/* <AboutArea /> */}
       <BannerArea />
       <ServiceArea />
-      <ChoseArea />
-      <FactArea />
-      <PricingArea />
-      <Testimonial />
-      <Projects />
-      <ProgressArea />
+      {/* <ChoseArea /> */}
+      {/* <FactArea /> */}
+      {/* <PricingArea /> */}
+      {/* <Testimonial /> */}
+      {/* <Projects /> */}
+      {/* <ProgressArea /> */}
       <Blogs />
       <Footer />
       <Toaster></Toaster>

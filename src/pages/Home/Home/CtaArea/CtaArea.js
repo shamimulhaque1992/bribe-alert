@@ -14,11 +14,12 @@ const CtaArea = () => {
   } = useForm();
   const [showContactInfo, setShowContactInfo] = useState(false);
   const [isAnonymous, setIsAnonymous] = useState(true);
+  const [reportType, setReportType] = useState("paid_a_bribe");
 
   const onSubmit = async (data) => {
     console.log("amar data", data);
     const postData = {
-      form_type: "paid_a_bribe", // paid_a_bribe
+      form_type: reportType, // paid_a_bribe
       form_data: {
         governmentArea: data.governmentArea,
         bribeReason: data.bribeReason,
@@ -88,10 +89,82 @@ const CtaArea = () => {
     <section className="tp-appoint-cta-area yellow-dark-bg pt-80 pb-65">
       <div className="container">
         <div className="row align-items-center custom-mar-20 justify-content-center">
-          <div className="col-12 custom-pad-20 mb-5">
+          <div className="col-8 custom-pad-20 mb-5">
             <div className="tp-appoint wow fadeInUp" data-wow-delay=".1s">
-              <h4 className="tp-appoint-title text-center">Report Bribery</h4>
+              <h4 className="fs-1 text-uppercase tp-appoint-title text-left mb-5">
+                Add a report
+              </h4>
             </div>
+            <ul
+              class="nav nav-tabs d-flex justify-content-between"
+              id="myTab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  className={`theme-btn text-white border-0 ${
+                    reportType !== "paid_a_bribe" ? "bg-transparent" : ""
+                  }`}
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#home"
+                  type="button"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                  onClick={() => setReportType("paid_a_bribe")}
+                >
+                  <div className="wow fadeInUp" data-wow-delay=".1s">
+                    <h4 className="fs-6 text-uppercase tp-appoint-title text-center text-white">
+                      I paid a bribe
+                    </h4>
+                  </div>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  // className="theme-btn text-white border-0"
+                  className={`theme-btn text-white border-0 ${
+                    reportType !== "bribe_fighter" ? "bg-transparent" : ""
+                  }`}
+                  id="profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                  onClick={() => setReportType("bribe_fighter")}
+                >
+                  <div className="wow fadeInUp" data-wow-delay=".1s">
+                    <h4 className="fs-6 text-uppercase tp-appoint-title text-center text-white">
+                      I am a bribe fighter
+                    </h4>
+                  </div>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  className={`theme-btn text-white border-0 ${
+                    reportType !== "honest_officer" ? "bg-transparent" : ""
+                  }`}
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="contact"
+                  aria-selected="false"
+                  onClick={() => setReportType("honest_officer")}
+                >
+                  <div className="wow fadeInUp" data-wow-delay=".1s">
+                    <h4 className="fs-6 text-uppercase tp-appoint-title text-center text-white">
+                      I met an honest officer
+                    </h4>
+                  </div>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="row align-items-center custom-mar-20 justify-content-center">

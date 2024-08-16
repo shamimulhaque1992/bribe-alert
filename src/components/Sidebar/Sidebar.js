@@ -11,7 +11,7 @@ const Sidebar = ({ show, handleClose }) => {
    const Pages = <NavLink to="/">Pages </NavLink>
    const Services = <NavLink to="/services">Services </NavLink>
    const Projects = <NavLink to="/projects">Projects</NavLink>
-   const Blog = <NavLink to="/blogSidebar">Blog</NavLink>
+   const Blog = <NavLink to="/blogs">Blog</NavLink>
    return (
       <>
 
@@ -63,7 +63,7 @@ const Sidebar = ({ show, handleClose }) => {
                   <Collapsible trigger={Blog} triggerTagName="div"
                      triggerOpenedClassName="icon_close" triggerClassName="iconAdd" open={false}>
                      <ul className="sidebar_sub_menu text-white mt-3">
-                        <li><NavLink to="/blogSidebar">Blog Sidebar</NavLink></li>
+                        <li><NavLink to="/blogs">Blog Sidebar</NavLink></li>
                         <li><NavLink to="/blogDetails">Blog Details</NavLink></li>
                      </ul>
                   </Collapsible>
@@ -81,7 +81,7 @@ const Sidebar = ({ show, handleClose }) => {
                                  <h4>Contact Info</h4>
                                  <ul>
                                     <li><i className="flaticon-pin"></i>28/4 Palmal, London</li>
-                                    <li><i className="flaticon-email"></i><a href="mailto:info@klenar.com">info@klenar.com</a></li>
+                                    <li><i className="flaticon-email"></i><a href="mailto:email@bribealert.com">email@bribealert.com</a></li>
                                     <li><i className="flaticon-phone-call"></i><a href="tel:33388820055">333 888 200 - 55</a></li>
                                  </ul>
                                  <div className="sidebar__menu--social">

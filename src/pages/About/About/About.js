@@ -16,10 +16,10 @@ const About = () => {
             <Navigation/>
             <AboutBreadcrumb />
             <AboutArea />
-            <WorkingProcess />
+            {/* <WorkingProcess /> */}
             <AboutFaq />
-            <AboutServices />
-            <AboutTestimonial />
+            {/* <AboutServices /> */}
+            {/* <AboutTestimonial /> */}
             <AboutBanner />
             <Footer/>
         </>
