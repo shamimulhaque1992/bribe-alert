@@ -8,7 +8,7 @@ const TeamSIngleBlog = ({image_num,date}) => {
             <div className="tp-blog-two mb-30 position-relative wow fadeInUp" data-wow-delay=".3s">
                <div className="tp-blog-img">
                   <Link to="/blogDetails">
-                     <img src={`assets/img/blog/blog-img-${image_num}.jpg`} className="img-fluid" alt="img not found" />
+                     <img src={`/assets/img/blog/blog-img-${image_num}.jpg`} className="img-fluid" alt="img not found" />
                   </Link>
                   <div className="tp-blog-date">
                      <h4>{date}</h4>

@@ -15,7 +15,7 @@ const TeamDetailsArea = () => {
                      <div className="tp-team-bg theme-dark-bg">
                         <div className="tp-team fix">
                            <div className="tp-team-img">
-                              <img src="assets/img/team/team-1.jpg" className="img-fluid" alt="img not found" />
+                              <img src="/assets/img/team/team-1.jpg" className="img-fluid" alt="img not found" />
                            </div>
                            <div className="tp-team-text pt-30 fix">
                               <h2 className="tp-section-title text-white">Georgia Mishel</h2>

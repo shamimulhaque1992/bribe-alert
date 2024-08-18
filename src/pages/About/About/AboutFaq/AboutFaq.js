@@ -8,7 +8,7 @@ const AboutFaq = () => {
         <div className="row align-items-start">
           <div className="col-lg-6 order-2 order-lg-1">
             <div className="tp-about-faq-img pt-130">
-              <img src="assets/img/feature/faq-img-2.png" alt="img not found" />
+              <img src="/assets/img/feature/faq-img-2.png" alt="img not found" />
             </div>
           </div>
           <div className="col-lg-6 order-1 order-lg-2">

@@ -9,8 +9,8 @@ const HomeTwoAbout = () => {
                <div className="row">
                   <div className="col-lg-6 col-md-10">
                      <div className="tp-about-img-two position-relative mr-80 wow fadeInUp" data-wow-delay=".4s">
-                        <img src="assets/img/about/about-img-2.jpg" className="img-fluid" alt="img not found"/>
-                           <img src="assets/img/about/about-img-3.png" className="img-fluid img-second" alt="img not found"/>
+                        <img src="/assets/img/about/about-img-2.jpg" className="img-fluid" alt="img not found"/>
+                           <img src="/assets/img/about/about-img-3.png" className="img-fluid img-second" alt="img not found"/>
                               <div className="tp-about-img-two-badge">
                                  <h3>20</h3>
                                  <h5>years <br/>Experience</h5>
@@ -47,7 +47,7 @@ const HomeTwoAbout = () => {
                            </div>
                            <div className="tp-about-text-two-sign pt-10">
                               <div className="tp-about-text-two-sign-img">
-                                 <img src="assets/img/about/sign.png" className="img-fluid" alt="img not found"/>
+                                 <img src="/assets/img/about/sign.png" className="img-fluid" alt="img not found"/>
                               </div>
                               <div className="tp-about-text-two-sign-text">
                                  <h4 className="tp-about-text-two-sign-name">Fesus Cameron</h4>

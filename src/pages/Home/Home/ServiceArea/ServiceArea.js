@@ -43,7 +43,7 @@ const ServiceArea = () => {
   }
 
   return (
-    <section className="tp-services-area theme-dark-bg pb-5">
+    <section className="tp-services-area theme-dark-bg pb-5 pt-5">
       <div className="tp-custom-container">
         <div className="tp-services-bg grey-bg pt-120 pb-90 z-index">
           <div className="container">

@@ -27,21 +27,12 @@ const HeroMapSection = () => {
   const [allReportsByDivision, setAllReportsByDivision] = useState([]);
   const [sidebarContent, setSidebarContent] = useState({});
   const [loading, setLoading] = useState(false);
-  const divisionData = {
-    divisionName: "Dhaka",
-    totalReports: 120,
-    totalAmount: 500000,
-    bribesPaid: 50,
-    bribeFighters: 30,
-    honestOfficers: 20,
-    bribeHotline: "1234",
-  };
 
   useEffect(() => {
     const getAllReports = () => {
       try {
         setLoading(true);
-        const req = instance.get("/bribeformdata?approval_status=Approved", {
+        const req = instance.get("/bribe_stats?approval_status=Approved", {
           method: "get",
           headers: {
             Accept: "application/json",
@@ -65,12 +56,14 @@ const HeroMapSection = () => {
   }, []);
 
   useEffect(() => {
+    const delay = 1000; // 1 second delay
+    let timeoutId;
     const getAllReportsByDivision = () => {
       try {
         if (hoveredDivision) {
           setLoading(true);
           const req = instance.get(
-            `/bribeformdata?division=${hoveredDivision}`,
+            `/bribe_stats?division=${hoveredDivision}&approval_status=Approved`,
             {
               method: "get",
               headers: {
@@ -92,9 +85,17 @@ const HeroMapSection = () => {
         setLoading(false);
       }
     };
-    getAllReportsByDivision();
+    if (hoveredDivision) {
+      timeoutId = setTimeout(() => {
+        getAllReportsByDivision();
+      }, delay);
+    }
+
+    // Cleanup timeout if hoveredDivision changes before the delay is over
+    return () => clearTimeout(timeoutId);
+    // getAllReportsByDivision();
   }, [hoveredDivision]);
-  console.log("your log output", allReportsByDivision);
+  console.log("sdfs", allReportsByDivision);
   const divisions = [
     { id: "division1", name: "Rangpur" },
     { id: "division2", name: "Khulna" },
@@ -113,7 +114,7 @@ const HeroMapSection = () => {
         style={{ backgroundColor: "#edf3f1" }}
       >
         <div className="container tp-slider-active home_hero_slide swiper-container common-dots ">
-          <div style={{  fontFamily: "Arial, sans-serif" }}>
+          <div style={{ fontFamily: "Arial, sans-serif" }}>
             {/* Top Section */}
             <div
               style={{
@@ -128,7 +129,9 @@ const HeroMapSection = () => {
             >
               <div style={{ textAlign: "center", flex: 1 }}>
                 <h3 style={{ color: "#ffffff" }}>Cities</h3>
-                <p style={{ color: "#ffffff" }}>{allReports?.total_cities}</p>
+                <p style={{ color: "#ffffff" }}>
+                  {allReports?.top_total_cities}
+                </p>
               </div>
               <div
                 style={{
@@ -141,7 +144,7 @@ const HeroMapSection = () => {
               <div style={{ textAlign: "center", flex: 1 }}>
                 <h3 style={{ color: "#ffffff" }}>Reports</h3>
                 <p style={{ color: "#ffffff" }}>
-                  {allReports?.total_submission}
+                  {allReports?.top_total_reports}
                 </p>
               </div>
               <div
@@ -154,7 +157,9 @@ const HeroMapSection = () => {
               ></div>
               <div style={{ textAlign: "center", flex: 1 }}>
                 <h3 style={{ color: "#ffffff" }}>Taka</h3>
-                <p style={{ color: "#ffffff" }}>{allReports?.total_amount}</p>
+                <p style={{ color: "#ffffff" }}>
+                  {allReports?.top_total_amount}
+                </p>
               </div>
             </div>
 
@@ -190,37 +195,50 @@ const HeroMapSection = () => {
                   <div style={{ marginTop: "20px" }}>
                     <h4 style={{ fontWeight: "400" }}>Total Reports</h4>
                     <p style={{ fontWeight: "900" }}>
-                      {allReportsByDivision?.total_submission}
+                      {allReportsByDivision?.sub_total_reports
+                        ? allReportsByDivision?.sub_total_reports
+                        : 0}
                     </p>
                   </div>
                   <div>
                     <h4 style={{ fontWeight: "400" }}>Total Amount</h4>
                     <p style={{ fontWeight: "900" }}>
-                      {allReportsByDivision?.total_amount} Taka
+                      {allReportsByDivision?.sub_total_amount
+                        ? allReportsByDivision?.sub_total_amount
+                        : 0}{" "}
+                      Taka
                     </p>
                   </div>
                   <div>
                     <h4 style={{ fontWeight: "400" }}>Bribes Paid</h4>
                     <p style={{ fontWeight: "900" }}>
-                      {allReportsByDivision?.total_submission}
+                      {allReportsByDivision?.sub_bribes_paid_count
+                        ? allReportsByDivision?.sub_bribes_paid_count
+                        : 0}
                     </p>
                   </div>
                   <div>
                     <h4 style={{ fontWeight: "400" }}>Bribe Fighters</h4>
                     <p style={{ fontWeight: "900" }}>
-                      {divisionData.bribeFighters}
+                      {allReportsByDivision.sub_bribe_fighter_count
+                        ? allReportsByDivision.sub_bribe_fighter_count
+                        : 0}
                     </p>
                   </div>
                   <div>
                     <h4 style={{ fontWeight: "400" }}>Honest Officers</h4>
                     <p style={{ fontWeight: "900" }}>
-                      {divisionData.honestOfficers}
+                      {allReportsByDivision.sub_honest_officer_count
+                        ? allReportsByDivision.sub_honest_officer_count
+                        : 0}
                     </p>
                   </div>
                   <div>
                     <h4 style={{ fontWeight: "400" }}>Bribe Hotline</h4>
                     <p style={{ fontWeight: "900" }}>
-                      {divisionData.bribeHotline}
+                      {allReportsByDivision.bribeHotline
+                        ? allReportsByDivision.bribeHotline
+                        : 0}
                     </p>
                   </div>
                 </div>

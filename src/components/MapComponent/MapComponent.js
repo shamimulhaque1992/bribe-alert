@@ -4,7 +4,6 @@ import MapSvgUpdate from "../MapSvg/MapSvgUpdate";
 import instance from "../../instance/api_instance";
 const MapComponent = ({ setHoveredDivision }) => {
   const [isOpen, setOpen] = useState(false);
-  // const [hoveredDivision, setHoveredDivision] = useState(null);
 
   const divisions = [
     { id: "division1", name: "Rangpur" },

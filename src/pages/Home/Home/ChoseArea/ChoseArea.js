@@ -15,7 +15,7 @@ const ChoseArea = () => {
                                 <h2 className="tp-section-title">Expert House Cleaning Service Can Trust</h2>
                             </div>
                             <div className="tp-choose-img mb-40 z-index d-block d-xl-none">
-                                <img src="assets/img/about/choose-img-1.jpg" alt="img not found"/>
+                                <img src="/assets/img/about/choose-img-1.jpg" alt="img not found"/>
                             </div>
                             <div className="row">
                                 <div className="col-sm-6">
@@ -59,7 +59,7 @@ const ChoseArea = () => {
                     </div>
                     <div className="col-xl-5 col-12">
                         <div className="tp-choose-img mb-30 z-index d-none d-xl-block wow fadeInUp" data-wow-delay=".6s">
-                            <img src="assets/img/about/choose-img-1.jpg" alt="img not found"/>
+                            <img src="/assets/img/about/choose-img-1.jpg" alt="img not found"/>
                         </div>
                     </div>
                 </div>

@@ -28,8 +28,8 @@ const HomeTwoNavbar = () => {
                   <div className="row align-items-center">
                      <div className="col-xl-3 col-8">
                         <div className="tp-header-logo-two">
-                           <div className="tp-header-logo-two-inner" data-background="assets/img/logo/logo-white-bg.png">
-                              <Link to="/"><img src="assets/img/logo/logo-white.png" alt="img not found" />
+                           <div className="tp-header-logo-two-inner" data-background="/assets/img/logo/logo-white-bg.png">
+                              <Link to="/"><img src="/assets/img/logo/logo-white.png" alt="img not found" />
                               </Link>
                            </div>
                         </div>

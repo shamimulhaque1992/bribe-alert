@@ -8,7 +8,7 @@ const SpecialSinglePricingPackage = ({ image_num, price, title, activeclassName 
          <div className="col-xl-4 col-md-6 mb-30">
             <div className="tp-pricing-two text-center bg-gray-light wow fadeInUp" data-wow-delay=".4s">
                <div className="tp-pricing-two-img mb-10">
-                  <img src={`assets/img/pricing/pricing-${image_num}.jpg`} className="img" alt="img not found" />
+                  <img src={`/assets/img/pricing/pricing-${image_num}.jpg`} className="img" alt="img not found" />
                </div>
                <div className="tp-pricing-two-content">
                   <div className={activeclassName ? `tp-pricing-two-rate ${activeclassName}` : 'tp-pricing-two-rate'}>

@@ -19,7 +19,7 @@ const MegaDropDown = ({ services, selectedItem, handleCloseDropdown }) => {
             </div>
           </div>
           <p>
-            This is the detailed content for {services[selectedItem].title}.
+            {services[selectedItem].description}.
           </p>
         </div>
       </div>

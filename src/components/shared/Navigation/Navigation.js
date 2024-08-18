@@ -92,7 +92,7 @@ const Navigation = () => {
                     <div className="tp-header-top-info-single">
                       <div className="tp-header-top-info-single-btn">
                         <Link to="/contact" className="yellow-btn">
-                          <i className="flaticon-enter"></i> Free Quote
+                          {/* <i className="flaticon-enter"></i> */} Contact us
                         </Link>
                       </div>
                     </div>
@@ -111,7 +111,7 @@ const Navigation = () => {
           >
             <div className="container">
               <div className="row justify-content-xl-center align-items-center">
-                <div className="col-xl-2 col-8 tp-sticky-column">
+                <div className="col-xl-1 col-8 tp-sticky-column">
                   <div className="tp-sticky-logo">
                     <Link to="/">
                       <img
@@ -123,7 +123,7 @@ const Navigation = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="col-xl-8 col-4">
+                <div className="col-xl-9 col-4">
                   <div className="tp-main-menu-bg">
                     <div className="tp-main-menu">
                       <nav id="tp-mobile-menu">
@@ -188,8 +188,53 @@ const Navigation = () => {
                             </ul> */}
                           </li>
                           <li className="menu-item-has-children">
+                            <NavLink to="/i-paid-a-bribe">
+                              Paid a bribe{" "}
+                            </NavLink>
+                            {/* <ul className="sub-menu">
+                              <li>
+                                <NavLink to="/services">Services</NavLink>
+                              </li>
+                              <li>
+                                <NavLink to="/servicesDetails">
+                                  Services Details
+                                </NavLink>
+                              </li>
+                            </ul> */}
+                          </li>
+                          <li className="menu-item-has-children">
+                            <NavLink to="/i-am-a-bribe-fighter">
+                              Bribe fighter{" "}
+                            </NavLink>
+                            {/* <ul className="sub-menu">
+                              <li>
+                                <NavLink to="/services">Services</NavLink>
+                              </li>
+                              <li>
+                                <NavLink to="/servicesDetails">
+                                  Services Details
+                                </NavLink>
+                              </li>
+                            </ul> */}
+                          </li>
+                          <li className="menu-item-has-children">
+                            <NavLink to="/i-met-an-hones-officer">
+                              Honest officer{" "}
+                            </NavLink>
+                            {/* <ul className="sub-menu">
+                              <li>
+                                <NavLink to="/services">Services</NavLink>
+                              </li>
+                              <li>
+                                <NavLink to="/servicesDetails">
+                                  Services Details
+                                </NavLink>
+                              </li>
+                            </ul> */}
+                          </li>
+                          <li className="menu-item-has-children">
                             <NavLink to="/partnerships">Partnerships</NavLink>
-                           {/*  <ul className="sub-menu">
+                            {/*  <ul className="sub-menu">
                               <li>
                                 <NavLink to="/partnerships">Partnerships</NavLink>
                               </li>
@@ -215,9 +260,9 @@ const Navigation = () => {
                               </li>
                             </ul> */}
                           </li>
-                          <li>
+                          {/* <li>
                             <NavLink to="/contact">Contact</NavLink>
-                          </li>
+                          </li> */}
                         </ul>
                       </nav>
                     </div>
@@ -235,13 +280,14 @@ const Navigation = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-xl-2 tp-sticky-column-btn">
+                <div className="col-xl-1 tp-sticky-column-btn">
                   <div className="tp-sticky-btn text-end">
                     <Link
                       to="/contact"
                       className="theme-btn justify-content-end text-white"
                     >
-                      <i className="flaticon-enter"></i> Free Quote
+                      Contact us
+                      {/* <i className="flaticon-enter"></i> Free Quote */}
                     </Link>
                   </div>
                 </div>

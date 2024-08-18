@@ -8,7 +8,7 @@ const HomeTwoFaq = () => {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="tp-faq-img">
-                                <img src="assets/img/feature/faq-img-1.png" alt="img not found"/>
+                                <img src="/assets/img/feature/faq-img-1.png" alt="img not found"/>
                             </div>
                         </div>
                         <div className="col-lg-6">

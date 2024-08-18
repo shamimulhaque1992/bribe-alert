@@ -10,9 +10,9 @@ const HomeThreeAbout = () => {
                <div className="row justify-content-xl-between justify-content-md-center">
                   <div className="col-xxl-5 col-xl-6 col-lg-7 col-md-10">
                      <div className="tp-about-img-three pt-40 position-relative mb-30 wow fadeInUp" data-wow-delay=".3s">
-                        <img src="assets/img/about/about-img-3.jpg" className="img-fluid" alt="img-not-found" />
-                        <img src="assets/img/about/about-img-4.jpg" className="img-fluid tp-about-img-three-second" alt="img-not-found" />
-                        <img src="assets/img/about/about-img-shape-3.png" className="img-fluid tp-about-img-three-third" alt="img-not-found" />
+                        <img src="/assets/img/about/about-img-3.jpg" className="img-fluid" alt="img-not-found" />
+                        <img src="/assets/img/about/about-img-4.jpg" className="img-fluid tp-about-img-three-second" alt="img-not-found" />
+                        <img src="/assets/img/about/about-img-shape-3.png" className="img-fluid tp-about-img-three-third" alt="img-not-found" />
                      </div>
                   </div>
                   <div className="col-xxl-6 col-xl-6 col-md-10">

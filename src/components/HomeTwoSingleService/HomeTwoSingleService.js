@@ -8,7 +8,7 @@ const HomeTwoSingleService = ({image_num,icon,title}) => {
          <div className="col-xl-3 col-md-6">
             <div className="tp-quality mb-30 wow fadeInUp" data-wow-delay=".5s">
                <div className="tp-quality-img">
-                  <img src={`assets/img/service/service-${image_num}.png`} className="img-fluid" alt="img not found"/>
+                  <img src={`/assets/img/service/service-${image_num}.png`} className="img-fluid" alt="img not found"/>
                </div>
                <div className="tp-quality-text text-center">
                   <div className="tp-quality-text-icon mb-10">

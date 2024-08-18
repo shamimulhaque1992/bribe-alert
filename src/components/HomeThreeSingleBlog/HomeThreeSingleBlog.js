@@ -8,7 +8,7 @@ const HomeThreeSingleBlog = ({image_num,title}) => {
             <div className="tp-blog-three mb-30 wow fadeInUp" data-wow-delay=".4s">
                <div className="tp-blog-three-img">
                   <Link to="/blogDetails">
-                     <img src={`assets/img/blog/blog-img-${image_num}.jpg`} className="img" 
+                     <img src={`/assets/img/blog/blog-img-${image_num}.jpg`} className="img" 
                      alt="img-not-found"/>                        
                   </Link>
                </div>

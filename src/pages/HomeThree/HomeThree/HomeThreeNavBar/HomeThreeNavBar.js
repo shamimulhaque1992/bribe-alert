@@ -27,7 +27,7 @@ const HomeThreeNavBar = () => {
                      <div className="col-xxl-2 col-xl-3 col-8">
                         <div className="tp-header-logo-three">
                            <Link to="/">
-                              <img src="assets/img/logo/logo-blue.png" className="img-fluid" alt="logo not found" />
+                              <img src="/assets/img/logo/logo-blue.png" className="img-fluid" alt="logo not found" />
                            </Link>
                         </div>
                      </div>

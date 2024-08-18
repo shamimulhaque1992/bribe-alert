@@ -31,37 +31,37 @@ const AboutBanner = () => {
                   >
                      <SwiperSlide>
                         <div className="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay=".3s" data-swiper-autoplay="5000">
-                           <a href="/"><img src="assets/img/brand/brand-6.png" className="img-fluid" alt="img" /></a>
+                           <a href="/"><img src="/assets/img/brand/brand-6.png" className="img-fluid" alt="img" /></a>
                         </div>
                      </SwiperSlide>
 
                      <SwiperSlide>
                         <div className="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay=".6s" data-swiper-autoplay="5000">
-                           <a href="/"><img src="assets/img/brand/brand-7.png" className="img-fluid" alt="img" /></a>
+                           <a href="/"><img src="/assets/img/brand/brand-7.png" className="img-fluid" alt="img" /></a>
                         </div>
                      </SwiperSlide>
 
                      <SwiperSlide>
                         <div className="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay=".9s" data-swiper-autoplay="5000">
-                           <a href="/"><img src="assets/img/brand/brand-8.png" className="img-fluid" alt="img" /></a>
+                           <a href="/"><img src="/assets/img/brand/brand-8.png" className="img-fluid" alt="img" /></a>
                         </div>
                      </SwiperSlide>
 
                      <SwiperSlide>
                         <div className="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay="1.2s" data-swiper-autoplay="5000">
-                           <a href="/"><img src="assets/img/brand/brand-9.png" className="img-fluid" alt="img" /></a>
+                           <a href="/"><img src="/assets/img/brand/brand-9.png" className="img-fluid" alt="img" /></a>
                         </div>
                      </SwiperSlide>
 
                      <SwiperSlide>
                         <div className="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay="1.5s" data-swiper-autoplay="5000">
-                           <a href="/"><img src="assets/img/brand/brand-6.png" className="img-fluid" alt="img" /></a>
+                           <a href="/"><img src="/assets/img/brand/brand-6.png" className="img-fluid" alt="img" /></a>
                         </div>
                      </SwiperSlide>
 
                      <SwiperSlide>
                         <div className="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay="1.8s" data-swiper-autoplay="5000">
-                           <a href="/"><img src="assets/img/brand/brand-7.png" className="img-fluid" alt="img" /></a>
+                           <a href="/"><img src="/assets/img/brand/brand-7.png" className="img-fluid" alt="img" /></a>
                         </div>
                      </SwiperSlide>
                   </Swiper>

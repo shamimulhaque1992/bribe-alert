@@ -3,7 +3,7 @@ import React from 'react';
 const ApointArea = () => {
     return (
         <>
-            <section className="tp-appoint-contact-area pt-145 appoint_bg" data-background="assets/img/appoint/appoint-bg.jpg">
+            <section className="tp-appoint-contact-area pt-145 appoint_bg" data-background="/assets/img/appoint/appoint-bg.jpg">
                 <div className="container">
                     <div className="row justify-content-lg-end justify-content-center">
                         <div className="col-xl-6 col-lg-8 col-md-10">

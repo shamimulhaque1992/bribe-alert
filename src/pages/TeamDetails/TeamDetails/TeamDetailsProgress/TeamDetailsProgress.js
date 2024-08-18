@@ -6,13 +6,13 @@ const TeamDetailsProgress = () => {
          <section className="tp-progress-area tp-team-progress-area pb-90">
             <div className="tp-progress-area-inner position-relative pt-25">
                <div className="tp-progress-shape">
-                  <img src="assets/img/team/team-shape-1.jpg" alt="img not found" />
+                  <img src="/assets/img/team/team-shape-1.jpg" alt="img not found" />
                </div>
                <div className="container z-index">
                   <div className="row">
                      <div className="col-lg-6">
                         <div className="tp-progress-img pt-75 mb-30">
-                           <img src="assets/img/team/team-2.jpg" alt="img not found" />
+                           <img src="/assets/img/team/team-2.jpg" alt="img not found" />
                         </div>
                      </div>
                      <div className="col-lg-6">

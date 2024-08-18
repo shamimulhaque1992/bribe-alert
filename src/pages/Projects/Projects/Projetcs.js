@@ -4,6 +4,7 @@ import Navigation from "../../../components/shared/Navigation/Navigation";
 import ProjectsArea from "./ProjectsArea/ProjectsArea";
 import ProjectsBreadcrumb from "./ProjectsBreadcrumb/ProjectsBreadcrumb";
 import ComingSoon from "../../../components/ComingSoon/ComingSoon";
+import SubscriptionForms from "../../../components/SubscriptionForms/SubscriptionForms";
 
 const Projects = () => {
   return (
@@ -11,7 +12,8 @@ const Projects = () => {
       <Navigation />
       <ProjectsBreadcrumb />
       {/* <ProjectsArea /> */}
-      <ComingSoon></ComingSoon>
+      {/* <ComingSoon></ComingSoon> */}
+      <SubscriptionForms></SubscriptionForms>
       <Footer />
     </>
   );

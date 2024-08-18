@@ -7,7 +7,7 @@ const ServicePageArea = ({service_image_num,ser_icon_img,ser_title,colorClass}) 
          <div className="col-lg-6">
             <div className="tp-service-three tp-service-four mb-30 wow fadeInUp" data-wow-delay="1.2s">
                <div className="tp-service-three-img">
-                  <img src={`assets/img/service/service-${service_image_num}.jpg`} className="img-fluid" alt="img-not-found"/>
+                  <img src={`/assets/img/service/service-${service_image_num}.jpg`} className="img-fluid" alt="img-not-found"/>
                      <div className="tp-service-three-img-icon">
                         <i className={`flaticon-${ser_icon_img}`}></i>
                      </div>

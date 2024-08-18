@@ -4,7 +4,7 @@ import divisions from "../../../../data/district-division-bangladesh.json";
 import governmentAreas from "../../../../data/bribe-area.json";
 import instance from "../../../../instance/api_instance";
 import toast, { Toaster } from "react-hot-toast";
-const CtaArea = () => {
+const CtaArea = ({ reportType }) => {
   const {
     register,
     handleSubmit,
@@ -14,7 +14,7 @@ const CtaArea = () => {
   } = useForm();
   const [showContactInfo, setShowContactInfo] = useState(false);
   const [isAnonymous, setIsAnonymous] = useState(true);
-  const [reportType, setReportType] = useState("paid_a_bribe");
+  // const [reportType, setReportType] = useState("paid_a_bribe");
 
   const onSubmit = async (data) => {
     console.log("amar data", data);
@@ -95,7 +95,7 @@ const CtaArea = () => {
                 Add a report
               </h4>
             </div>
-            <ul
+            {/* <ul
               class="nav nav-tabs d-flex justify-content-between"
               id="myTab"
               role="tablist"
@@ -112,7 +112,7 @@ const CtaArea = () => {
                   role="tab"
                   aria-controls="home"
                   aria-selected="true"
-                  onClick={() => setReportType("paid_a_bribe")}
+                  // onClick={() => setReportType("paid_a_bribe")}
                 >
                   <div className="wow fadeInUp" data-wow-delay=".1s">
                     <h4 className="fs-6 text-uppercase tp-appoint-title text-center text-white">
@@ -134,7 +134,7 @@ const CtaArea = () => {
                   role="tab"
                   aria-controls="profile"
                   aria-selected="false"
-                  onClick={() => setReportType("bribe_fighter")}
+                  // onClick={() => setReportType("bribe_fighter")}
                 >
                   <div className="wow fadeInUp" data-wow-delay=".1s">
                     <h4 className="fs-6 text-uppercase tp-appoint-title text-center text-white">
@@ -155,7 +155,7 @@ const CtaArea = () => {
                   role="tab"
                   aria-controls="contact"
                   aria-selected="false"
-                  onClick={() => setReportType("honest_officer")}
+                  // onClick={() => setReportType("honest_officer")}
                 >
                   <div className="wow fadeInUp" data-wow-delay=".1s">
                     <h4 className="fs-6 text-uppercase tp-appoint-title text-center text-white">
@@ -164,7 +164,7 @@ const CtaArea = () => {
                   </div>
                 </button>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
         <div className="row align-items-center custom-mar-20 justify-content-center">
@@ -272,7 +272,11 @@ const CtaArea = () => {
                   </div>
                 </div>
 
-                <div className="col-lg-6 custom-pad-20">
+                <div
+                  className={`${
+                    reportType === "paid_a_bribe" ? "col-lg-6" : "col-lg-12"
+                  } custom-pad-20`}
+                >
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
                     <input
                       type="date"
@@ -288,22 +292,30 @@ const CtaArea = () => {
                     <p style={{ color: "red" }}>{errors.date?.message}</p>
                   </div>
                 </div>
-                <div className="col-lg-6 custom-pad-20">
-                  <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
-                    <input
-                      type="number"
-                      {...register("amount", {
-                        required: {
-                          value: true,
-                          message: "Please enter a amount!",
-                        },
-                      })}
-                      placeholder="Amount"
-                      className="form-control"
-                    />
-                    <p style={{ color: "red" }}>{errors.amount?.message}</p>
+                {reportType === "paid_a_bribe" ? (
+                  <div className="col-lg-6 custom-pad-20">
+                    <div
+                      className="tp-appoint wow fadeInUp"
+                      data-wow-delay=".3s"
+                    >
+                      <input
+                        type="number"
+                        {...register("amount", {
+                          required: {
+                            value: reportType === "paid_a_bribe",
+                            message: "Please enter a amount!",
+                          },
+                        })}
+                        placeholder="Amount"
+                        className="form-control"
+                      />
+                      <p style={{ color: "red" }}>{errors.amount?.message}</p>
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  ""
+                )}
+
                 <div className="col-lg-12 custom-pad-20">
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
                     <input

@@ -22,7 +22,7 @@ const FaqArea = () => {
                             </div>
                             <div className="tp-faqs-left-img mb-30">
                                 <a href="#">
-                                   <img src="assets/img/about/faq-img-1.jpg" className="img" alt="img not found"/>
+                                   <img src="/assets/img/about/faq-img-1.jpg" className="img" alt="img not found"/>
                                  </a>
                             </div>
                         </div>

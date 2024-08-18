@@ -8,7 +8,7 @@ const BlogSidebarWidget = ({widget_img_num,sidebar_post_title}) => {
             <div className="sidebar__post--thumb">
                <Link to="/blogDetails">
                   <div className="post__img">
-                     <img src={`assets/img/blog/${widget_img_num}.jpg`} alt="" />
+                     <img src={`/assets/img/blog/${widget_img_num}.jpg`} alt="" />
                   </div>
                </Link>
             </div>

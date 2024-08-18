@@ -16,7 +16,7 @@ const HomeThreeFooter = () => {
                         <div className="tp-footer-widget footer-col-1 mb-30 wow fadeInUp" data-wow-delay=".3s">
                            <div className="tp-footer-info tp-footer-info-three">
                               <div className="tp-footer-info-logo mb-35">
-                                 <Link to="/"><img src="assets/img/logo/logo-white.png" className="img-fluid" alt="img not found"/></Link>
+                                 <Link to="/"><img src="/assets/img/logo/logo-white.png" className="img-fluid" alt="img not found"/></Link>
                               </div>
                               <p className="text-white mb-35">Pulvinar seneius morbi to quisque nunc a towa faucibus netus a mone lestie nice disease</p>
                               <div className="tp-footer-info-social tp-footer-info-social-three">
@@ -46,7 +46,7 @@ const HomeThreeFooter = () => {
                            <div className="tp-footer-news tp-footer-news-three">
                               <div className="tp-footer-news-single tp-footer-news-three-single mb-10">
                                  <div className="tp-footer-news-three-single-img">
-                                    <Link to="/blogDetails"><img src="assets/img/footer/footer-blog-1.png" className="img-fluid" alt="img-not-found"/></Link>
+                                    <Link to="/blogDetails"><img src="/assets/img/footer/footer-blog-1.png" className="img-fluid" alt="img-not-found"/></Link>
                                  </div>
                                  <div className="tp-footer-news-three-single-text">
                                     <h6><Link to="/blogDetails">Feugiat pharetra a ductor nonuy vehicula</Link></h6>
@@ -55,7 +55,7 @@ const HomeThreeFooter = () => {
                               </div>
                               <div className="tp-footer-news-single tp-footer-news-three-single mb-10">
                                  <div className="tp-footer-news-three-single-img">
-                                    <Link to="/blogDetails"><img src="assets/img/footer/footer-blog-2.png" className="img-fluid" alt="img-not-found"/></Link>
+                                    <Link to="/blogDetails"><img src="/assets/img/footer/footer-blog-2.png" className="img-fluid" alt="img-not-found"/></Link>
                                  </div>
                                  <div className="tp-footer-news-three-single-text">
                                     <h6><Link to="/blogDetails">Curabitur tortor venenatis an scelerisque</Link></h6>

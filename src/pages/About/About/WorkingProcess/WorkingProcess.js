@@ -18,7 +18,7 @@ const WorkingProcess = () => {
                   <div className="col-xl-3 col-sm-6">
                      <div className="tp-feature-three text-center mb-30 wow fadeInUp" data-wow-delay=".4s">
                         <div className="tp-feature-three-icon mb-30">
-                           <img src="assets/img/icon/feature-bg.png" className="img-fluid" alt="img not found"/>
+                           <img src="/assets/img/icon/feature-bg.png" className="img-fluid" alt="img not found"/>
                               <i className="flaticon-booking"></i>
                         </div>
                         <div className="tp-feature-three-text">
@@ -31,7 +31,7 @@ const WorkingProcess = () => {
                   <div className="col-xl-3 col-sm-6">
                      <div className="tp-feature-three text-center mb-30 wow fadeInUp" data-wow-delay=".7s">
                         <div className="tp-feature-three-icon mb-30">
-                           <img src="assets/img/icon/feature-bg.png" className="img-fluid" alt="img not found"/>
+                           <img src="/assets/img/icon/feature-bg.png" className="img-fluid" alt="img not found"/>
                               <i className="flaticon-delivery-box"></i>
                         </div>
                         <div className="tp-feature-three-text">
@@ -44,7 +44,7 @@ const WorkingProcess = () => {
                   <div className="col-xl-3 col-sm-6">
                      <div className="tp-feature-three text-center mb-30 wow fadeInUp" data-wow-delay="1s">
                         <div className="tp-feature-three-icon mb-30">
-                           <img src="assets/img/icon/feature-bg.png" className="img-fluid" alt="img not found"/>
+                           <img src="/assets/img/icon/feature-bg.png" className="img-fluid" alt="img not found"/>
                               <i className="flaticon-boy"></i>
                         </div>
                         <div className="tp-feature-three-text">
@@ -57,7 +57,7 @@ const WorkingProcess = () => {
                   <div className="col-xl-3 col-sm-6">
                      <div className="tp-feature-three text-center mb-30 wow fadeInUp" data-wow-delay="1.3s">
                         <div className="tp-feature-three-icon mb-30">
-                           <img src="assets/img/icon/feature-bg.png" className="img-fluid" alt="img not found"/>
+                           <img src="/assets/img/icon/feature-bg.png" className="img-fluid" alt="img not found"/>
                               <i className="flaticon-cleaning"></i>
                         </div>
                         <div className="tp-feature-three-text">

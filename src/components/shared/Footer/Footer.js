@@ -5,12 +5,14 @@ import { FaMapMarkerAlt, FaEnvelopeOpen, FaFacebookF } from "react-icons/fa";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
 import SubscriptionForms from "../../SubscriptionForms/SubscriptionForms";
+import blogs from "../../../data/blog-eng.json";
+import NewsLaterForm from "../../NewsLaterForm/NewsLaterForm";
 
 const Footer = () => {
   return (
     <>
       <footer className="theme-dark-bg">
-        <SubscriptionForms></SubscriptionForms>
+        <NewsLaterForm></NewsLaterForm>
         <div className="tp-footer-area-two pt-80 pb-50">
           <div className="container">
             <div className="row">
@@ -24,7 +26,7 @@ const Footer = () => {
                       <Link to="/">
                         <img
                           style={{ maxWidth: "150px" }}
-                          src="assets/img/logo/bribe-logo.png"
+                          src="/assets/img/logo/bribe-logo.png"
                           className="img-fluid"
                           alt="img not found"
                         />
@@ -40,7 +42,7 @@ const Footer = () => {
                         <FaEnvelopeOpen />{" "}
                       </i>
                       <a href="mailto:info@basictheme.com">
-                        info@basictheme.com
+                        email@bribealert.com
                       </a>
                     </h6>
                     <h6 className="mb-20">
@@ -81,23 +83,25 @@ const Footer = () => {
                   className="tp-footer-widget footer-col-2 mb-30 wow fadeInUp"
                   data-wow-delay=".6s"
                 >
-                  <h4 className="tp-footer-widget-title mb-35">Our Services</h4>
+                  <h4 className="tp-footer-widget-title mb-35">
+                    Submit a Report
+                  </h4>
                   <ul>
                     <li>
-                      <a href="#">Carpet Cleaning</a>
+                      <Link to={"/i-paid-a-bribe"}>Report a Bribe</Link>
                     </li>
                     <li>
-                      <a href="#">Plumbing Serivices</a>
+                      <Link to={"/i-am-a-bribe-fighter"}>Bribe Fight</Link>
                     </li>
                     <li>
-                      <a href="#">Park Cleaning</a>
+                      <Link to={"/i-met-an-hones-officer"}>Honest officer</Link>
+                    </li>
+                    {/* <li>
+                      <Link to={"#"}>Residential Services</Link>
                     </li>
                     <li>
-                      <a href="#">Residential Services</a>
-                    </li>
-                    <li>
-                      <a href="#">Toilet Cleaning</a>
-                    </li>
+                      <Link to={"#"}>Toilet Cleaning</Link>
+                    </li> */}
                   </ul>
                 </div>
               </div>
@@ -108,15 +112,18 @@ const Footer = () => {
                 >
                   <h4 className="tp-footer-widget-title mb-35">Recent News</h4>
                   <div className="tp-footer-news">
-                    <div className="tp-footer-news-single mb-15">
-                      <h6>
-                        <Link to="/blogDetails">
-                          Orci magna pede, quisque sociis integer litora netus
-                        </Link>
-                      </h6>
-                      <span>Jun 02, 2021</span>
-                    </div>
-                    <div className="tp-footer-news-single">
+                    {blogs.slice(0, 2).map((blog, index) => (
+                      <div className="tp-footer-news-single mb-15">
+                        <h6>
+                          <Link to={`/blogDetails/${blog.id}`}>
+                            {blog.headline}
+                          </Link>
+                        </h6>
+                        <span>Jun 02, 2021</span>
+                      </div>
+                    ))}
+
+                    {/* <div className="tp-footer-news-single">
                       <h6>
                         <Link to="/blogDetails">
                           Congue morbi elit dictumst socio sit mauris congue
@@ -124,7 +131,7 @@ const Footer = () => {
                         </Link>
                       </h6>
                       <span>Jun 02, 2021</span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -137,42 +144,42 @@ const Footer = () => {
                   <div className="tp-footer-insta">
                     <a href="/">
                       <img
-                        src="assets/img/footer/footer-insta-1.jpg"
+                        src="/assets/img/footer/footer-insta-1.jpg"
                         className="img-fluid"
                         alt="img not found"
                       />
                     </a>
                     <a href="/">
                       <img
-                        src="assets/img/footer/footer-insta-2.jpg"
+                        src="/assets/img/footer/footer-insta-2.jpg"
                         className="img-fluid"
                         alt="img not found"
                       />
                     </a>
                     <a href="/">
                       <img
-                        src="assets/img/footer/footer-insta-3.jpg"
+                        src="/assets/img/footer/footer-insta-3.jpg"
                         className="img-fluid"
                         alt="img not found"
                       />
                     </a>
                     <a href="/">
                       <img
-                        src="assets/img/footer/footer-insta-4.jpg"
+                        src="/assets/img/footer/footer-insta-4.jpg"
                         className="img-fluid"
                         alt="img not found"
                       />
                     </a>
                     <a href="/">
                       <img
-                        src="assets/img/footer/footer-insta-5.jpg"
+                        src="/assets/img/footer/footer-insta-5.jpg"
                         className="img-fluid"
                         alt="img not found"
                       />
                     </a>
                     <a href="/">
                       <img
-                        src="assets/img/footer/footer-insta-6.jpg"
+                        src="/assets/img/footer/footer-insta-6.jpg"
                         className="img-fluid"
                         alt="img not found"
                       />

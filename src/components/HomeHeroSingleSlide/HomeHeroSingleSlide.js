@@ -7,9 +7,9 @@ const HomeHeroSingleSlide = ({ setOpen }) => {
     return (
         <>
             <div className="tp-single-slider tp-slider-height d-flex align-items-center swiper-slide" data-swiper-autoplay="5000">
-                <div className="slide-bg" data-background="assets/img/slider/slider-bg-1.jpg"></div>
+                <div className="slide-bg" data-background="/assets/img/slider/slider-bg-1.jpg"></div>
                 <div className="slider-img">
-                    <img src="assets/img/slider/slider-img-1.jpg" className="img-fluid" alt="img not found" />
+                    <img src="/assets/img/slider/slider-img-1.jpg" className="img-fluid" alt="img not found" />
                 </div>
                 <div className="container">
                     <div className="row">

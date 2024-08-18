@@ -7,7 +7,7 @@ const ServiceTestimonial = ({ testi_img_num, title, name }) => {
          <div className="tp-testimonial-two position-relative swiper-slide mb-30">
             <div className="tp-testimonial-two-author mb-20">
                <div className="tp-testimonial-two-author-img">
-                  <img src={`assets/img/testimonial/author-${testi_img_num}.png`} className="img-fluid" alt="img not found" />
+                  <img src={`/assets/img/testimonial/author-${testi_img_num}.png`} className="img-fluid" alt="img not found" />
                </div>
                <div className="tp-testimonial-two-author-text">
                   <span>{title}</span>

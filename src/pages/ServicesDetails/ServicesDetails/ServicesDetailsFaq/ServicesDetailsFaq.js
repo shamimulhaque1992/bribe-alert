@@ -29,7 +29,7 @@ const ServicesDetailsFaq = () => {
                   </ul>
                 </div>
                 <div className="tp-faqs-left-img mb-30">
-                  <a href="#"><img src="assets/img/about/faq-img-1.jpg" className="img" alt="img not found" /></a>
+                  <a href="#"><img src="/assets/img/about/faq-img-1.jpg" className="img" alt="img not found" /></a>
                 </div>
                 <div className="tp-faqs-left-sidebar tp-services-sidebar mb-30">
                   <h4 className="tp-faqs-left-sidebar-title mb-30">Category...</h4>
@@ -45,12 +45,12 @@ const ServicesDetailsFaq = () => {
                 <div className="row">
                   <div className="col-sm-6">
                     <div className="tp-service-details-img mb-30">
-                      <img src="assets/img/service/service-details-1.jpg" alt="img not found" />
+                      <img src="/assets/img/service/service-details-1.jpg" alt="img not found" />
                     </div>
                   </div>
                   <div className="col-sm-6">
                     <div className="tp-service-details-img mb-30">
-                      <img src="assets/img/service/service-details-2.jpg" alt="img not found" />
+                      <img src="/assets/img/service/service-details-2.jpg" alt="img not found" />
                     </div>
                   </div>
                 </div>
@@ -60,7 +60,7 @@ const ServicesDetailsFaq = () => {
                 <h3 className="tp-service-details-subtitle">Service Overview</h3>
                 <p className="mb-40">Quisque maorbi gravida, enim hendrerit nunc feugiat vehicula fringilla. Ridiculus sapien curabitur. Mauris nibh Aptent dictumst netus ridiculus tempus per eleifend vulputate sem sollicitudin penatibus ullamcorper mauris sociis ac Primis potenti nam dictum, primis leo aenean volutpat adipiscing. Metus, elit. Feugiat cras cursus iaculis nulla tortor dictumst sociosqu malesuada nostra scelerisque massa rhoncus torquent Pellentesque, primis luctus. Donec eget vivamus integer. Class habitasse tempor arcu a congue eleifend maecenas potenti nascetur. Senectus netus dolor donec arcu nisi malesuada erat a mattis, fames. Ut vestibulum enim tincidunt varius ligula mi conubia quisque pretium bibendum. Mauris montes fusce dolor leo aliquet tempus felis.</p>
                 <div className="tp-service-details-img mb-30 position-relative">
-                  <img src="assets/img/service/service-details-3.jpg" alt="img not found" />
+                  <img src="/assets/img/service/service-details-3.jpg" alt="img not found" />
                   <div className="tp-service-details-img-overlay">
                     <div className="tp-service-details-img-overlay-icon">
                       <button onClick={() => setOpen(true)} className="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/o4GuSJYSzrY">
@@ -77,7 +77,7 @@ const ServicesDetailsFaq = () => {
                   <div className="col-xl-4 col-md-6">
                     <div className="tp-service-details-feature text-center bg-gray-light mb-40">
                       <div className="tp-feature-three-icon mb-25">
-                        <img src="assets/img/icon/service-feature.png" className="img-fluid" alt="img not found" />
+                        <img src="/assets/img/icon/service-feature.png" className="img-fluid" alt="img not found" />
                         <i className="flaticon-booking"></i>
                       </div>
                       <h4 className="tp-service-details-feature-title">
@@ -87,7 +87,7 @@ const ServicesDetailsFaq = () => {
                   <div className="col-xl-4 col-md-6">
                     <div className="tp-service-details-feature text-center bg-gray-light mb-40">
                       <div className="tp-feature-three-icon mb-25">
-                        <img src="assets/img/icon/service-feature.png" className="img-fluid" alt="img not found" />
+                        <img src="/assets/img/icon/service-feature.png" className="img-fluid" alt="img not found" />
                         <i className="flaticon-delivery-box"></i>
                       </div>
                       <h4 className="tp-service-details-feature-title">
@@ -97,7 +97,7 @@ const ServicesDetailsFaq = () => {
                   <div className="col-xl-4 col-md-6">
                     <div className="tp-service-details-feature text-center bg-gray-light mb-40">
                       <div className="tp-feature-three-icon mb-25">
-                        <img src="assets/img/icon/service-feature.png" className="img-fluid" alt="img not found" />
+                        <img src="/assets/img/icon/service-feature.png" className="img-fluid" alt="img not found" />
                         <i className="flaticon-boy"></i>
                       </div>
                       <h4 className="tp-service-details-feature-title">
@@ -110,7 +110,7 @@ const ServicesDetailsFaq = () => {
                 <div className="row">
                   <div className="col-xl-6">
                     <div className="tp-service-details-img mb-30">
-                      <img src="assets/img/service/service-details-4.jpg" alt="img not found" />
+                      <img src="/assets/img/service/service-details-4.jpg" alt="img not found" />
                     </div>
                   </div>
                   <div className="col-xl-6">

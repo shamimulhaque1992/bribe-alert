@@ -20,6 +20,9 @@ import ScrollToTop from "./components/ScrollToTop";
 import HomeTwo from "./pages/HomeTwo/HomeTwo/HomeTwo";
 import HomeThree from "./pages/HomeThree/HomeThree/HomeThree";
 import { Toaster } from "react-hot-toast";
+import IPaidABribe from "./pages/IPaidABribe/IPaidABribe";
+import IAmABribeFighter from "./pages/IAmABribeFighter/IAmABribeFighter";
+import IMetAnHonestOfficer from "./pages/IMetAnHonestOfficer/IMetAnHonestOfficer";
 
 const App = () => {
   // wow animation active
@@ -37,6 +40,12 @@ const App = () => {
           <Route path="/homeTwo" element={<HomeTwo />} />
           <Route path="/homeThree" element={<HomeThree />} />
           <Route path="/about" element={<About />} />
+          <Route path="/i-paid-a-bribe" element={<IPaidABribe />} />
+          <Route path="/i-am-a-bribe-fighter" element={<IAmABribeFighter />} />
+          <Route
+            path="/i-met-an-hones-officer"
+            element={<IMetAnHonestOfficer />}
+          />
           <Route path="/resource" element={<Services />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/pricing" element={<Pricing />} />

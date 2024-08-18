@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const HomeSingleBlog = ({ blog_img_num, date, title, blog }) => {
-  const { headline, image_link, introduction, body, conclusion,id } = blog;
+  const { headline, image_link, introduction, body, conclusion, id } = blog;
 
-  console.log('blog',blog)
+  console.log("blog", blog);
   return (
     <>
       <div className="col-lg-4 col-md-6">
@@ -12,7 +12,7 @@ const HomeSingleBlog = ({ blog_img_num, date, title, blog }) => {
           <div className="tp-blog-img mb-25">
             <Link to={`/blogDetails/${id}`}>
               <img
-                src={`assets/img/blog/blog-img-${blog_img_num}.jpg`}
+                src={`/assets/img/blog/blog-img-${blog_img_num}.jpg`}
                 className="img-fluid"
                 alt="img not found"
               />

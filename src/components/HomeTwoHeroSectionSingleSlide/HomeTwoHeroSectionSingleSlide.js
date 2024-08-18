@@ -6,7 +6,7 @@ const HomeTwoHeroSectionSingleSlide = ({ openVideo }) => {
     return (
         <>
             <div className="tp-single-slider tp-slider-height-two d-flex align-items-center swiper-slide" data-swiper-autoplay="5000">
-                <div className="slide-bg home_two_slide_bg" data-background="assets/img/slider/slider-bg-2.jpg"></div>
+                <div className="slide-bg home_two_slide_bg" data-background="/assets/img/slider/slider-bg-2.jpg"></div>
                 <div className="container">
                     <div className="row">
                         <div className="col-12">

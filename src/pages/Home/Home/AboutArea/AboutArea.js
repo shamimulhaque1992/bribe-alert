@@ -7,7 +7,7 @@ const AboutArea = () => {
       <section className="tp-about-area position-relative pt-120 pb-90 fix">
         <div className="tp-about-shape">
           <img
-            src="assets/img/about/about-shape-1.jpg"
+            src="/assets/img/about/about-shape-1.jpg"
             className="img-fluid"
             alt="img not found"
           />
@@ -20,7 +20,7 @@ const AboutArea = () => {
                 data-wow-delay=".3s"
               >
                 <img
-                  src="assets/img/about/about-img-1.jpg"
+                  src="/assets/img/about/about-img-1.jpg"
                   alt="img not found"
                 />
               </div>
@@ -110,7 +110,7 @@ const AboutArea = () => {
                     <div className="tp-about-author mb-30">
                       <div className="tp-about-author-img">
                         <img
-                          src="assets/img/about/about-author.png"
+                          src="/assets/img/about/about-author.png"
                           className="img-fluid"
                           alt="img not found"
                         />

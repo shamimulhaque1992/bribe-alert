@@ -21,9 +21,9 @@ const Home = () => {
       <Navigation />
       {/* <HeroSection /> */}
       <HeroMapSection></HeroMapSection>
-      <CtaArea />
+      {/* <CtaArea /> */}
       {/* <AboutArea /> */}
-      <BannerArea />
+      {/* <BannerArea /> */}
       <ServiceArea />
       {/* <ChoseArea /> */}
       {/* <FactArea /> */}

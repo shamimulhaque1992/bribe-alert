@@ -25,7 +25,7 @@ const Blogs = () => {
             </div>
           </div>
           <div className="row">
-            {blogs.slice(0, 3).map((blog, index) => (
+            {blogs.slice(0, 6).map((blog, index) => (
               <HomeSingleBlog
                 blog={blog}
                 blog_img_num="1"
@@ -38,7 +38,7 @@ const Blogs = () => {
                 className="tp-appoint text-end wow fadeInUp"
                 data-wow-delay=".9s"
               >
-                <Link to={"/bogs"}>
+                <Link to={"/blogs"}>
                   <button type="submit" className="theme-btn text-white">
                     <i className="flaticon-enter"></i> See All Blogs
                   </button>

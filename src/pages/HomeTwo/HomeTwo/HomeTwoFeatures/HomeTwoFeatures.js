@@ -21,7 +21,7 @@ const HomeTwoFeatures = () => {
                <div className="row justify-content-between align-items-xl-center">
                   <div className="col-xl-5 col-lg-6">
                      <div className="tp-feature-img mb-30 wow fadeInUp" data-wow-delay=".4s">
-                        <img src="assets/img/feature/feature-img-1.jpg" alt="img not found"/>
+                        <img src="/assets/img/feature/feature-img-1.jpg" alt="img not found"/>
                      </div>
                   </div>
                   <div className="col-xl-6 col-lg-6">

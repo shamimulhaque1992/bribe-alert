@@ -6,7 +6,7 @@ const HomeThreeChoseArea = () => {
       <>
          <section className="tp-choose-area-three position-relative mt-120 pb-50">
             <div className="tp-choose-area-three-img">
-               <img src="assets/img/about/about-img-5.jpg" alt="img-not-found"/>
+               <img src="/assets/img/about/about-img-5.jpg" alt="img-not-found"/>
                   <div className="tp-choose-three-year tp-choose-three-year-responsive mb-50">
                      <div className="tp-choose-three-year-inner">
                         <h3>20 Years</h3>

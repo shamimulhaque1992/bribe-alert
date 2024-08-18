@@ -65,7 +65,7 @@ const SubscriptionForms = () => {
   }, [isAnonymousRadio]);
 
   return (
-    <div className="tp-footer-subscribe-area-two position-relative pt-100">
+    <div className="tp-footer-subscribe-area-two position-relative pt-100 pb-5">
       <div className="container">
         <div className="tp-footer-subscribe-bg-two theme-yellow-bg pt-30 pb-20 z-index pl-60 pr-60">
           <div className="row align-items-center">

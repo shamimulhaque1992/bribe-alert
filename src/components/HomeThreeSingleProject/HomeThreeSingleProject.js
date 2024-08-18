@@ -9,10 +9,10 @@ const HomeThreeSingleProject = ({ column, columnTwo, image_num, title, subTitle 
    const [photoIndex, setPhotoIndex] = useState(0);
    const [open, setOpen] = useState(false);
    const images = [
-      'assets/img/project/project-5.jpg',
-      'assets/img/project/project-6.jpg',
-      'assets/img/project/project-7.jpg',
-      'assets/img/project/project-8.jpg',
+      '/assets/img/project/project-5.jpg',
+      '/assets/img/project/project-6.jpg',
+      '/assets/img/project/project-7.jpg',
+      '/assets/img/project/project-8.jpg',
    ]
    return (
       <>
@@ -31,7 +31,7 @@ const HomeThreeSingleProject = ({ column, columnTwo, image_num, title, subTitle 
          <div className={`col-xl-${column} col-lg-${column} col-md-${columnTwo}`}>
             <div className="tp-project-three mb-30 wow fadeInUp" data-wow-delay=".4s">
                <div className="tp-project-three-img">
-                  <img src={`assets/img/project/project-${image_num}.jpg`} className="img" alt="img-not-found" />
+                  <img src={`/assets/img/project/project-${image_num}.jpg`} className="img" alt="img-not-found" />
                   <div className="tp-project-three-img-overlay">
                      <div className="tp-project-three-img-overlay-text">
                         <div onClick={() => setOpen(true)} className="tp-project-three-img-overlay-text-icon">

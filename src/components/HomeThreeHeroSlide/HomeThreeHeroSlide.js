@@ -7,7 +7,7 @@ const HomeThreeHeroSlide = () => {
             <div className="tp-single-slider-three tp-slider-height-three d-flex align-items-center swiper-slide" data-swiper-autoplay="5000">
                 <div className="slide-bg slide_bg_three"></div>
                 <div className="slider-img-three">
-                    <img src="assets/img/slider/slider-img-3.png" className="img-fluid" alt="img not found" />
+                    <img src="/assets/img/slider/slider-img-3.png" className="img-fluid" alt="img not found" />
                 </div>
                 <div className="container">
                     <div className="row">
@@ -15,7 +15,7 @@ const HomeThreeHeroSlide = () => {
                             <div className="tp-slider-three z-index">
 
                                 <Fade left>
-                                    <h6 className="tp-slider-three-subtitle" ><img src="assets/img/icon/slider-icon-1.png" className="img-fluid" alt="img not found" /> Fast and efficient service</h6>
+                                    <h6 className="tp-slider-three-subtitle" ><img src="/assets/img/icon/slider-icon-1.png" className="img-fluid" alt="img not found" /> Fast and efficient service</h6>
                                 </Fade>
 
                                 <Fade right>

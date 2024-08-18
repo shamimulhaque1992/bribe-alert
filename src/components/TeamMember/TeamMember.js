@@ -11,7 +11,7 @@ const TeamMember = ({ image_no, name, title }) => {
             <div className="tp-service-two text-center mb-45 wow fadeInUp" data-wow-delay="1.3s">
                <div className="tp-service-two-img mb-35">
                   <div className="tp-service-two-img-box">
-                     <img src={`assets/img/service/service-${image_no}.jpg`} className="img-fluid" alt="img not found" />
+                     <img src={`/assets/img/service/service-${image_no}.jpg`} className="img-fluid" alt="img not found" />
                   </div>
                   <div className="tp-service-two-icon-wrapper">
                      <div className="tp-service-two-icon">
