@@ -5,22 +5,21 @@ const MegaDropDown = ({ services, selectedItem, handleCloseDropdown }) => {
     <div className="row mb-4">
       <div className="col-12">
         <div className="dropdown-content">
-          <div className="dropdown-header d-flex justify-content-between">
+          <div className="dropdown-header d-flex justify-content-between text-wrap">
             <h4>{services[selectedItem].title}</h4>
             <div
-              className="close-button btn border"
+              className="close-button btn border d-flex justify-content-center align-items-center"
               onClick={handleCloseDropdown}
+              style={{ maxWidth: "40px", maxHeight: "40px" }}
             >
               <img
-                style={{ width: "20px" }}
+                style={{ maxWidth: "20px", maxHeight: "20px" }}
                 src="/assets/img/icon/close-black-circle.png"
                 alt=""
               />
             </div>
           </div>
-          <p>
-            {services[selectedItem].description}.
-          </p>
+          <p>{services[selectedItem].description}.</p>
         </div>
       </div>
     </div>

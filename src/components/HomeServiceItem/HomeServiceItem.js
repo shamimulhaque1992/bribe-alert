@@ -9,7 +9,7 @@ const HomeServiceItem = ({
   description,
 }) => {
   return (
-    <div className="col-xl-4 col-sm-6 mb-5">
+    <div className="col-xl-4 col-md-6 mb-5">
       <div
         className={`tp-services white-bg mb-30 wow fadeInUp pb-0 ${
           isActive ? "active" : ""
@@ -23,7 +23,7 @@ const HomeServiceItem = ({
         </div>
         <div className="tp-services-text fix ">
           <h4 className="tp-services-text-title mb-15 hover-theme-color">
-            <Link to="/servicesDetails">{title}</Link>
+            {title}
           </h4>
           <p className="mb-20">{description}</p>
         </div>

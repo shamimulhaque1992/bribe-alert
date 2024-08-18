@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Sidebar from "../../Sidebar/Sidebar";
 import { FaBars } from "react-icons/fa";
+import { useMediaQuery } from "react-responsive";
 
 const Navigation = () => {
   const [show, setShow] = useState(false);
-
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
+  const isLaptopOrDesktop = useMediaQuery({ minWidth: 1024 });
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   // sticky state
@@ -105,8 +108,8 @@ const Navigation = () => {
           <div
             className={
               sticky
-                ? "sticky-menu tp-header-menu-area tp-transparent-header-menu header-sticky"
-                : "tp-header-menu-area tp-transparent-header-menu header-sticky mt-3"
+                ? "sticky-menu tp-header-menu-area tp-transparent-header-menu header-sticky py-1"
+                : "tp-header-menu-area tp-transparent-header-menu header-sticky mt-3 py-1"
             }
           >
             <div className="container">
@@ -115,7 +118,7 @@ const Navigation = () => {
                   <div className="tp-sticky-logo">
                     <Link to="/">
                       <img
-                        style={{ maxWidth: "100px" }}
+                        style={{ maxWidth: isMobile ? "65px" : "100px" }}
                         src="/assets/img/logo/bribe-logo.png"
                         className="img-fluid"
                         alt="logo not found"

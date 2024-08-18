@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import HomeServiceItem from "../../../../components/HomeServiceItem/HomeServiceItem";
 import MegaDropDown from "../../../../components/MegaDropDown/MegaDropDown";
+import { useMediaQuery } from "react-responsive";
 
 const ServiceArea = () => {
   const [selectedItem, setSelectedItem] = useState(null);
+  // Media queries to detect device types
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
+  const isLaptopOrDesktop = useMediaQuery({ minWidth: 1024 });
+
+  // Determine number of items per row based on device type
+  const itemsPerRow = isMobile ? 1 : isTablet ? 2 : 3;
 
   const handleItemClick = (itemIndex) => {
     setSelectedItem(selectedItem === itemIndex ? null : itemIndex);
@@ -38,14 +46,14 @@ const ServiceArea = () => {
   ];
 
   const rows = [];
-  for (let i = 0; i < services.length; i += 3) {
-    rows.push(services.slice(i, i + 3));
+  for (let i = 0; i < services.length; i += itemsPerRow) {
+    rows.push(services.slice(i, i + itemsPerRow));
   }
 
   return (
     <section className="tp-services-area theme-dark-bg pb-5 pt-5">
       <div className="tp-custom-container">
-        <div className="tp-services-bg grey-bg pt-120 pb-90 z-index">
+        <div className="tp-services-bg grey-bg pt-60 pb-90 z-index">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-8">
@@ -69,18 +77,25 @@ const ServiceArea = () => {
                       icon_name={service.icon_name}
                       title={service.title}
                       description={service.description}
-                      onClick={() => handleItemClick(rowIndex * 3 + index)}
-                      isActive={selectedItem === rowIndex * 3 + index}
+                      onClick={() =>
+                        handleItemClick(rowIndex * itemsPerRow + index)
+                      }
+                      isActive={selectedItem === rowIndex * itemsPerRow + index}
                     />
                   ))}
                 </div>
+                {/* MegaDropDown Positioning Logic */}
                 {selectedItem !== null &&
-                  Math.floor(selectedItem / 3) === rowIndex && (
+                  ((isMobile &&
+                    selectedItem >= rowIndex * itemsPerRow &&
+                    selectedItem < (rowIndex + 1) * itemsPerRow) ||
+                    ((isTablet || isLaptopOrDesktop) &&
+                      Math.floor(selectedItem / itemsPerRow) === rowIndex)) && (
                     <MegaDropDown
                       services={services}
                       selectedItem={selectedItem}
                       handleCloseDropdown={handleCloseDropdown}
-                    ></MegaDropDown>
+                    />
                   )}
               </React.Fragment>
             ))}

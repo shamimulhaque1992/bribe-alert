@@ -15,6 +15,7 @@ import { Carousel } from "react-bootstrap";
 import HomeHeroSingleSlide from "../../../../components/HomeHeroSingleSlide/HomeHeroSingleSlide";
 import MapComponent from "../../../../components/MapComponent/MapComponent";
 import instance from "../../../../instance/api_instance";
+import { useMediaQuery } from "react-responsive";
 
 // install Swiper modules
 SwiperCore.use([Pagination, Autoplay, A11y, EffectFade, EffectCards]);
@@ -27,6 +28,9 @@ const HeroMapSection = () => {
   const [allReportsByDivision, setAllReportsByDivision] = useState([]);
   const [sidebarContent, setSidebarContent] = useState({});
   const [loading, setLoading] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
+  const isLaptopOrDesktop = useMediaQuery({ minWidth: 1024 });
 
   useEffect(() => {
     const getAllReports = () => {
@@ -110,7 +114,7 @@ const HeroMapSection = () => {
   return (
     <>
       <section
-        className="tp-slider-area fix pt-5  wow fadeInUp"
+        className="tp-slider-area fix pt-5  wow fadeInUp "
         style={{ backgroundColor: "#edf3f1" }}
       >
         <div className="container tp-slider-active home_hero_slide swiper-container common-dots ">
@@ -118,7 +122,7 @@ const HeroMapSection = () => {
             {/* Top Section */}
             <div
               style={{
-                width: "70%",
+                maxWidth: "100%",
                 margin: "0 auto",
                 display: "flex",
                 justifyContent: "space-between",
@@ -170,76 +174,89 @@ const HeroMapSection = () => {
                 justifyContent: "space-between",
                 marginTop: "40px",
               }}
-              className="d-flex flex-column flex-lg-row justify-content-between"
+              className="d-flex flex-column flex-lg-row justify-content-between w-100"
             >
               {/* Left Section: Statistics */}
               <div
                 style={{
                   width: "100%",
-                  paddingRight: "20px",
                 }}
-                className="d-flex justify-content-center pr-5"
+                className="d-flex justify-content-center w-100 "
               >
-                <div className="d-inline-block pr-5">
-                  <div>
+                <div
+                  className="d-inline-block w-100 d-flex flex-column align-items-center"
+                  style={{ width: "fit-content" }}
+                >
+                  <div className={`${isMobile ? "w-100" :isTablet?"w-75": "w-50"}`}>
                     <h2>{hoveredDivision}</h2>
                     <hr
                       style={{
                         height: "10px",
-                        width: "75%",
+                        width: "70%",
                         backgroundColor: "#ffc000",
                       }}
                     />
                   </div>
+                  <div
+                    className={`d-flex flex-rwo flex-lg-column justify-content-between align-items-start ${
+                      isMobile ? "w-100" :isTablet?"w-75": "w-50"
+                    }`}
+                    // style={{ width: "fit-content" }}
+                  >
+                    <div>
+                      <div className="mb-2">
+                        <h4 style={{ fontWeight: "400" }}>Total Reports</h4>
+                        <p style={{ fontWeight: "900" }}>
+                          {allReportsByDivision?.sub_total_reports
+                            ? allReportsByDivision?.sub_total_reports
+                            : 0}
+                        </p>
+                      </div>
+                      <div className="mb-2">
+                        <h4 style={{ fontWeight: "400" }}>Total Amount</h4>
+                        <p style={{ fontWeight: "900" }}>
+                          {allReportsByDivision?.sub_total_amount
+                            ? allReportsByDivision?.sub_total_amount
+                            : 0}{" "}
+                          Taka
+                        </p>
+                      </div>
+                      <div className="mb-2">
+                        <h4 style={{ fontWeight: "400" }}>Bribes Paid</h4>
+                        <p style={{ fontWeight: "900" }}>
+                          {allReportsByDivision?.sub_bribes_paid_count
+                            ? allReportsByDivision?.sub_bribes_paid_count
+                            : 0}
+                        </p>
+                      </div>
+                    </div>
 
-                  <div style={{ marginTop: "20px" }}>
-                    <h4 style={{ fontWeight: "400" }}>Total Reports</h4>
-                    <p style={{ fontWeight: "900" }}>
-                      {allReportsByDivision?.sub_total_reports
-                        ? allReportsByDivision?.sub_total_reports
-                        : 0}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 style={{ fontWeight: "400" }}>Total Amount</h4>
-                    <p style={{ fontWeight: "900" }}>
-                      {allReportsByDivision?.sub_total_amount
-                        ? allReportsByDivision?.sub_total_amount
-                        : 0}{" "}
-                      Taka
-                    </p>
-                  </div>
-                  <div>
-                    <h4 style={{ fontWeight: "400" }}>Bribes Paid</h4>
-                    <p style={{ fontWeight: "900" }}>
-                      {allReportsByDivision?.sub_bribes_paid_count
-                        ? allReportsByDivision?.sub_bribes_paid_count
-                        : 0}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 style={{ fontWeight: "400" }}>Bribe Fighters</h4>
-                    <p style={{ fontWeight: "900" }}>
-                      {allReportsByDivision.sub_bribe_fighter_count
-                        ? allReportsByDivision.sub_bribe_fighter_count
-                        : 0}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 style={{ fontWeight: "400" }}>Honest Officers</h4>
-                    <p style={{ fontWeight: "900" }}>
-                      {allReportsByDivision.sub_honest_officer_count
-                        ? allReportsByDivision.sub_honest_officer_count
-                        : 0}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 style={{ fontWeight: "400" }}>Bribe Hotline</h4>
-                    <p style={{ fontWeight: "900" }}>
-                      {allReportsByDivision.bribeHotline
-                        ? allReportsByDivision.bribeHotline
-                        : 0}
-                    </p>
+                    <div className="">
+                      <div className="mb-2">
+                        <h4 style={{ fontWeight: "400" }}>Bribe Fighters</h4>
+                        <p style={{ fontWeight: "900" }}>
+                          {allReportsByDivision.sub_bribe_fighter_count
+                            ? allReportsByDivision.sub_bribe_fighter_count
+                            : 0}
+                        </p>
+                      </div>
+                      <div className="mb-2">
+                        <h4 style={{ fontWeight: "400" }}>Honest Officers</h4>
+                        <p style={{ fontWeight: "900" }}>
+                          {allReportsByDivision.sub_honest_officer_count
+                            ? allReportsByDivision.sub_honest_officer_count
+                            : 0}
+                        </p>
+                      </div>
+                      <div className="mb-2">
+                        <h4 style={{ fontWeight: "400" }}>Bribe Hotline</h4>
+                        <p style={{ fontWeight: "900" }}>
+                          {allReportsByDivision.bribeHotline
+                            ? allReportsByDivision.bribeHotline
+                            : 0}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
