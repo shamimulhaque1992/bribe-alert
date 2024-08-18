@@ -140,7 +140,7 @@ const Footer = () => {
                   className="tp-footer-widget footer-col-4 mb-30 wow fadeInUp"
                   data-wow-delay="1.2s"
                 >
-                  <h4 className="tp-footer-widget-title mb-40">Instagram</h4>
+                  <h4 className="tp-footer-widget-title mb-40">Partners</h4>
                   <div className="tp-footer-insta">
                     <a href="/">
                       <img
@@ -196,8 +196,8 @@ const Footer = () => {
               <div className="col-12">
                 <div className="tp-copyright tp-copyright-two text-center">
                   <p className="m-0">
-                    Copyright ©2022 <span>Theme_pure</span>. All Rights Reserved
-                    Copyright
+                    Copyright ©{new Date().getFullYear()}{" "}
+                    <span>BribeAlert</span>. All Rights Reserved Copyright
                   </p>
                 </div>
               </div>

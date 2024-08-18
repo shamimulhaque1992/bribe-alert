@@ -6,11 +6,13 @@ import CtaArea from "../Home/Home/CtaArea/CtaArea";
 
 const IPaidABribe = () => {
   const reportType = "paid_a_bribe";
+  const title = "Are you a";
+  const SubTitle = "Victim of Bribery?";
 
   return (
     <div>
       <Navigation />
-      <AboutBreadcrumb />
+      <AboutBreadcrumb title={title} SubTitle={SubTitle} />
 
       <CtaArea reportType={reportType}></CtaArea>
       <Footer />

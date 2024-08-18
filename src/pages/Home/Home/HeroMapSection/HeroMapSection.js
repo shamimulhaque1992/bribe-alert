@@ -118,7 +118,7 @@ const HeroMapSection = () => {
             {/* Top Section */}
             <div
               style={{
-                width: "80%",
+                width: "70%",
                 margin: "0 auto",
                 display: "flex",
                 justifyContent: "space-between",

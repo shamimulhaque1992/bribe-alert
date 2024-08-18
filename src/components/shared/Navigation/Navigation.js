@@ -123,7 +123,7 @@ const Navigation = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="col-xl-9 col-4">
+                <div className="col-xl-10 col-4">
                   <div className="tp-main-menu-bg">
                     <div className="tp-main-menu">
                       <nav id="tp-mobile-menu">

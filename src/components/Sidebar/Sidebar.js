@@ -1,29 +1,26 @@
-import React from 'react';
-import { Offcanvas } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import { FaFacebookF } from 'react-icons/fa';
-import { AiOutlineGoogle } from 'react-icons/ai';
-import { BsTwitter, BsInstagram } from 'react-icons/bs';
-import Collapsible from 'react-collapsible';
+import React from "react";
+import { Offcanvas } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import { FaFacebookF } from "react-icons/fa";
+import { AiOutlineGoogle } from "react-icons/ai";
+import { BsTwitter, BsInstagram } from "react-icons/bs";
+import Collapsible from "react-collapsible";
 
 const Sidebar = ({ show, handleClose }) => {
-   const Home = <NavLink to="/home">Home</NavLink>
-   const Pages = <NavLink to="/">Pages </NavLink>
-   const Services = <NavLink to="/services">Services </NavLink>
-   const Projects = <NavLink to="/projects">Projects</NavLink>
-   const Blog = <NavLink to="/blogs">Blog</NavLink>
-   return (
-      <>
-
-         <div className='side__bar'>
-            <Offcanvas show={show} onHide={handleClose} placement='end'>
-               <Offcanvas.Header closeButton>
-                  {/* <Offcanvas.Title>Offcanvas</Offcanvas.Title> */}
-               </Offcanvas.Header>
-               <Offcanvas.Body>
-
-
-                  <Collapsible trigger={Home} triggerTagName="div"
+  const Home = <NavLink to="/home">Home</NavLink>;
+  const Pages = <NavLink to="/">Pages </NavLink>;
+  const Services = <NavLink to="/services">Services </NavLink>;
+  const Projects = <NavLink to="/projects">Projects</NavLink>;
+  const Blog = <NavLink to="/blogs">Blog</NavLink>;
+  return (
+    <>
+      <div className="side__bar">
+        <Offcanvas show={show} onHide={handleClose} placement="end">
+          <Offcanvas.Header closeButton>
+            {/* <Offcanvas.Title>Offcanvas</Offcanvas.Title> */}
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            {/* <Collapsible trigger={Home} triggerTagName="div"
                      triggerOpenedClassName="icon_close" triggerClassName="iconAdd" open={false}>
                      <ul className="sidebar_sub_menu text-white mt-3">
                         <li><NavLink to="/">Home Style 1</NavLink></li>
@@ -66,40 +63,107 @@ const Sidebar = ({ show, handleClose }) => {
                         <li><NavLink to="/blogs">Blog Sidebar</NavLink></li>
                         <li><NavLink to="/blogDetails">Blog Details</NavLink></li>
                      </ul>
-                  </Collapsible>
+                  </Collapsible> */}
 
-                  <div className='contact_nav text-white font-bold'>
-                     <NavLink className="font-bold" to="/contact">Contact</NavLink>
+            <div className="contact_nav text-white font-bold mb-2">
+              <NavLink className="font-bold" to="/">
+                Home
+              </NavLink>
+            </div>
+            <div className="contact_nav text-white font-bold mb-2">
+              <NavLink className="font-bold" to="/about">
+                About us
+              </NavLink>
+            </div>
+            <div className="contact_nav text-white font-bold mb-2">
+              <NavLink className="font-bold" to="/resource">
+                Resource
+              </NavLink>
+            </div>
+            <div className="contact_nav text-white font-bold mb-2">
+              <NavLink className="font-bold" to="/i-paid-a-bribe">
+                Paid a bribe
+              </NavLink>
+            </div>
+            <div className="contact_nav text-white font-bold mb-2">
+              <NavLink className="font-bold" to="/i-am-a-bribe-fighter">
+                Bribe fighter
+              </NavLink>
+            </div>
+            <div className="contact_nav text-white font-bold mb-2">
+              <NavLink className="font-bold" to="/i-met-an-hones-officer">
+                Honest officer
+              </NavLink>
+            </div>
+            <div className="contact_nav text-white font-bold mb-2">
+              <NavLink className="font-bold" to="/partnerships">
+                Partners
+              </NavLink>
+            </div>
+            <div className="contact_nav text-white font-bold mb-2">
+              <NavLink className="font-bold" to="/blogs">
+                Blogs
+              </NavLink>
+            </div>
+            <div className="contact_nav text-white font-bold mb-2">
+              <NavLink className="font-bold" to="/contact">
+                Contact
+              </NavLink>
+            </div>
+            <div className="fix">
+              <div className="side-info">
+                <div className="side-info-content">
+                  <div className="tp-mobile-menu"></div>
+                  <div className="contact-infos mb-30">
+                    <div className="contact-list mb-30">
+                      <h4>Contact Info</h4>
+                      <ul>
+                        <li>
+                          <i className="flaticon-pin"></i>28/4 Palmal, London
+                        </li>
+                        <li>
+                          <i className="flaticon-email"></i>
+                          <a href="mailto:email@bribealert.com">
+                            email@bribealert.com
+                          </a>
+                        </li>
+                        <li>
+                          <i className="flaticon-phone-call"></i>
+                          <a href="tel:33388820055">333 888 200 - 55</a>
+                        </li>
+                      </ul>
+                      <div className="sidebar__menu--social">
+                        <a className="text-white" href="/">
+                          <i>
+                            <FaFacebookF className="icon" />{" "}
+                          </i>
+                        </a>
+                        <a className="text-white" href="/">
+                          <i>
+                            <BsTwitter className="icon" />{" "}
+                          </i>
+                        </a>
+                        <a className="text-white" href="/">
+                          <i>
+                            <BsInstagram className="icon" />{" "}
+                          </i>
+                        </a>
+                        <a className="text-white" href="/">
+                          <i>
+                            <AiOutlineGoogle className="icon" />{" "}
+                          </i>
+                        </a>
+                      </div>
+                    </div>
                   </div>
-
-                  <div className="fix">
-                     <div className="side-info">
-                        <div className="side-info-content">
-                           <div className="tp-mobile-menu"></div>
-                           <div className="contact-infos mb-30">
-                              <div className="contact-list mb-30">
-                                 <h4>Contact Info</h4>
-                                 <ul>
-                                    <li><i className="flaticon-pin"></i>28/4 Palmal, London</li>
-                                    <li><i className="flaticon-email"></i><a href="mailto:email@bribealert.com">email@bribealert.com</a></li>
-                                    <li><i className="flaticon-phone-call"></i><a href="tel:33388820055">333 888 200 - 55</a></li>
-                                 </ul>
-                                 <div className="sidebar__menu--social">
-                                    <a className="text-white" href="/"><i><FaFacebookF className='icon' /> </i></a>
-                                    <a className="text-white" href="/"><i><BsTwitter className='icon' /> </i></a>
-                                    <a className="text-white" href="/"><i><BsInstagram className='icon' /> </i></a>
-                                    <a className="text-white" href="/"><i><AiOutlineGoogle className='icon' /> </i></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </Offcanvas.Body>
-            </Offcanvas>
-         </div>
-      </>
-   );
+                </div>
+              </div>
+            </div>
+          </Offcanvas.Body>
+        </Offcanvas>
+      </div>
+    </>
+  );
 };
 
 export default Sidebar;

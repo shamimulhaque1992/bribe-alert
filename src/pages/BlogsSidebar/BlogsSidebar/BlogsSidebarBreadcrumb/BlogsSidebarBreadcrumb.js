@@ -4,7 +4,7 @@ import Breadcrumb from '../../../../components/Breadcrumb/Breadcrumb';
 const BlogsSidebarBreadcrumb = () => {
     return (
         <>
-            <Breadcrumb title="Blog" subTitle="Sidebar" smText='Blog Sidebar'></Breadcrumb>
+            <Breadcrumb title="All" subTitle="Blogs" smText='Blogs'></Breadcrumb>
         </>
     );
 };

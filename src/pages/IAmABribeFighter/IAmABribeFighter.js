@@ -6,10 +6,12 @@ import CtaArea from "../Home/Home/CtaArea/CtaArea";
 
 const IAmABribeFighter = () => {
   const reportType = "bribe_fighter";
+  const title = "Are you";
+  const SubTitle = "A Bribe Fighter?";
   return (
     <div>
       <Navigation />
-      <AboutBreadcrumb />
+      <AboutBreadcrumb title={title} SubTitle={SubTitle} />
       <CtaArea reportType={reportType}></CtaArea>
       <Footer />
     </div>
