@@ -19,6 +19,7 @@ import { WOW } from "wowjs";
 import ScrollToTop from "./components/ScrollToTop";
 import HomeTwo from "./pages/HomeTwo/HomeTwo/HomeTwo";
 import HomeThree from "./pages/HomeThree/HomeThree/HomeThree";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   // wow animation active
@@ -48,10 +49,12 @@ const App = () => {
           <Route path="/partnerships" element={<Projects />} />
           <Route path="/projectsDetails" element={<ProjectsDetails />} />
           <Route path="/blogs" element={<BlogsSidebar />} />
+          <Route path="/blogDetails/:id" element={<BlogDetails />} />
           <Route path="/blogDetails" element={<BlogDetails />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
+      <Toaster></Toaster>
     </>
   );
 };

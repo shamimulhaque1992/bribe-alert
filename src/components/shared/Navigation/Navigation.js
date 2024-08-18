@@ -64,7 +64,7 @@ const Navigation = () => {
                     <Link to="/">
                       <img
                         style={{ maxWidth: "90px" }}
-                        src="assets/img/logo/bribe-logo.png"
+                        src="/assets/img/logo/bribe-logo.png"
                         className="img-fluid"
                         alt="logo not found"
                       />
@@ -116,7 +116,7 @@ const Navigation = () => {
                     <Link to="/">
                       <img
                         style={{ maxWidth: "100px" }}
-                        src="assets/img/logo/bribe-logo.png"
+                        src="/assets/img/logo/bribe-logo.png"
                         className="img-fluid"
                         alt="logo not found"
                       />

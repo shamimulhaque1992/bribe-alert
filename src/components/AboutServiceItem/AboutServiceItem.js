@@ -11,7 +11,7 @@ const AboutServiceItem = ({servicer_img,name,title}) => {
          data-wow-delay=".4s">
             <div className="tp-service-two-img mb-35">
                <div className="tp-service-two-img-box">
-                  <img src={`assets/img/service/service-${servicer_img}.jpg`}
+                  <img src={`/assets/img/service/service-${servicer_img}.jpg`}
                   className="img-fluid" alt="img not found" />
                </div>
                <div className="tp-service-two-icon-wrapper">

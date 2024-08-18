@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "headline": "Why Reporting Bribes Matters: How Your Voice Can Drive Change",
     "image_link": "",
     "introduction": "Corruption will continue to be a pervasive issue that undermines the integrity of institutions and hinders societal progress. It will breed inequality, stifle economic development, and erode public trust in governance. Addressing corruption will require not just top-down initiatives but also grassroots involvement from citizens. Collective action will play a crucial role in tackling this problem, and one powerful way individuals will contribute is by reporting bribery.",
@@ -7,6 +8,7 @@
     "conclusion": "Your voice will be a powerful tool in the fight against corruption. By reporting bribery, you will contribute to exposing corrupt practices, fostering a culture of accountability, and driving meaningful change. If you witness or are aware of any instances of bribery, we will urge you to take action and report it through Bribe Alert. Together, we will create a society where transparency and integrity are the norm. For more information on how to report bribery and to access additional resources, visit Bribe Alert’s reporting platform. Your contribution will be vital in the ongoing effort to combat corruption and build a fairer world."
   },
   {
+    "id": 2,
     "headline": "The Systemic Roots of Corruption: Understanding the C = M + D – A Formula",
     "image_link": "",
     "introduction": "Corruption often thrives in environments where certain systemic factors are present. The formula C = M + D – A (Corruption = Monopoly + Discretion – Accountability) provides a framework for understanding the underlying conditions that facilitate corrupt practices. By dissecting this formula, we can better comprehend how corruption takes root and what can be done to counteract it.",
@@ -14,6 +16,7 @@
     "conclusion": "Understanding the systemic roots of corruption through the C = M + D – A formula provides valuable insights into how corrupt practices develop and persist. By addressing issues related to monopolistic control, discretionary power, and accountability, we can work towards meaningful systemic change. Engaging with platforms like Bribe Alert and reporting instances of corruption will be crucial steps in this process."
   },
   {
+    "id": 3,
     "headline": "Success Stories: Countries That Overcame Corruption and What We Can Learn",
     "image_link": "",
     "introduction": "Corruption remains a formidable global challenge, impacting societies, economies, and governance systems across the world. Yet, there is hope—several countries have managed to significantly reduce corruption through dedicated efforts and strategic reforms. By examining these success stories, we can gain valuable insights into what works and how similar approaches might be applied to other contexts, including Bangladesh.",
@@ -21,6 +24,7 @@
     "conclusion": "The success stories of countries like Hong Kong, Bolivia, Singapore, Estonia, and Rwanda demonstrate that it is possible to make substantial progress in reducing corruption through targeted reforms, strong leadership, and public engagement. While each country’s context is unique, the lessons learned from these examples offer valuable guidance for Bangladesh as it continues its fight against corruption. By adopting similar strategies, strengthening institutions, and empowering citizens, Bangladesh can work towards a future with greater transparency and integrity."
   },
   {
+    "id": 4,
     "headline": "Understanding the Psychology of Corruption: Why People Engage in Bribery",
     "image_link": "",
     "introduction": "Bribery is a complex issue that extends beyond mere legality; it involves deep-seated psychological, cultural, and systemic factors. To effectively combat corruption, it is crucial to understand why individuals might resort to bribery. By examining these underlying reasons, we can develop more effective strategies to address and reduce corrupt behavior.",
@@ -28,6 +32,7 @@
     "conclusion": "Understanding the psychology behind bribery reveals that addressing the issue involves more than just enforcing laws. It requires tackling psychological, cultural, and systemic factors that drive individuals towards corrupt behavior. By addressing both the mental and emotional drivers and implementing systemic reforms, we can work towards a more transparent and ethical society.\n\nEngage with Bribe Alert to be part of the solution. Reporting instances of bribery not only helps in curbing corrupt practices but also contributes to shifting societal attitudes and fostering a culture of integrity. Visit Bribe Alert’s reporting platform to take action and support the fight against corruption."
   },
   {
+    "id": 5,
     "headline": "The Economic Impact of Corruption: How Bribes Affect Us All",
     "image_link": "",
     "introduction": "Corruption is not just a matter of ethical concern; it has profound economic consequences that affect individuals, businesses, and entire nations. Bribery and other forms of corruption create inefficiencies, distort markets, and undermine economic growth. Understanding these economic impacts highlights the urgency of addressing corruption to foster a more prosperous and equitable society.",
@@ -35,6 +40,7 @@
     "conclusion": "Addressing corruption is not just a matter of enforcing laws; it is essential for improving economic conditions and fostering a fairer, more efficient society. By tackling bribery and other corrupt practices, we can enhance the quality of public services, stimulate economic growth, reduce everyday costs, and promote national prosperity.\n\nTake action today by reporting bribery through Bribe Alert’s reporting platform. Your contribution will help in the fight against corruption and support efforts to create a more transparent and prosperous economic environment for all."
   },
   {
+    "id": 6,
     "headline": "The Role of Youth in Combating Corruption: Empowering the Next Generation",
     "image_link": "",
     "introduction": "Youth have the potential to drive significant change in the fight against corruption. Their unique perspectives, energy, and innovative approaches can rejuvenate anti-corruption efforts and bring about meaningful progress. By actively involving young people in these initiatives, we can harness their potential to create a more transparent and just society.",
@@ -42,6 +48,7 @@
     "conclusion": "The role of youth in combating corruption is both critical and transformative. By empowering young people through education, activism, and mentorship, we can build a future where transparency, integrity, and justice are the norm. Encouraging youth to engage in anti-corruption efforts not only strengthens the fight against corruption but also lays the foundation for a more equitable and sustainable society.\n\nBribe Alert provides a platform for young people to take action and contribute to the fight against corruption. Join us in empowering the next generation to lead with integrity and create a brighter future for all."
   },
   {
+    "id": 7,
     "headline": "Fighting Corruption in Government: A Path to Transparency and Accountability",
     "image_link": "",
     "introduction": "Government corruption erodes public trust, weakens institutions, and undermines democracy. Addressing corruption within government structures is crucial for ensuring transparency, accountability, and equitable governance. This article explores key strategies for fighting corruption in government and highlights the importance of citizen involvement in this effort.",
