@@ -22,7 +22,6 @@ const MapComponent = ({ setHoveredDivision }) => {
       style={{
         width: "100%",
         paddingLeft: "20px",
-        backgroundColor: "#f0f0f0",
       }}
     >
       <MapSvgUpdate setHoveredDivision={setHoveredDivision}></MapSvgUpdate>
