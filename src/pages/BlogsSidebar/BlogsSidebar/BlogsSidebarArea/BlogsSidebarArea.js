@@ -35,7 +35,7 @@ const BlogsSidebarArea = () => {
           <div className="tp-custom-container-box">
             <div className="row">
               <div className="col-lg-12">
-                <div className="ablog__sidebar--wrapper mr-50">
+                <div className="ablog__sidebar--wrapper">
                   {blogs.map((blog, index) => (
                     <div
                       className="ablog ablog-4 mb-55 wow fadeInUp"

@@ -8,10 +8,11 @@ const IAmABribeFighter = () => {
   const reportType = "bribe_fighter";
   const title = "Are you";
   const SubTitle = "A Bribe Fighter?";
+  const smallText = "Bribe Fighter";
   return (
     <div>
       <Navigation />
-      <AboutBreadcrumb title={title} SubTitle={SubTitle} />
+      <AboutBreadcrumb title={title} SubTitle={SubTitle}smallText={smallText} />
       <CtaArea reportType={reportType}></CtaArea>
       <Footer />
     </div>

@@ -8,7 +8,7 @@ import { useMediaQuery } from "react-responsive";
 const Navigation = () => {
   const [show, setShow] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
+  const isTablet = useMediaQuery({ minWidth: 1200, maxWidth: 1399 });
   const isLaptopOrDesktop = useMediaQuery({ minWidth: 1024 });
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -28,8 +28,11 @@ const Navigation = () => {
         <div className="tp-header-area">
           <div className="tp-header-top theme-dark-bg pt-20 pb-50 d-none d-xl-block">
             <div className="tp-custom-container">
-              <div className="row align-items-center">
-                <div className="col-xxl-4 col-xl-5">
+              <div
+                className={`row align-items-center justify-content-center justify-content-xl-between justify-content-xxl-between `}
+                style={{ maxWidth: isTablet?"830px":"966px", margin: "0 auto" }}
+              >
+                {/* <div className="col-xxl-4 col-xl-5">
                   <div className="tp-header-top-info">
                     <div className="tp-header-top-info-single pr-40 mr-40 border-right-1">
                       <div className="tp-header-top-info-single-icon mr-10">
@@ -61,9 +64,9 @@ const Navigation = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-xxl-4 col-xl-2">
-                  <div className="header-logo text-center">
+                </div> */}
+                <div className="col-xxl-5 col-xl-2 px-0">
+                  <div className="header-logo text-left">
                     <Link to="/">
                       <img
                         style={{ maxWidth: "90px" }}
@@ -74,9 +77,9 @@ const Navigation = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="col-xxl-4 col-xl-5">
+                <div className="col-xxl-5 col-xl-5 px-0">
                   <div className="tp-header-top-info justify-content-end">
-                    <div className="tp-header-top-info-single mr-85">
+                    {/* <div className="tp-header-top-info-single mr-85">
                       <div className="tp-header-top-info-single-icon tp-header-top-info-single-icon-call mr-10">
                         <i className="flaticon-phone-call"></i>
                       </div>
@@ -91,11 +94,12 @@ const Navigation = () => {
                           333 888 200 - 55
                         </a>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="tp-header-top-info-single">
                       <div className="tp-header-top-info-single-btn">
-                        <Link to="/contact" className="yellow-btn">
-                          {/* <i className="flaticon-enter"></i> */} Contact us
+                        <Link to="/i-paid-a-bribe" className="yellow-btn">
+                          {/* <i className="flaticon-enter"></i> */} Report a
+                          Bribe
                         </Link>
                       </div>
                     </div>
@@ -126,145 +130,179 @@ const Navigation = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="col-xl-10 col-4">
-                  <div className="tp-main-menu-bg">
+                <div className="col-xl-9 col-4">
+                  <div className="tp-main-menu-bg mx-0">
                     <div className="tp-main-menu">
                       <nav id="tp-mobile-menu">
                         <ul className="text-center">
                           <li className="menu-item-has-children">
-                            <NavLink to="/">Home</NavLink>
+                            <NavLink
+                              style={{ fontSize: isTablet ? "15px" : "17px" }}
+                              to="/"
+                            >
+                              Home
+                            </NavLink>
                             {/* <ul className="sub-menu">
-                                  <li><NavLink to="/">Home Style 1</NavLink></li>
-                                  <li><NavLink to="/homeTwo">Home Style 2</NavLink></li>
-                                  <li><NavLink to="/homeThree">Home Style 3</NavLink></li>
+                                  <li><NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/">Home Style 1</NavLink></li>
+                                  <li><NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/homeTwo">Home Style 2</NavLink></li>
+                                  <li><NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/homeThree">Home Style 3</NavLink></li>
                                 </ul> */}
                           </li>
                           <li className="menu-item-has-children">
-                            <NavLink to="/about">About us</NavLink>
+                            <NavLink
+                              style={{ fontSize: isTablet ? "15px" : "17px" }}
+                              to="/about"
+                            >
+                              About Us
+                            </NavLink>
                             {/* <ul className="sub-menu">
                               <li>
-                                <NavLink to="/about">About</NavLink>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/about">About</NavLink>
                               </li>
                               <li>
-                                <NavLink to="/appointment">Appointment</NavLink>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/appointment">Appointment</NavLink>
                               </li>
                               <li>
-                                <NavLink to="/pricing">Pricing</NavLink>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/pricing">Pricing</NavLink>
                               </li>
                               <li>
-                                <NavLink to="/team">Team</NavLink>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/team">Team</NavLink>
                               </li>
                               <li>
-                                <NavLink to="/teamDetails">
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/teamDetails">
                                   Team Details
                                 </NavLink>
                               </li>
                               <li>
-                                <NavLink to="/faq">Faq</NavLink>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/faq">Faq</NavLink>
                               </li>
                             </ul> */}
                           </li>
                           {/* <li className="menu-item-has-children">
-                            <NavLink to="/services">Services </NavLink>
+                            <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/services">Services </NavLink>
                             <ul className="sub-menu">
                               <li>
-                                <NavLink to="/services">Services</NavLink>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/services">Services</NavLink>
                               </li>
                               <li>
-                                <NavLink to="/servicesDetails">
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/servicesDetails">
                                   Services Details
                                 </NavLink>
                               </li>
                             </ul>
                           </li> */}
                           <li className="menu-item-has-children">
-                            <NavLink to="/resource">Resource </NavLink>
-                            {/* <ul className="sub-menu">
-                              <li>
-                                <NavLink to="/services">Services</NavLink>
-                              </li>
-                              <li>
-                                <NavLink to="/servicesDetails">
-                                  Services Details
-                                </NavLink>
-                              </li>
-                            </ul> */}
-                          </li>
-                          <li className="menu-item-has-children">
-                            <NavLink to="/i-paid-a-bribe">
-                              Paid a bribe{" "}
+                            <NavLink
+                              style={{ fontSize: isTablet ? "15px" : "17px" }}
+                              to="/resource"
+                            >
+                              Resource{" "}
                             </NavLink>
                             {/* <ul className="sub-menu">
                               <li>
-                                <NavLink to="/services">Services</NavLink>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/services">Services</NavLink>
                               </li>
                               <li>
-                                <NavLink to="/servicesDetails">
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/servicesDetails">
                                   Services Details
                                 </NavLink>
                               </li>
                             </ul> */}
                           </li>
                           <li className="menu-item-has-children">
-                            <NavLink to="/i-am-a-bribe-fighter">
-                              Bribe fighter{" "}
+                            <NavLink
+                              style={{ fontSize: isTablet ? "15px" : "17px" }}
+                              to="/i-paid-a-bribe"
+                            >
+                              Paid a Bribe{" "}
                             </NavLink>
                             {/* <ul className="sub-menu">
                               <li>
-                                <NavLink to="/services">Services</NavLink>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/services">Services</NavLink>
                               </li>
                               <li>
-                                <NavLink to="/servicesDetails">
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/servicesDetails">
                                   Services Details
                                 </NavLink>
                               </li>
                             </ul> */}
                           </li>
                           <li className="menu-item-has-children">
-                            <NavLink to="/i-met-an-hones-officer">
-                              Honest officer{" "}
+                            <NavLink
+                              style={{ fontSize: isTablet ? "15px" : "17px" }}
+                              to="/i-am-a-bribe-fighter"
+                            >
+                              Bribe Fighter{" "}
                             </NavLink>
                             {/* <ul className="sub-menu">
                               <li>
-                                <NavLink to="/services">Services</NavLink>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/services">Services</NavLink>
                               </li>
                               <li>
-                                <NavLink to="/servicesDetails">
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/servicesDetails">
                                   Services Details
                                 </NavLink>
                               </li>
                             </ul> */}
                           </li>
                           <li className="menu-item-has-children">
-                            <NavLink to="/partnerships">Partnerships</NavLink>
+                            <NavLink
+                              style={{ fontSize: isTablet ? "15px" : "17px" }}
+                              to="/i-met-an-hones-officer"
+                            >
+                              Honest Officer{" "}
+                            </NavLink>
+                            {/* <ul className="sub-menu">
+                              <li>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/services">Services</NavLink>
+                              </li>
+                              <li>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/servicesDetails">
+                                  Services Details
+                                </NavLink>
+                              </li>
+                            </ul> */}
+                          </li>
+                          <li className="menu-item-has-children">
+                            <NavLink
+                              style={{ fontSize: isTablet ? "15px" : "17px" }}
+                              to="/partnerships"
+                            >
+                              Partnerships
+                            </NavLink>
                             {/*  <ul className="sub-menu">
                               <li>
-                                <NavLink to="/partnerships">Partnerships</NavLink>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/partnerships">Partnerships</NavLink>
                               </li>
                               <li>
-                                <NavLink to="/projectsDetails">
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/projectsDetails">
                                   Projects Details
                                 </NavLink>
                               </li>
                             </ul> */}
                           </li>
                           <li className="menu-item-has-children">
-                            <NavLink to="/blogs">Blog</NavLink>
+                            <NavLink
+                              style={{ fontSize: isTablet ? "15px" : "17px" }}
+                              to="/blogs"
+                            >
+                              Blog
+                            </NavLink>
                             {/* <ul className="sub-menu">
                               <li>
-                                <NavLink to="/blogs">
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/blogs">
                                   Blog Sidebar
                                 </NavLink>
                               </li>
                               <li>
-                                <NavLink to="/blogDetails">
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/blogDetails">
                                   Blog Details
                                 </NavLink>
                               </li>
                             </ul> */}
                           </li>
                           {/* <li>
-                            <NavLink to="/contact">Contact</NavLink>
+                            <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/contact">Contact</NavLink>
                           </li> */}
                         </ul>
                       </nav>
@@ -283,13 +321,14 @@ const Navigation = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-xl-1 tp-sticky-column-btn">
+                <div className="col-xl-2 tp-sticky-column-btn">
                   <div className="tp-sticky-btn text-end">
                     <Link
-                      to="/contact"
+                      to="/i-paid-a-bribe"
                       className="theme-btn justify-content-end text-white"
+                      style={{ fontSize: isTablet ? "15px" : "17px" }}
                     >
-                      Contact us
+                      Report a Bribe
                       {/* <i className="flaticon-enter"></i> Free Quote */}
                     </Link>
                   </div>

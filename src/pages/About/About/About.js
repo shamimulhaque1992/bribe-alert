@@ -13,10 +13,11 @@ import WorkingProcess from "./WorkingProcess/WorkingProcess";
 const About = () => {
   const title = "About";
   const SubTitle = "Bribery Alert";
+  const smallText = "About Us";
   return (
     <>
       <Navigation />
-      <AboutBreadcrumb title={title} SubTitle={SubTitle} />
+      <AboutBreadcrumb title={title} SubTitle={SubTitle}smallText={smallText} />
       <AboutArea />
       {/* <WorkingProcess /> */}
       <AboutFaq />

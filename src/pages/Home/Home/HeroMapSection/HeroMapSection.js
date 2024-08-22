@@ -118,11 +118,11 @@ const HeroMapSection = () => {
         style={{ backgroundColor: "#edf3f1" }}
       >
         <div className="container tp-slider-active home_hero_slide swiper-container common-dots ">
-          <div style={{ fontFamily: "Arial, sans-serif" }}>
+          <div>
             {/* Top Section */}
             <div
               style={{
-                maxWidth: "100%",
+                maxWidth: isMobile || isTablet ? "100%" : "65%",
                 margin: "0 auto",
                 display: "flex",
                 justifyContent: "space-between",
@@ -132,8 +132,8 @@ const HeroMapSection = () => {
               }}
             >
               <div style={{ textAlign: "center", flex: 1 }}>
-                <h3 style={{ color: "#ffffff" }}>Cities</h3>
-                <p style={{ color: "#ffffff" }}>
+                <h3 style={{ color: "#ffffff", fontSize: "24px" }}>Cities</h3>
+                <p style={{ color: "#ffffff", fontWeight: "900" }}>
                   {allReports?.top_total_cities}
                 </p>
               </div>
@@ -146,8 +146,8 @@ const HeroMapSection = () => {
                 }}
               ></div>
               <div style={{ textAlign: "center", flex: 1 }}>
-                <h3 style={{ color: "#ffffff" }}>Reports</h3>
-                <p style={{ color: "#ffffff" }}>
+                <h3 style={{ color: "#ffffff", fontSize: "24px" }}>Reports</h3>
+                <p style={{ color: "#ffffff", fontWeight: "900" }}>
                   {allReports?.top_total_reports}
                 </p>
               </div>
@@ -160,8 +160,8 @@ const HeroMapSection = () => {
                 }}
               ></div>
               <div style={{ textAlign: "center", flex: 1 }}>
-                <h3 style={{ color: "#ffffff" }}>Taka</h3>
-                <p style={{ color: "#ffffff" }}>
+                <h3 style={{ color: "#ffffff", fontSize: "24px" }}>Taka</h3>
+                <p style={{ color: "#ffffff", fontWeight: "900" }}>
                   {allReports?.top_total_amount}
                 </p>
               </div>
@@ -187,43 +187,53 @@ const HeroMapSection = () => {
                   className="d-inline-block w-100 d-flex flex-column align-items-center"
                   style={{ width: "fit-content" }}
                 >
-                  <div className={`${isMobile ? "w-100" :isTablet?"w-75": "w-50"}`}>
-                    <h2>{hoveredDivision}</h2>
+                  <div
+                    className={`${
+                      isMobile ? "w-100" : isTablet ? "w-75" : "w-50"
+                    }`}
+                  >
+                    <h2 style={{ fontSize: "24px" }}>{hoveredDivision}</h2>
                     <hr
                       style={{
                         height: "10px",
-                        width: "70%",
+                        width: "20%",
                         backgroundColor: "#ffc000",
                       }}
                     />
                   </div>
                   <div
                     className={`d-flex flex-rwo flex-lg-column justify-content-between align-items-start ${
-                      isMobile ? "w-100" :isTablet?"w-75": "w-50"
+                      isMobile ? "w-100" : isTablet ? "w-75" : "w-50"
                     }`}
                     // style={{ width: "fit-content" }}
                   >
                     <div>
-                      <div className="mb-2">
-                        <h4 style={{ fontWeight: "400" }}>Total Reports</h4>
-                        <p style={{ fontWeight: "900" }}>
+                      <div className="mb-4">
+                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                          Total Reports
+                        </h4>
+                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
                           {allReportsByDivision?.sub_total_reports
                             ? allReportsByDivision?.sub_total_reports
                             : 0}
                         </p>
                       </div>
-                      <div className="mb-2">
-                        <h4 style={{ fontWeight: "400" }}>Total Amount</h4>
-                        <p style={{ fontWeight: "900" }}>
+                      <div className="mb-4">
+                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                          Total Amount
+                        </h4>
+                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
                           {allReportsByDivision?.sub_total_amount
                             ? allReportsByDivision?.sub_total_amount
                             : 0}{" "}
                           Taka
                         </p>
                       </div>
-                      <div className="mb-2">
-                        <h4 style={{ fontWeight: "400" }}>Bribes Paid</h4>
-                        <p style={{ fontWeight: "900" }}>
+                      <div className="mb-4">
+                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                          Bribes Paid
+                        </h4>
+                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
                           {allReportsByDivision?.sub_bribes_paid_count
                             ? allReportsByDivision?.sub_bribes_paid_count
                             : 0}
@@ -232,25 +242,31 @@ const HeroMapSection = () => {
                     </div>
 
                     <div className="">
-                      <div className="mb-2">
-                        <h4 style={{ fontWeight: "400" }}>Bribe Fighters</h4>
-                        <p style={{ fontWeight: "900" }}>
+                      <div className="mb-4">
+                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                          Bribe Fighters
+                        </h4>
+                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
                           {allReportsByDivision.sub_bribe_fighter_count
                             ? allReportsByDivision.sub_bribe_fighter_count
                             : 0}
                         </p>
                       </div>
-                      <div className="mb-2">
-                        <h4 style={{ fontWeight: "400" }}>Honest Officers</h4>
-                        <p style={{ fontWeight: "900" }}>
+                      <div className="mb-4">
+                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                          Honest Officers
+                        </h4>
+                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
                           {allReportsByDivision.sub_honest_officer_count
                             ? allReportsByDivision.sub_honest_officer_count
                             : 0}
                         </p>
                       </div>
-                      <div className="mb-2">
-                        <h4 style={{ fontWeight: "400" }}>Bribe Hotline</h4>
-                        <p style={{ fontWeight: "900" }}>
+                      <div className="mb-4">
+                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                          Bribe Hotline
+                        </h4>
+                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
                           {allReportsByDivision.bribeHotline
                             ? allReportsByDivision.bribeHotline
                             : 0}

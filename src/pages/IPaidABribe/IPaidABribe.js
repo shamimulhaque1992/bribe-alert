@@ -8,11 +8,12 @@ const IPaidABribe = () => {
   const reportType = "paid_a_bribe";
   const title = "Are you a";
   const SubTitle = "Victim of Bribery?";
+  const smallText = "I Paid a Bribe";
 
   return (
     <div>
       <Navigation />
-      <AboutBreadcrumb title={title} SubTitle={SubTitle} />
+      <AboutBreadcrumb title={title} SubTitle={SubTitle}smallText={smallText} />
 
       <CtaArea reportType={reportType}></CtaArea>
       <Footer />

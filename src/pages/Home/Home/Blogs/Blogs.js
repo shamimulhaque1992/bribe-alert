@@ -24,7 +24,7 @@ const Blogs = () => {
               </div>
             </div>
           </div>
-          <div className="row">
+          <div className="row justify-content-center">
             {blogs.slice(0, 6).map((blog, index) => (
               <HomeSingleBlog
                 blog={blog}

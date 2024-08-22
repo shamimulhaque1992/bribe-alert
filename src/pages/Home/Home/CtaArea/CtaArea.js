@@ -91,7 +91,7 @@ const CtaArea = ({ reportType }) => {
         <div className="row align-items-center custom-mar-20 justify-content-center">
           <div className="col-8 custom-pad-20 mb-5">
             <div className="tp-appoint wow fadeInUp" data-wow-delay=".1s">
-              <h4 className="fs-1 text-uppercase tp-appoint-title text-left mb-5">
+              <h4 className="fs-1 tp-appoint-title text-left mb-5">
                 Add a report
               </h4>
             </div>
@@ -182,7 +182,7 @@ const CtaArea = ({ reportType }) => {
                       })}
                       className="form-control"
                     >
-                      <option value="">Which Area of Government?</option>
+                      <option value="">Which area of government?</option>
                       {governmentAreas.map((areaObject, index) => {
                         const area = Object.keys(areaObject)[0];
                         return (
@@ -237,7 +237,7 @@ const CtaArea = ({ reportType }) => {
                       })}
                       className="form-control"
                     >
-                      <option value="">Select Division</option>
+                      <option value="">Select division</option>
                       {divisions.map((division) => (
                         <option key={division.id} value={division.name}>
                           {division.name}
@@ -259,7 +259,7 @@ const CtaArea = ({ reportType }) => {
                       })}
                       className="form-control"
                     >
-                      <option value="">Select District</option>
+                      <option value="">Select district</option>
                       {divisions
                         .find((d) => d.name === selectedDivision)
                         ?.districts.map((district) => (
@@ -344,7 +344,7 @@ const CtaArea = ({ reportType }) => {
                         },
                       })}
                       placeholder="Enter report details along with Date, Time & Location of the incident; Name & Designation of the officer"
-                      className="form-control"
+                      className="form-control px-4 pt-4"
                     ></textarea>
                     <p style={{ color: "red" }}>
                       {errors.reportDetails?.message}
@@ -362,7 +362,7 @@ const CtaArea = ({ reportType }) => {
                         },
                       })}
                       placeholder="Name & Description of the officer/ Name will be kept anonymous until verified"
-                      className="form-control"
+                      className="form-control px-4 pt-4"
                     ></textarea>
                     <p style={{ color: "red" }}>
                       {errors.officerDetails?.message}

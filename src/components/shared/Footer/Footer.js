@@ -32,7 +32,7 @@ const Footer = () => {
                         />
                       </Link>
                     </div>
-                    <h4 className="mb-15">
+                    {/* <h4 className="mb-15">
                       <a href="tel:02(850)2560-3">02 (850) 2560 - 3</a>
                     </h4>
                     <h6 className="mb-15">
@@ -52,7 +52,7 @@ const Footer = () => {
                         <FaMapMarkerAlt />{" "}
                       </i>{" "}
                       25/B Globe House Ave. Point Beach, New York
-                    </h6>
+                    </h6> */}
                     <div className="tp-footer-info-social">
                       <a href="/">
                         <i>

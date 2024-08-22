@@ -9,10 +9,17 @@ import ServicesTestimonials from "./ServicesTestimonial/ServicesTestimonials";
 import ComingSoon from "../../../components/ComingSoon/ComingSoon";
 
 const Services = () => {
+  const title = "Our";
+  const SubTitle = "Resources";
+  const smallText = "Resources";
   return (
     <>
       <Navigation />
-      <ServicesBreadcrumb />
+      <ServicesBreadcrumb
+        title={title}
+        SubTitle={SubTitle}
+        smallText={smallText}
+      />
       {/* <ServicesArea />
             <ServicesTestimonials />
             <ServicesBrandLogos />

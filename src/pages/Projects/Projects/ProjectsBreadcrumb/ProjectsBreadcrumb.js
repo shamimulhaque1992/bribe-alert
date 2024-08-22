@@ -2,12 +2,15 @@ import React from "react";
 import Breadcrumb from "../../../../components/Breadcrumb/Breadcrumb";
 
 const ProjectsBreadcrumb = () => {
+  const title = "Our";
+  const SubTitle = "Partners";
+  const smallText = "Partners";
   return (
     <>
       <Breadcrumb
-        title="Our"
-        subTitle="Partners"
-        smText=" Our Partners"
+        title={title}
+        subTitle={SubTitle}
+        smallText={smallText}
       ></Breadcrumb>
     </>
   );

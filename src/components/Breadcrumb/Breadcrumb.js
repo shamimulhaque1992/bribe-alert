@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Breadcrumb = ({title,subTitle,smText = 'Appointment'}) => {
+const Breadcrumb = ({title,subTitle,smallText }) => {
    return (
       <>
          <div className={`tp-page-title-area pt-180 pb-185 position-relative fix breadcrumb_bg`} >
@@ -15,7 +15,7 @@ const Breadcrumb = ({title,subTitle,smText = 'Appointment'}) => {
                               <ul className="trail-items">
                                  <li className="trail-item trail-begin"><Link to="/">Home</Link>
                                  </li>
-                                 <li className="trail-item trail-end"><span>{smText && smText}</span></li>
+                                 <li className="trail-item trail-end"><span>{smallText && smallText}</span></li>
                               </ul>
                            </nav>
                         </div>

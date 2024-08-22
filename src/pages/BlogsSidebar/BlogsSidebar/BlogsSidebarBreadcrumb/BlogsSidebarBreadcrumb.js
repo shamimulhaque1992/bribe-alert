@@ -1,12 +1,19 @@
-import React from 'react';
-import Breadcrumb from '../../../../components/Breadcrumb/Breadcrumb';
+import React from "react";
+import Breadcrumb from "../../../../components/Breadcrumb/Breadcrumb";
 
 const BlogsSidebarBreadcrumb = () => {
-    return (
-        <>
-            <Breadcrumb title="All" subTitle="Blogs" smText='Blogs'></Breadcrumb>
-        </>
-    );
+  const title = "All";
+  const SubTitle = "Blogs";
+  const smallText = "Blogs";
+  return (
+    <>
+      <Breadcrumb
+        title={title}
+        subTitle={SubTitle}
+        smallText={smallText}
+      ></Breadcrumb>
+    </>
+  );
 };
 
 export default BlogsSidebarBreadcrumb;

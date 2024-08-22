@@ -39,7 +39,7 @@ const AboutArea = () => {
                     Welcome to Bribe Alert
                   </h2>
                 </div>
-                <p className="mb-15">
+                <p className="mb-15"style={{textAlign:"justify"}}>
                   Welcome to Bribe Alert, a pioneering platform committed to
                   tackling corruption in Bangladesh by empowering citizens to
                   report and expose bribery. Whether it’s issues with obtaining
@@ -47,14 +47,14 @@ const AboutArea = () => {
                   property, Bribe Alert enables you to report these instances of
                   corruption that disrupt everyday life.
                 </p>
-                <p className="mb-15">
+                <p className="mb-15"style={{textAlign:"justify"}}>
                   By collecting data on the nature, frequency, and location of
                   corrupt acts, we create a real-time snapshot of bribery across
                   the country. This data is vital in our advocacy for better
                   governance, stronger law enforcement, and more transparent
                   regulatory frameworks.
                 </p>
-                <p className="mb-15">
+                <p className="mb-15"style={{textAlign:"justify"}}>
                   We encourage you to share your experiences—whether you’ve paid
                   a bribe, resisted one, or received fair treatment due to an
                   honest official or new procedure. Your anonymity is protected,
@@ -62,7 +62,7 @@ const AboutArea = () => {
                   number.
                 </p>
 
-                <p className="mb-15">
+                <p className="mb-15"style={{textAlign:"justify"}}>
                   Join us in our mission to build a more transparent and
                   accountable Bangladesh. Together, we can shine a light on
                   corruption and work towards a system where integrity prevails.

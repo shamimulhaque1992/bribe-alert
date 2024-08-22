@@ -19,7 +19,7 @@ const BlogDetailsArea = () => {
           <div className="tp-custom-container-box">
             <div className="row">
               <div className="col-lg-12">
-                <div className="blog__details--wrapper mr-50 mb-50">
+                <div className="blog__details--wrapper mb-50">
                   <div className="ablog ablog-4 mb-55">
                     <div className="ablog__img wow fadeInUp border">
                       <img

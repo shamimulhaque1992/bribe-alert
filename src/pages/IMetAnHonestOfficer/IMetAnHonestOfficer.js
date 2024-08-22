@@ -8,10 +8,11 @@ const IMetAnHonestOfficer = () => {
   const reportType = "honest_officer";
   const title = "Appreciate an";
   const SubTitle = "Honest Officer";
+  const smallText = "Honest Officer";
   return (
     <div>
       <Navigation />
-      <AboutBreadcrumb title={title} SubTitle={SubTitle} />
+      <AboutBreadcrumb title={title} SubTitle={SubTitle}smallText={smallText} />
       <CtaArea reportType={reportType}></CtaArea>
       <Footer />
     </div>
