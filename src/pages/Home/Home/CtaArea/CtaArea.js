@@ -70,7 +70,7 @@ const CtaArea = ({ reportType, textColor }) => {
         }
       );
       reset();
-    } catch (error) {}
+    } catch (error) { }
   };
 
   const selectedGovernmentArea = watch("governmentArea");
@@ -90,7 +90,16 @@ const CtaArea = ({ reportType, textColor }) => {
   };
 
   return (
+
     <section className="tp-appoint-cta-area -bg pt-80 pb-65">
+      <style>
+        {`
+          .custom-textarea::placeholder {
+            color: ${textColor}; /* Replace with your desired color */
+            opacity: 1; /* Ensures the placeholder color is fully opaque */
+          }
+        `}
+      </style>
       <div className="container">
         <div className="row align-items-center custom-mar-20 justify-content-center">
           <div className="col-8 custom-pad-20 mb-2">
@@ -219,9 +228,8 @@ const CtaArea = ({ reportType, textColor }) => {
                 </div>
 
                 <div
-                  className={`${
-                    reportType === "paid_a_bribe" ? "col-lg-6" : "col-lg-12"
-                  } custom-pad-20`}
+                  className={`${reportType === "paid_a_bribe" ? "col-lg-6" : "col-lg-12"
+                    } custom-pad-20`}
                 >
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
                     <input
@@ -233,7 +241,7 @@ const CtaArea = ({ reportType, textColor }) => {
                         },
                       })}
                       placeholder="Date"
-                      className="form-control"
+                      className="form-control "
                     />
                     <p style={{ color: "red" }}>{errors.date?.message}</p>
                   </div>
@@ -264,6 +272,7 @@ const CtaArea = ({ reportType, textColor }) => {
 
                 <div className="col-lg-12 custom-pad-20">
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
+                    
                     <input
                       type="text"
                       {...register("reportTitle", {
@@ -273,20 +282,40 @@ const CtaArea = ({ reportType, textColor }) => {
                         },
                       })}
                       placeholder="Enter title of your report"
-                      className="form-control"
+                      className="form-control "
                     />
                     <p style={{ color: "red" }}>
                       {errors.reportTitle?.message}
                     </p>
                   </div>
                 </div>
+               
                 <div className="col-lg-12 custom-pad-20">
+                  <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
+                    <textarea
+                      {...register("officerDetails", {
+                        required: {
+                          value: true,
+                          message:
+                            "Please enter name & Description of the officer!",
+                        },
+                      })}
+                      placeholder="Name & Description of the officer/ Name will be kept anonymous until verified"
+                      className="form-control px-4 pt-4 "
+                    ></textarea>
+
+                    <p style={{ color: "red" }}>
+                      {errors.officerDetails?.message}
+                    </p>
+                  </div>
+                </div> <div className="col-lg-12 custom-pad-20">
                   <div
                     className="tp-appoint wow fadeInUp position-relative w-100"
                     data-wow-delay=".3s"
                     onMouseEnter={() => setShowTooltip(true)}
                     onMouseLeave={() => setShowTooltip(false)}
                   >
+
                     <textarea
                       {...register("reportDetails", {
                         required: {
@@ -294,8 +323,11 @@ const CtaArea = ({ reportType, textColor }) => {
                           message: "Please enter report details!",
                         },
                       })}
-                      placeholder="Enter report details along with Date, Time & Location of the incident; Name & Designation of the officer"
-                      className="form-control px-4 pt-4"
+                      placeholder="Enter report details along with Date, Time & Location of the incident"
+                      className="form-control px-4 pt-4 " // Add the custom class here
+                      style={{
+                        width: '100%', // Example of inline style for the textarea itself
+                      }}
                     ></textarea>
 
                     {showTooltip /* true */ && (
@@ -383,25 +415,6 @@ const CtaArea = ({ reportType, textColor }) => {
                   </div>
                 </div>
                 <div className="col-lg-12 custom-pad-20">
-                  <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
-                    <textarea
-                      {...register("officerDetails", {
-                        required: {
-                          value: true,
-                          message:
-                            "Please enter name & Description of the officer!",
-                        },
-                      })}
-                      placeholder="Name & Description of the officer/ Name will be kept anonymous until verified"
-                      className="form-control px-4 pt-4"
-                    ></textarea>
-
-                    <p style={{ color: "red" }}>
-                      {errors.officerDetails?.message}
-                    </p>
-                  </div>
-                </div>
-                <div className="col-lg-12 custom-pad-20 mb-4">
                   <div
                     className="tp-appoint wow fadeInUp d-flex justify-content-start gap-5 align-items-start"
                     data-wow-delay=".3s"
@@ -518,11 +531,11 @@ const CtaArea = ({ reportType, textColor }) => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-12 custom-pad-20">
+                <div className="col-lg-3 custom-pad-20">
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
                     <button
                       type="button"
-                      className="theme-btn text-white rounded-pill w-50"
+                      className="theme-btn text-white rounded-pill "
                       onClick={() => setShowContactInfo(!showContactInfo)}
                     >
                       <i className="flaticon-enter"></i> Add Contact Info
