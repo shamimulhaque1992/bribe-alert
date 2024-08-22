@@ -1727,6 +1727,27 @@ select {
   background: #e5b10a;
   color: #064e2a;
 }
+.theme-btn {
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  height: 60px;
+  line-height: 60px;
+  color: #ffffff;
+  background: #0b702a;
+  text-align: center;
+  padding: 0px 38px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.theme-btn:hover {
+  background: #e5b10a;
+  color: #064e2a;
+}
 
 .yellow-btn:before,
 .theme-btn:before {

@@ -33,12 +33,13 @@ const BlogsSidebarArea = () => {
       <section className="blog-sidebar-area pt-120 pb-110">
         <div className="container">
           <div className="tp-custom-container-box">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="ablog__sidebar--wrapper">
-                  {blogs.map((blog, index) => (
+            <div className="row"> 
+              {blogs.map((blog, index) => (
+              <div className="col-lg-4">
+                <div className="ablog__sidebar--wrapper " >
+                 
                     <div
-                      className="ablog ablog-4 mb-55 wow fadeInUp"
+                      className="ablog ablog-4 mb-55 wow fadeInUp  "
                       data-wow-delay=".4s"
                     >
                       <div className="ablog__img">
@@ -49,7 +50,7 @@ const BlogsSidebarArea = () => {
                         />
                       </div>
                       <div className="ablog__text ablog__text4">
-                        <div className="ablog__meta ablog__meta4">
+                        <div className="ablog__meta ablog__meta4 ">
                           <ul>
                             <li>
                               <Link to="/blogDetails">
@@ -80,10 +81,10 @@ const BlogsSidebarArea = () => {
                             </li>
                           </ul>
                         </div>
-                        <h3 className="ablog__text--title4 mb-20">
+                        <h4 className="ablog__text--title4 mb-20 ">
                           <Link to="/blogDetails">{blog.headline}</Link>
-                        </h3>
-                        <p className="mb-30">{blog.introduction}</p>
+                        </h4>
+                        {/* <p className="mb-30">{blog.introduction}</p> */}
                         <div className="ablog__btn4">
                           <Link
                             to={`/blogDetails/${blog.id}`}
@@ -94,7 +95,7 @@ const BlogsSidebarArea = () => {
                         </div>
                       </div>
                     </div>
-                  ))}
+                  
 
                   {/* <div
                     className="ablog ablog-4 mb-55 wow fadeInUp"
@@ -308,6 +309,7 @@ const BlogsSidebarArea = () => {
                   </div> */}
                 </div>
               </div>
+              ))}
               {/* <div className="col-lg-4">
                 <div className="ablog__sidebar">
                   <div className="widget wow fadeInUp" data-wow-delay=".3s">

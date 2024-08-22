@@ -68,12 +68,13 @@ const ContactForm = () => {
                 className="section-title-wrapper-two mb-50 wow fadeInUp"
                 data-wow-delay=".2s"
               >
-                <h5 className="tp-section-subtitle section__sm__title common-yellow-shape mb-20 heading-color-black">
+                {/* <h5 className="tp-section-subtitle section__sm__title common-yellow-shape mb-20 heading-color-black">
                   Get Free Estimate
-                </h5>
+                </h5> */}
                 <h2 className="tp-section-title heading-color-black">
-                  If you Have Any Query, Don’t Hesitate <br />
-                  Contact with us{" "}
+                  {/* If you Have Any Query, Don’t Hesitate <br />
+                  Contact with us{" "} */}
+                  Would you like to reach us?
                 </h2>
               </div>
             </div>
@@ -82,7 +83,7 @@ const ContactForm = () => {
             <div className="col-lg-4">
               <div className="row custom-mar-20">
                 <div className="col-lg-12 col-md-4 col-sm-6 custom-pad-20">
-                  <div
+                  {/* <div
                     className="tp-contact-info mb-40 wow fadeInUp"
                     data-wow-delay=".4s"
                   >
@@ -99,9 +100,9 @@ const ContactForm = () => {
                         palace road, London.
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
-                <div className="col-lg-12 col-md-4 col-sm-6 custom-pad-20">
+                {/* <div className="col-lg-12 col-md-4 col-sm-6 custom-pad-20">
                   <div
                     className="tp-contact-info mb-40 wow fadeInUp"
                     data-wow-delay=".6s"
@@ -118,7 +119,7 @@ const ContactForm = () => {
                       <a href="tel:444555300-25">444555300-25</a>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div className="col-lg-12 col-md-4 col-sm-6 custom-pad-20">
                   <div
                     className="tp-contact-info mb-40 wow fadeInUp"

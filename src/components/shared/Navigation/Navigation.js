@@ -173,24 +173,7 @@ const Navigation = () => {
                               </li>
                             </ul> */}
                         </li>
-                        <li className="menu-item-has-children">
-                          <NavLink
-                            style={{ fontSize: isTablet ? "15px" : "17px" }}
-                            to="/partnerships"
-                          >
-                            Partnerships
-                          </NavLink>
-                          {/*  <ul className="sub-menu">
-                              <li>
-                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/partnerships">Partnerships</NavLink>
-                              </li>
-                              <li>
-                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/projectsDetails">
-                                  Projects Details
-                                </NavLink>
-                              </li>
-                            </ul> */}
-                        </li>
+                       
                         <li className="menu-item-has-children">
                           <NavLink
                             style={{ fontSize: isTablet ? "15px" : "17px" }}
@@ -207,6 +190,24 @@ const Navigation = () => {
                               <li>
                                 <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/blogDetails">
                                   Blog Details
+                                </NavLink>
+                              </li>
+                            </ul> */}
+                        </li> <li className="menu-item-has-children">
+                          <NavLink
+                            style={{ fontSize: isTablet ? "15px" : "17px" }}
+                            to="/contact"
+                          >
+                            {/* Partnerships */}
+                            Contact Us
+                          </NavLink>
+                          {/*  <ul className="sub-menu">
+                              <li>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/partnerships">Partnerships</NavLink>
+                              </li>
+                              <li>
+                                <NavLink style={{ fontSize: isTablet?"15px":"17px" }}to="/projectsDetails">
+                                  Projects Details
                                 </NavLink>
                               </li>
                             </ul> */}
@@ -231,12 +232,12 @@ const Navigation = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-2 tp-sticky-column-btn">
-                <div className="tp-sticky-btn text-end">
+              <div className="col-xl-2 tp-sticky-column-btn" >
+                <div className="tp-sticky-btn text-end" >
                   <Link
                     to="/i-paid-a-bribe"
-                    className="theme-btn justify-content-end text-white"
-                    style={{ fontSize: isTablet ? "15px" : "17px" }}
+                    className="theme-btn justify-content-end text-white" 
+                    style={{ fontSize: isTablet ? "15px" : "17px",backgroundColor:"#e50000" }}
                   >
                     Report a Bribe
                     {/* <i className="flaticon-enter"></i> Free Quote */}
