@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HomeServiceItem from "../../../../components/HomeServiceItem/HomeServiceItem";
 import MegaDropDown from "../../../../components/MegaDropDown/MegaDropDown";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 const ServiceArea = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -23,6 +24,7 @@ const ServiceArea = () => {
 
   const services = [
     {
+      serial: "01",
       icon_name: "pot",
       title: "Stand Up Against Corruption",
       description:
@@ -33,12 +35,14 @@ const ServiceArea = () => {
       title: "Share Your Story",
       description:
         "Report your experience to raise awareness and encourage others to join the fight against corruption.",
+      serial: "02",
     },
     {
       icon_name: "house-cleaning",
       title: "Drive Change",
       description:
         "Your report will be shared with media and government bodies, helping to push for systemic changes.",
+      serial: "03",
     },
     // { icon_name: "desk", title: "Office Cleaning" },
     // { icon_name: "cleaning", title: "Road Cleaning" },
@@ -77,15 +81,37 @@ const ServiceArea = () => {
                       icon_name={service.icon_name}
                       title={service.title}
                       description={service.description}
+                      serial={service.serial}
+                      isReversed={index === 1}
                       onClick={() =>
                         handleItemClick(rowIndex * itemsPerRow + index)
                       }
                       isActive={selectedItem === rowIndex * itemsPerRow + index}
                     />
                   ))}
+                  <p className="text-center " style={{ fontSize: "32px" }}>Join the movement to make a difference.</p>
+                  <div className="mt-3" style={{display:"flex",justifyContent:"center",gap:40,alignItems:"center",}}>
+                    <div className="ablog__btn4" >
+                      <Link
+                        to={`/i-paid-a-bribe`}
+                        className="theme-btn text-white"style={{backgroundColor:"#e50000"}}
+                      >
+                        <i className="flaticon-enter" ></i> Report a Bribe
+                      </Link>
+                    </div>
+                    <div className="ablog__btn4">
+                      <Link
+                        to={`#`}
+                        className="theme-btn text-white" style={{backgroundColor:"#0b702a"}}
+                      >
+                        <i className="flaticon-enter"></i>Learn More
+                      </Link>
+                    </div>
+                  </div>
+
                 </div>
                 {/* MegaDropDown Positioning Logic */}
-                {selectedItem !== null &&
+                {/* {selectedItem !== null &&
                   ((isMobile &&
                     selectedItem >= rowIndex * itemsPerRow &&
                     selectedItem < (rowIndex + 1) * itemsPerRow) ||
@@ -96,7 +122,7 @@ const ServiceArea = () => {
                       selectedItem={selectedItem}
                       handleCloseDropdown={handleCloseDropdown}
                     />
-                  )}
+                  )} */}
               </React.Fragment>
             ))}
           </div>

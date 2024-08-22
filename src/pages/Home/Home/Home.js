@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       <Navigation />
-      {/* <HeroSection /> */}
+      <HeroSection />
       <HeroMapSection></HeroMapSection>
       {/* <CtaArea /> */}
       {/* <AboutArea /> */}

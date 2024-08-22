@@ -6,15 +6,15 @@ const AboutFaq = () => {
     <section className="tp-faq-area">
       <div className="container">
         <div className="row align-items-start">
-          <div className="col-lg-6 order-2 order-lg-1">
+          {/* <div className="col-lg-6 order-2 order-lg-1">
             <div className="tp-about-faq-img pt-130">
               <img
                 src="/assets/img/feature/faq-img-2.png"
                 alt="img not found"
               />
             </div>
-          </div>
-          <div className="col-lg-6 order-1 order-lg-2">
+          </div> */}
+          <div className="col-lg-12 order-1 order-lg-2">
             <div className="tp-faq-text tp-about-faq-text pt-130 pb-120">
               <div className="section-title-wrapper-two mb-45">
                 <h5 className="tp-section-subtitle section__sm__title common-yellow-shape mb-20 heading-color-black">

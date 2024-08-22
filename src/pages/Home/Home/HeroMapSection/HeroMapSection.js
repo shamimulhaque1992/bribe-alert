@@ -114,13 +114,16 @@ const HeroMapSection = () => {
   return (
     <>
       <section
-        className={`tp-slider-area fix pt-5  wow fadeInUp ${
-          isMobile ? "mt-75" : "mt-100"
-        }`}
+        className={"tp-slider-area fix pt-5  wow fadeInUp " }
+      //   className={`tp-slider-area fix pt-5  wow fadeInUp 
+      //     ${
+      //     isMobile ? "mt-75" : "mt-100"
+      //   }`
+      // }
         style={{ backgroundColor: "#edf3f1" }}
       >
         <div className="container tp-slider-active home_hero_slide swiper-container common-dots ">
-          <div>
+          <div cl>
             {/* Top Section */}
             <div
               style={{
