@@ -122,12 +122,12 @@ const HeroMapSection = () => {
       // }
         style={{ backgroundColor: "#edf3f1" }}
       >
-        <div className="container tp-slider-active home_hero_slide swiper-container common-dots ">
-          <div cl>
+        <div className="container tp-slider-active home_hero_slide swiper-container common-dots mx-auto">
+          <div style={{maxWidth:"1000px",margin:"0 auto"}}>
             {/* Top Section */}
             <div
               style={{
-                maxWidth: isMobile || isTablet ? "100%" : "65%",
+                maxWidth: "100%",
                 margin: "0 auto",
                 display: "flex",
                 justifyContent: "space-between",
@@ -189,7 +189,7 @@ const HeroMapSection = () => {
                 className="d-flex justify-content-center w-100 "
               >
                 <div
-                  className="d-inline-block w-100 d-flex flex-column align-items-center"
+                  className="d-inline-block w-100 d-flex flex-column align-items-start"
                   style={{ width: "fit-content" }}
                 >
                   <div
@@ -202,7 +202,7 @@ const HeroMapSection = () => {
                       style={{
                         height: "5px",
                         width: "20%",
-                        backgroundColor: "#0b702a",
+                        backgroundColor: "#e5b10a",
                         marginBottom: "15px",
                       }}
                     />
@@ -225,7 +225,7 @@ const HeroMapSection = () => {
                           style={{
                             fontWeight: "400",
                             fontSize: "24px",
-                            color: "#e5b10a",
+                            color: "#0b702a",
                           }}
                         >
                           {allReportsByDivision?.sub_total_reports
@@ -244,7 +244,7 @@ const HeroMapSection = () => {
                           style={{
                             fontWeight: "400",
                             fontSize: "24px",
-                            color: "#e5b10a",
+                            color: "#e50000",
                           }}
                         >
                           {allReportsByDivision?.sub_total_amount
@@ -286,7 +286,7 @@ const HeroMapSection = () => {
                           style={{
                             fontWeight: "400",
                             fontSize: "24px",
-                            color: "#0b702a",
+                            color: "#e5b10a",
                           }}
                         >
                           {allReportsByDivision.sub_bribe_fighter_count

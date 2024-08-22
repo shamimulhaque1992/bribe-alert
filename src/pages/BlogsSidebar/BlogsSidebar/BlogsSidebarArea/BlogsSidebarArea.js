@@ -53,7 +53,7 @@ const BlogsSidebarArea = () => {
                         <div className="ablog__meta ablog__meta4 ">
                           <ul>
                             <li>
-                              <Link to="/blogDetails">
+                              <Link to={`/blogDetails/${blog.id}`}>
                                 <i>
                                   {" "}
                                   <AiOutlineCalendar className="blog_icon" />{" "}
@@ -62,7 +62,7 @@ const BlogsSidebarArea = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link to="/blogDetails">
+                              <Link to={`/blogDetails/${blog.id}`}>
                                 <i>
                                   {" "}
                                   <AiOutlineUser className="blog_icon" />{" "}
@@ -71,7 +71,7 @@ const BlogsSidebarArea = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link to="/blogDetails">
+                              <Link to={`/blogDetails/${blog.id}`}>
                                 <i>
                                   {" "}
                                   <FaRegComments className="blog_icon" />{" "}
@@ -82,7 +82,7 @@ const BlogsSidebarArea = () => {
                           </ul>
                         </div>
                         <h4 className="ablog__text--title4 mb-20 ">
-                          <Link to="/blogDetails">{blog.headline}</Link>
+                          <Link to={`/blogDetails/${blog.id}`}>{blog.headline}</Link>
                         </h4>
                         {/* <p className="mb-30">{blog.introduction}</p> */}
                         <div className="ablog__btn4">

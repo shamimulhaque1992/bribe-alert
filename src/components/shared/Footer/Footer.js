@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaPaperPlane } from "react-icons/fa";
 import { FaMapMarkerAlt, FaEnvelopeOpen, FaFacebookF } from "react-icons/fa";
 import { AiOutlineGoogle } from "react-icons/ai";
-import { BsTwitter, BsInstagram } from "react-icons/bs";
+import { BsTwitter, BsInstagram, BsTwitterX } from "react-icons/bs";
 import SubscriptionForms from "../../SubscriptionForms/SubscriptionForms";
 import blogs from "../../../data/blog-eng.json";
 import NewsLaterForm from "../../NewsLaterForm/NewsLaterForm";
@@ -61,10 +61,10 @@ const Footer = () => {
                       </a>
                       <a href="/">
                         <i>
-                          <BsTwitter className="icon" />{" "}
+                          <BsTwitterX className="icon" />{" "}
                         </i>
                       </a>
-                      <a href="/">
+                      {/* <a href="/">
                         <i>
                           <BsInstagram className="icon" />{" "}
                         </i>
@@ -73,7 +73,7 @@ const Footer = () => {
                         <i>
                           <AiOutlineGoogle className="icon" />{" "}
                         </i>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -95,6 +95,9 @@ const Footer = () => {
                     </li>
                     <li>
                       <Link to={"/i-met-an-hones-officer"}>Honest officer</Link>
+                    </li>
+                    <li>
+                      <Link to={"#"}>Privacy Policy</Link>
                     </li>
                     {/* <li>
                       <Link to={"#"}>Residential Services</Link>
@@ -197,7 +200,7 @@ const Footer = () => {
                 <div className="tp-copyright tp-copyright-two text-center">
                   <p className="m-0">
                     Copyright ©{new Date().getFullYear()}{" "}
-                    <span>BribeAlert</span>. All Rights Reserved Copyright
+                    <span>BribeAlert</span>. All Rights Reserved.
                   </p>
                 </div>
               </div>

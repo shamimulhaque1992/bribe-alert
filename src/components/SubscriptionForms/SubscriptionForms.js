@@ -223,7 +223,7 @@ const SubscriptionForms = () => {
                           placeholder="Enter your email"
                           className="form-control"
                         />
-                        <i className="position-absolute top-50 end-0 translate-middle pe-2">
+                        <i className="position-absolute top-50 end-0 translate-middle pe-3">
                           <FaPaperPlane />
                         </i>
                         <p style={{ color: "red" }}>
