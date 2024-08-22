@@ -6,7 +6,7 @@ const Breadcrumb = ({ title, subTitle, smallText, bannerBg }) => {
     <>
       <div
         className={`tp-page-title-area pt-180 pb-185 position-relative fix`}
-        style={{ backgroundColor: bannerBg }}
+        style={{ backgroundColor: bannerBg ? bannerBg : "#0b702a" }}
       >
         <div className="tp-custom-container">
           <div className="row">
