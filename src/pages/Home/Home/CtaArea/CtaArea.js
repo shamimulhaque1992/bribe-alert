@@ -4,7 +4,7 @@ import divisions from "../../../../data/district-division-bangladesh.json";
 import governmentAreas from "../../../../data/bribe-area.json";
 import instance from "../../../../instance/api_instance";
 import toast, { Toaster } from "react-hot-toast";
-const CtaArea = ({ reportType }) => {
+const CtaArea = ({ reportType, textColor }) => {
   const {
     register,
     handleSubmit,
@@ -86,12 +86,15 @@ const CtaArea = ({ reportType }) => {
   };
 
   return (
-    <section className="tp-appoint-cta-area yellow-dark-bg pt-80 pb-65">
+    <section className="tp-appoint-cta-area -bg pt-80 pb-65">
       <div className="container">
         <div className="row align-items-center custom-mar-20 justify-content-center">
-          <div className="col-8 custom-pad-20 mb-5">
+          <div className="col-8 custom-pad-20 mb-2">
             <div className="tp-appoint wow fadeInUp" data-wow-delay=".1s">
-              <h4 className="fs-1 tp-appoint-title text-left mb-5">
+              <h4
+                className="fs-1 tp-appoint-title text-left mb-5"
+                style={{ color: textColor }}
+              >
                 Add a report
               </h4>
             </div>
@@ -168,7 +171,10 @@ const CtaArea = ({ reportType }) => {
           </div>
         </div>
         <div className="row align-items-center custom-mar-20 justify-content-center">
-          <div className="col-xl-8 col-lg-9 custom-pad-20">
+          <div
+            className="col-xl-8 col-lg-9 custom-pad-20 px-3 py-4"
+            style={{ backgroundColor: "#f2f2f2" }}
+          >
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="row align-items-center custom-mar-20">
                 <div className="col-lg-6 custom-pad-20">
@@ -182,7 +188,7 @@ const CtaArea = ({ reportType }) => {
                       })}
                       className="form-control"
                     >
-                      <option value="">Which area of government?</option>
+                      <option style={{ color: textColor }} value="">Which area of government?</option>
                       {governmentAreas.map((areaObject, index) => {
                         const area = Object.keys(areaObject)[0];
                         return (

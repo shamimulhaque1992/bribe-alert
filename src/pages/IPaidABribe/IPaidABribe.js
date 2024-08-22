@@ -9,13 +9,13 @@ const IPaidABribe = () => {
   const title = "Are you a";
   const SubTitle = "Victim of Bribery?";
   const smallText = "I Paid a Bribe";
+  const bannerBg = "#e50000";
 
   return (
     <div>
       <Navigation />
-      <AboutBreadcrumb title={title} SubTitle={SubTitle}smallText={smallText} />
-
-      <CtaArea reportType={reportType}></CtaArea>
+      <AboutBreadcrumb title={title} SubTitle={SubTitle}smallText={smallText}bannerBg={bannerBg} />
+      <CtaArea reportType={reportType}textColor={bannerBg}></CtaArea>
       <Footer />
     </div>
   );

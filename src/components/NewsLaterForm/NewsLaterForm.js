@@ -66,7 +66,7 @@ const NewsLaterForm = () => {
           <div className="row align-items-center">
             <div className="col-xl-5 col-lg-4">
               <div className="tp-footer-subscribe">
-                <h3 className="tp-footer-subscribe-title">For latest update</h3>
+                <h3 className="tp-footer-subscribe-title">For update</h3>
               </div>
             </div>
             <div className="col-xl-7 col-lg-8">
@@ -89,7 +89,7 @@ const NewsLaterForm = () => {
                           placeholder="Enter your email"
                           className="form-control"
                         />
-                        <i className="position-absolute top-50 end-0 translate-middle">
+                        <i className="position-absolute top-50 end-0 translate-middle pe-2">
                           <FaPaperPlane />
                         </i>
                         <p style={{ color: "red" }}>

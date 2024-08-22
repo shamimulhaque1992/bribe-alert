@@ -368,6 +368,7 @@ select {
     &:hover {
         background: $theme-color;
         color: $white;
+        
     }
 }
 .theme-btn {
@@ -389,6 +390,7 @@ select {
     &:hover {
         background: $theme-yellow;
         color: $body-text-color;
+        border: 1px solid #0b702a;
     }
 }
 .yellow-btn,
@@ -479,7 +481,7 @@ select {
 .swiper-container .swiper-pagination-bullet.swiper-pagination-bullet-active {
     height: 6px ;
     width: 6px ;
-    background: #06ae5a ;
+    background: #0b702a ;
     margin: 11px ;
     margin-left: 9px ;
     transform: translateY(2px) ;
@@ -506,7 +508,7 @@ select {
 .swiper-container .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
     content: '';
     position: absolute;
-    border-color: #06ae5a ;
+    border-color: #0b702a ;
 }
 
 .swiper-container .swiper-pagination-bullet::before {
@@ -529,7 +531,7 @@ select {
     height: 90px;
     line-height: 90px;
     width: 90px;
-    background: #06ae5a;
+    background: #0b702a;
     text-align: center;
     display: inline-block;
     border-radius: 50%;
@@ -543,7 +545,7 @@ select {
     height: 80px;
     line-height: 80px;
     width: 80px;
-    background: #06ae5a;
+    background: #0b702a;
     text-align: center;
     display: inline-block;
     border-radius: 50%;

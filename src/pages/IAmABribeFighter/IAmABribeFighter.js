@@ -9,11 +9,17 @@ const IAmABribeFighter = () => {
   const title = "Are you";
   const SubTitle = "A Bribe Fighter?";
   const smallText = "Bribe Fighter";
+  const bannerBg = "#0b702a";
   return (
     <div>
       <Navigation />
-      <AboutBreadcrumb title={title} SubTitle={SubTitle}smallText={smallText} />
-      <CtaArea reportType={reportType}></CtaArea>
+      <AboutBreadcrumb
+        title={title}
+        SubTitle={SubTitle}
+        smallText={smallText}
+        bannerBg={bannerBg}
+      />
+      <CtaArea reportType={reportType} textColor={bannerBg}></CtaArea>
       <Footer />
     </div>
   );

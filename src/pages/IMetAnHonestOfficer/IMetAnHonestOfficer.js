@@ -9,11 +9,17 @@ const IMetAnHonestOfficer = () => {
   const title = "Appreciate an";
   const SubTitle = "Honest Officer";
   const smallText = "Honest Officer";
+  const bannerBg = "#e5b10a";
   return (
     <div>
       <Navigation />
-      <AboutBreadcrumb title={title} SubTitle={SubTitle}smallText={smallText} />
-      <CtaArea reportType={reportType}></CtaArea>
+      <AboutBreadcrumb
+        title={title}
+        SubTitle={SubTitle}
+        smallText={smallText}
+        bannerBg={bannerBg}
+      />
+      <CtaArea reportType={reportType}textColor={bannerBg}></CtaArea>
       <Footer />
     </div>
   );

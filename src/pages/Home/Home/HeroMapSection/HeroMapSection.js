@@ -114,7 +114,9 @@ const HeroMapSection = () => {
   return (
     <>
       <section
-        className="tp-slider-area fix pt-5  wow fadeInUp "
+        className={`tp-slider-area fix pt-5  wow fadeInUp ${
+          isMobile ? "mt-75" : "mt-100"
+        }`}
         style={{ backgroundColor: "#edf3f1" }}
       >
         <div className="container tp-slider-active home_hero_slide swiper-container common-dots ">
@@ -193,11 +195,12 @@ const HeroMapSection = () => {
                     }`}
                   >
                     <h2 style={{ fontSize: "24px" }}>{hoveredDivision}</h2>
-                    <hr
+                    <div
                       style={{
-                        height: "10px",
+                        height: "5px",
                         width: "20%",
-                        backgroundColor: "#ffc000",
+                        backgroundColor: "#0b702a",
+                        marginBottom: "15px",
                       }}
                     />
                   </div>
@@ -209,20 +212,38 @@ const HeroMapSection = () => {
                   >
                     <div>
                       <div className="mb-4">
-                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                        <h4
+                          className="mb-0"
+                          style={{ fontWeight: "400", fontSize: "18px" }}
+                        >
                           Total Reports
                         </h4>
-                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
+                        <p
+                          style={{
+                            fontWeight: "400",
+                            fontSize: "24px",
+                            color: "#e5b10a",
+                          }}
+                        >
                           {allReportsByDivision?.sub_total_reports
                             ? allReportsByDivision?.sub_total_reports
                             : 0}
                         </p>
                       </div>
                       <div className="mb-4">
-                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                        <h4
+                          className="mb-0"
+                          style={{ fontWeight: "400", fontSize: "18px" }}
+                        >
                           Total Amount
                         </h4>
-                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
+                        <p
+                          style={{
+                            fontWeight: "400",
+                            fontSize: "24px",
+                            color: "#e5b10a",
+                          }}
+                        >
                           {allReportsByDivision?.sub_total_amount
                             ? allReportsByDivision?.sub_total_amount
                             : 0}{" "}
@@ -230,10 +251,19 @@ const HeroMapSection = () => {
                         </p>
                       </div>
                       <div className="mb-4">
-                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                        <h4
+                          className="mb-0"
+                          style={{ fontWeight: "400", fontSize: "18px" }}
+                        >
                           Bribes Paid
                         </h4>
-                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
+                        <p
+                          style={{
+                            fontWeight: "400",
+                            fontSize: "24px",
+                            color: "#e50000",
+                          }}
+                        >
                           {allReportsByDivision?.sub_bribes_paid_count
                             ? allReportsByDivision?.sub_bribes_paid_count
                             : 0}
@@ -243,35 +273,56 @@ const HeroMapSection = () => {
 
                     <div className="">
                       <div className="mb-4">
-                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                        <h4
+                          className="mb-0"
+                          style={{ fontWeight: "400", fontSize: "18px" }}
+                        >
                           Bribe Fighters
                         </h4>
-                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
+                        <p
+                          style={{
+                            fontWeight: "400",
+                            fontSize: "24px",
+                            color: "#0b702a",
+                          }}
+                        >
                           {allReportsByDivision.sub_bribe_fighter_count
                             ? allReportsByDivision.sub_bribe_fighter_count
                             : 0}
                         </p>
                       </div>
                       <div className="mb-4">
-                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                        <h4
+                          className="mb-0"
+                          style={{ fontWeight: "400", fontSize: "18px" }}
+                        >
                           Honest Officers
                         </h4>
-                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
+                        <p
+                          style={{
+                            fontWeight: "400",
+                            fontSize: "24px",
+                            color: "#232323",
+                          }}
+                        >
                           {allReportsByDivision.sub_honest_officer_count
                             ? allReportsByDivision.sub_honest_officer_count
                             : 0}
                         </p>
                       </div>
-                      <div className="mb-4">
-                        <h4 className="mb-0" style={{ fontWeight: "400",fontSize:"18px" }}>
+                      {/* <div className="mb-4">
+                        <h4
+                          className="mb-0"
+                          style={{ fontWeight: "400", fontSize: "18px" }}
+                        >
                           Bribe Hotline
                         </h4>
-                        <p style={{ fontWeight: "900", fontSize: "24px" }}>
+                        <p style={{ fontWeight: "400", fontSize: "24px" }}>
                           {allReportsByDivision.bribeHotline
                             ? allReportsByDivision.bribeHotline
                             : 0}
                         </p>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
