@@ -4,6 +4,7 @@ import divisions from "../../../../data/district-division-bangladesh.json";
 import governmentAreas from "../../../../data/bribe-area.json";
 import instance from "../../../../instance/api_instance";
 import toast, { Toaster } from "react-hot-toast";
+import { useMediaQuery } from "react-responsive";
 const CtaArea = ({ reportType, textColor }) => {
   const {
     register,
@@ -14,7 +15,10 @@ const CtaArea = ({ reportType, textColor }) => {
   } = useForm();
   const [showContactInfo, setShowContactInfo] = useState(false);
   const [isAnonymous, setIsAnonymous] = useState(true);
-  // const [reportType, setReportType] = useState("paid_a_bribe");
+  const [showTooltip, setShowTooltip] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1399 });
+  const isLaptopOrDesktop = useMediaQuery({ minWidth: 1024 });
 
   const onSubmit = async (data) => {
     console.log("amar data", data);
@@ -188,7 +192,9 @@ const CtaArea = ({ reportType, textColor }) => {
                       })}
                       className="form-control"
                     >
-                      <option style={{ color: textColor }} value="">Which area of government?</option>
+                      <option disabled style={{ color: textColor }} value="">
+                        Which area of government?
+                      </option>
                       {governmentAreas.map((areaObject, index) => {
                         const area = Object.keys(areaObject)[0];
                         return (
@@ -215,7 +221,7 @@ const CtaArea = ({ reportType, textColor }) => {
                       })}
                       className="form-control"
                     >
-                      <option value="">
+                      <option disabled value="">
                         Why were you asked for the bribe?
                       </option>
                       {getReasons(selectedGovernmentArea).map(
@@ -243,7 +249,9 @@ const CtaArea = ({ reportType, textColor }) => {
                       })}
                       className="form-control"
                     >
-                      <option value="">Select division</option>
+                      <option disabled value="">
+                        Select division
+                      </option>
                       {divisions.map((division) => (
                         <option key={division.id} value={division.name}>
                           {division.name}
@@ -265,7 +273,9 @@ const CtaArea = ({ reportType, textColor }) => {
                       })}
                       className="form-control"
                     >
-                      <option value="">Select district</option>
+                      <option disabled value="">
+                        Select district
+                      </option>
                       {divisions
                         .find((d) => d.name === selectedDivision)
                         ?.districts.map((district) => (
@@ -341,7 +351,12 @@ const CtaArea = ({ reportType, textColor }) => {
                   </div>
                 </div>
                 <div className="col-lg-12 custom-pad-20">
-                  <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
+                  <div
+                    className="tp-appoint wow fadeInUp position-relative w-100"
+                    data-wow-delay=".3s"
+                    onMouseEnter={() => setShowTooltip(true)}
+                    onMouseLeave={() => setShowTooltip(false)}
+                  >
                     <textarea
                       {...register("reportDetails", {
                         required: {
@@ -352,6 +367,86 @@ const CtaArea = ({ reportType, textColor }) => {
                       placeholder="Enter report details along with Date, Time & Location of the incident; Name & Designation of the officer"
                       className="form-control px-4 pt-4"
                     ></textarea>
+
+                    {showTooltip /* true */ && (
+                      <div
+                        className="position-absolute text-white p-4 rounded"
+                        style={{
+                          top: isMobile || isTablet ? "280%" : "50%",
+                          left: isMobile || isTablet ? "10%" : "80%",
+                          width: isMobile || isTablet ? "80%" : "43%",
+                          transform: "translateY(-50%)",
+                          zIndex: 1000,
+                          fontSize: "0.875rem",
+                          whiteSpace: "nowrap",
+                          backgroundColor: "#fff",
+                          border: "1px solid gray",
+                          boxShadow: "0 5px 10px rgba(0, 0, 0, 0.2)",
+                        }}
+                      >
+                        <div className="d-flex flex-column align-items-start justify-content-center">
+                          <p className="text-wrap text-black">
+                            By entering more relevant details in your bribe
+                            report, you are increasing the chances of action
+                            being taken against the bribe taker,
+                          </p>
+                          <ul
+                            className="mb-2 text-wrap ps-4"
+                            style={{ color: textColor }}
+                          >
+                            <li>Name of the officer</li>
+                            <li>Date of the incident</li>
+                            <li>Time of the incident</li>
+                            <li>
+                              Location of the incident and / the office where
+                              the incident took place.{" "}
+                            </li>
+                            <li>Designation of the officer</li>
+                          </ul>
+                          <div className="w-100 text-center">
+                            <button
+                              style={{
+                                height: "40px",
+                                lineHeight: "0px",
+                              }}
+                              type="button"
+                              class="btn btn-outline-dark btn-sm w-50 rounded-pill"
+                            >
+                              View an ideal report
+                            </button>
+                          </div>
+                        </div>
+                        {isMobile || isTablet ? (
+                          <div
+                            className="position-absolute"
+                            style={{
+                              top: "-2.5%",
+                              left: "50%",
+                              transform: "translateX(-50%)",
+                              width: "0",
+                              height: "0",
+                              borderLeft: "6px solid transparent",
+                              borderRight: "6px solid transparent",
+                              borderBottom: "6px solid #343a40", // Tooltip arrow color matching background
+                            }}
+                          ></div>
+                        ) : (
+                          <div
+                            className="position-absolute"
+                            style={{
+                              top: "50%",
+                              left: "-6px",
+                              transform: "translateY(-50%)",
+                              width: "0",
+                              height: "0",
+                              borderTop: "6px solid transparent",
+                              borderBottom: "6px solid transparent",
+                              borderRight: "6px solid #343a40", // Tooltip arrow color matching background
+                            }}
+                          ></div>
+                        )}
+                      </div>
+                    )}
                     <p style={{ color: "red" }}>
                       {errors.reportDetails?.message}
                     </p>
@@ -370,14 +465,15 @@ const CtaArea = ({ reportType, textColor }) => {
                       placeholder="Name & Description of the officer/ Name will be kept anonymous until verified"
                       className="form-control px-4 pt-4"
                     ></textarea>
+
                     <p style={{ color: "red" }}>
                       {errors.officerDetails?.message}
                     </p>
                   </div>
                 </div>
-                <div className="col-lg-12 custom-pad-20">
+                <div className="col-lg-12 custom-pad-20 mb-4">
                   <div
-                    className="tp-appoint wow fadeInUp d-flex justify-content-start"
+                    className="tp-appoint wow fadeInUp d-flex justify-content-start gap-5 align-items-start"
                     data-wow-delay=".3s"
                   >
                     <div className="form-check d-flex align-items-center justify-content-between ps-0">
@@ -393,17 +489,90 @@ const CtaArea = ({ reportType, textColor }) => {
                         I want to stay anonymous
                       </label>
                     </div>
-                    <div className="form-check d-flex align-items-center justify-content-between">
-                      <input
-                        type="radio"
-                        {...register("shareStory")}
-                        value="share"
-                        id="share"
-                        style={{ width: "20px", marginRight: "10px" }}
-                      />
-                      <label htmlFor="share" className="form-check-label">
-                        I want to share my story
-                      </label>
+                    <div className="d-flex flex-column align-items-start">
+                      <div className="form-check d-flex align-items-center justify-content-between ps-0">
+                        <input
+                          type="radio"
+                          {...register("shareStory")}
+                          value="share"
+                          id="share"
+                          style={{ width: "20px", marginRight: "10px" }}
+                        />
+                        <label htmlFor="share" className="form-check-label">
+                          I want to share my story
+                        </label>
+                      </div>
+
+                      {!isAnonymousRadio && (
+                        <>
+                          <div className="form-check d-flex align-items-center justify-content-start ps-0">
+                            <input
+                              type="checkbox"
+                              defaultChecked={true}
+                              {...register("senior-officials", {
+                                required: {
+                                  value: false,
+                                  message:
+                                    "Please read the privacy policy and check the checkbox!",
+                                },
+                              })}
+                              id="senior-officials"
+                              style={{ width: "20px", marginRight: "10px",height:"30px" }}
+                            />
+
+                            <label
+                              htmlFor="senior-officials"
+                              className="form-check-label"
+                            >
+                              Senior officials of the department
+                            </label>
+                          </div>
+                          <div className="form-check d-flex align-items-center justify-content-start ps-0">
+                            <input
+                              type="checkbox"
+                              defaultChecked={true}
+                              {...register("state-vigilance", {
+                                required: {
+                                  value: true,
+                                  message:
+                                    "Please read the privacy policy and check the checkbox!",
+                                },
+                              })}
+                              id="state-vigilance"
+                              style={{ width: "20px", marginRight: "10px",height:"30px" }}
+                            />
+
+                            <label
+                              htmlFor="state-vigilance"
+                              className="form-check-label"
+                            >
+                              State Vigilance Officer
+                            </label>
+                          </div>
+                          <div className="form-check d-flex align-items-center justify-content-start ps-0">
+                            <input
+                              type="checkbox"
+                              defaultChecked={true}
+                              {...register("media-news-television", {
+                                required: {
+                                  value: true,
+                                  message:
+                                    "Please read the privacy policy and check the checkbox!",
+                                },
+                              })}
+                              id="media-news-television"
+                              style={{ width: "20px", marginRight: "10px",height:"30px" }}
+                            />
+
+                            <label
+                              htmlFor="media-news-television"
+                              className="form-check-label"
+                            >
+                              Media - Newspapers & Television
+                            </label>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -501,7 +670,7 @@ const CtaArea = ({ reportType, textColor }) => {
                           },
                         })}
                         id="privacyPolicy"
-                        style={{ width: "20px", marginRight: "10px" }}
+                        style={{ width: "20px", marginRight: "10px",height:"30px" }}
                       />
 
                       <label
@@ -519,7 +688,7 @@ const CtaArea = ({ reportType, textColor }) => {
                         type="checkbox"
                         {...register("keepUpdated")}
                         id="keepUpdated"
-                        style={{ width: "20px", marginRight: "10px" }}
+                        style={{ width: "20px", marginRight: "10px",height:"30px" }}
                       />
                       <label htmlFor="keepUpdated" className="form-check-label">
                         Keep me updated about responses to my report and other
