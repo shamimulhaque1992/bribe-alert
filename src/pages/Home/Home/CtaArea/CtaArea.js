@@ -323,7 +323,7 @@ const CtaArea = ({ reportType, textColor }) => {
                           message: "Please enter report details!",
                         },
                       })}
-                      placeholder="Enter report details along with Date, Time & Location of the incident; Name & Designation of the officer"
+                      placeholder="Enter report details along with Date, Time & Location of the incident"
                       className="form-control px-4 pt-4 " // Add the custom class here
                       style={{
                         width: '100%', // Example of inline style for the textarea itself
