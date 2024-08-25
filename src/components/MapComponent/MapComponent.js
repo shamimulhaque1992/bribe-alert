@@ -24,6 +24,7 @@ const MapComponent = ({ setHoveredDivision }) => {
         paddingLeft: "20px",
       }}
     >
+      
       <MapSvgUpdate setHoveredDivision={setHoveredDivision}></MapSvgUpdate>
       <div className={style.division_buttons}></div>
     </div>

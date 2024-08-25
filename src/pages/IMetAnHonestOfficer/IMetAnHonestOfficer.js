@@ -10,6 +10,8 @@ const IMetAnHonestOfficer = () => {
   const SubTitle = "Honest Officer";
   const smallText = "Honest Officer";
   const bannerBg = "#e5b10a";
+  const placeHolderColor = "#e66e6e";
+  const bgImg = "/assets/img/bribe-img/Honest-Officer_1920X500.jpg";
   return (
     <div>
       <Navigation />
@@ -18,8 +20,10 @@ const IMetAnHonestOfficer = () => {
         SubTitle={SubTitle}
         smallText={smallText}
         bannerBg={bannerBg}
+        bgImg={bgImg}
+        placeHolderColor={placeHolderColor}
       />
-      <CtaArea reportType={reportType}textColor={bannerBg}></CtaArea>
+      <CtaArea reportType={reportType} textColor={bannerBg}></CtaArea>
       <Footer />
     </div>
   );

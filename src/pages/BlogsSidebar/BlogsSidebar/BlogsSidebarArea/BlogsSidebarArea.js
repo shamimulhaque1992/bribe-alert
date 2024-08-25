@@ -82,7 +82,7 @@ const BlogsSidebarArea = () => {
                           </ul>
                         </div>
                         <h4 className="ablog__text--title4 mb-20 ">
-                          <Link to={`/blogDetails/${blog.id}`}>{blog.headline}</Link>
+                          <Link to={`/blogDetails/${blog.id}`}>{blog.headline.slice(0,20)+" ..."}</Link>
                         </h4>
                         {/* <p className="mb-30">{blog.introduction}</p> */}
                         <div className="ablog__btn4">

@@ -70,7 +70,7 @@ const CtaArea = ({ reportType, textColor }) => {
         }
       );
       reset();
-    } catch (error) { }
+    } catch (error) {}
   };
 
   const selectedGovernmentArea = watch("governmentArea");
@@ -90,7 +90,6 @@ const CtaArea = ({ reportType, textColor }) => {
   };
 
   return (
-
     <section className="tp-appoint-cta-area -bg pt-80 pb-65">
       <style>
         {`
@@ -148,7 +147,6 @@ const CtaArea = ({ reportType, textColor }) => {
                     </p>
                   </div>
                 </div>
-
                 <div className="col-lg-6 custom-pad-20">
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".5s">
                     <select
@@ -176,7 +174,6 @@ const CtaArea = ({ reportType, textColor }) => {
                     </p>
                   </div>
                 </div>
-
                 <div className="col-lg-6 custom-pad-20">
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".7s">
                     <select
@@ -200,7 +197,6 @@ const CtaArea = ({ reportType, textColor }) => {
                     <p style={{ color: "red" }}>{errors.division?.message}</p>
                   </div>
                 </div>
-
                 <div className="col-lg-6 custom-pad-20">
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".7s">
                     <select
@@ -226,10 +222,10 @@ const CtaArea = ({ reportType, textColor }) => {
                     <p style={{ color: "red" }}>{errors.district?.message}</p>
                   </div>
                 </div>
-
                 <div
-                  className={`${reportType === "paid_a_bribe" ? "col-lg-6" : "col-lg-12"
-                    } custom-pad-20`}
+                  className={`${
+                    reportType === "paid_a_bribe" ? "col-lg-6" : "col-lg-12"
+                  } custom-pad-20`}
                 >
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
                     <input
@@ -269,10 +265,8 @@ const CtaArea = ({ reportType, textColor }) => {
                 ) : (
                   ""
                 )}
-
                 <div className="col-lg-12 custom-pad-20">
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
-                    
                     <input
                       type="text"
                       {...register("reportTitle", {
@@ -289,7 +283,6 @@ const CtaArea = ({ reportType, textColor }) => {
                     </p>
                   </div>
                 </div>
-               
                 <div className="col-lg-12 custom-pad-20">
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
                     <textarea
@@ -308,14 +301,14 @@ const CtaArea = ({ reportType, textColor }) => {
                       {errors.officerDetails?.message}
                     </p>
                   </div>
-                </div> <div className="col-lg-12 custom-pad-20">
+                </div>{" "}
+                <div className="col-lg-12 custom-pad-20">
                   <div
                     className="tp-appoint wow fadeInUp position-relative w-100"
                     data-wow-delay=".3s"
                     onMouseEnter={() => setShowTooltip(true)}
                     onMouseLeave={() => setShowTooltip(false)}
                   >
-
                     <textarea
                       {...register("reportDetails", {
                         required: {
@@ -323,10 +316,12 @@ const CtaArea = ({ reportType, textColor }) => {
                           message: "Please enter report details!",
                         },
                       })}
+                      onKeyUp={() => setShowTooltip(false)}
+                      rows="8"
                       placeholder="Enter report details along with Date, Time & Location of the incident"
-                      className="form-control px-4 pt-4 " // Add the custom class here
+                      className="form-control px-4 pt-4 custom-textarea" // Add the custom class here
                       style={{
-                        width: '100%', // Example of inline style for the textarea itself
+                        width: "100%", // Example of inline style for the textarea itself
                       }}
                     ></textarea>
 
@@ -334,9 +329,9 @@ const CtaArea = ({ reportType, textColor }) => {
                       <div
                         className="position-absolute text-white p-4 rounded"
                         style={{
-                          top: isMobile || isTablet ? "280%" : "50%",
-                          left: isMobile || isTablet ? "10%" : "80%",
-                          width: isMobile || isTablet ? "80%" : "43%",
+                          top: isMobile || isTablet ? "162%" : "50%",
+                          left: isMobile || isTablet ? "5%" : "80%",
+                          width: isMobile || isTablet ? "90%" : "43%",
                           transform: "translateY(-50%)",
                           zIndex: 1000,
                           fontSize: "0.875rem",

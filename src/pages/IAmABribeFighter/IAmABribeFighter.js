@@ -10,6 +10,8 @@ const IAmABribeFighter = () => {
   const SubTitle = "A Bribe Fighter?";
   const smallText = "Bribe Fighter";
   const bannerBg = "#0b702a";
+  const placeHolderColor = "#e66e6e";
+  const bgImg = "/assets/img/bribe-img/Bribe-Fighter_1920X500.jpg";
   return (
     <div>
       <Navigation />
@@ -18,6 +20,8 @@ const IAmABribeFighter = () => {
         SubTitle={SubTitle}
         smallText={smallText}
         bannerBg={bannerBg}
+        bgImg={bgImg}
+        placeHolderColor={placeHolderColor}
       />
       <CtaArea reportType={reportType} textColor={bannerBg}></CtaArea>
       <Footer />

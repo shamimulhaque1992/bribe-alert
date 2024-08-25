@@ -89,26 +89,6 @@ const ServiceArea = () => {
                       isActive={selectedItem === rowIndex * itemsPerRow + index}
                     />
                   ))}
-                  <p className="text-center " style={{ fontSize: "32px" }}>Join the movement to make a difference.</p>
-                  <div className="mt-3" style={{display:"flex",justifyContent:"center",gap:40,alignItems:"center",}}>
-                    <div className="ablog__btn4" >
-                      <Link
-                        to={`/i-paid-a-bribe`}
-                        className="theme-btn text-white"style={{backgroundColor:"#e50000"}}
-                      >
-                        <i className="flaticon-enter" ></i> Report a Bribe
-                      </Link>
-                    </div>
-                    <div className="ablog__btn4">
-                      <Link
-                        to={`#`}
-                        className="theme-btn text-white" style={{backgroundColor:"#0b702a"}}
-                      >
-                        <i className="flaticon-enter"></i>Learn More
-                      </Link>
-                    </div>
-                  </div>
-
                 </div>
                 {/* MegaDropDown Positioning Logic */}
                 {/* {selectedItem !== null &&
@@ -125,6 +105,37 @@ const ServiceArea = () => {
                   )} */}
               </React.Fragment>
             ))}
+            <p className="text-center " style={{ fontSize: "32px" }}>
+              Join the movement to make a difference.
+            </p>
+            <div
+              className="mt-3"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: 40,
+                alignItems: "center",
+              }}
+            >
+              <div className="ablog__btn4">
+                <Link
+                  to={`/i-paid-a-bribe`}
+                  className="theme-btn text-white"
+                  style={{ backgroundColor: "#e50000" }}
+                >
+                  <i className="flaticon-enter"></i> Report a Bribe
+                </Link>
+              </div>
+              <div className="ablog__btn4">
+                <Link
+                  to={`#`}
+                  className="theme-btn text-white"
+                  style={{ backgroundColor: "#0b702a" }}
+                >
+                  <i className="flaticon-enter"></i>Learn More
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

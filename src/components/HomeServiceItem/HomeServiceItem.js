@@ -15,7 +15,7 @@ const HomeServiceItem = ({
         className={`tp-services white-bg mb-30 wow fadeInUp pb-0 ${isActive ? "active" : ""} h-100 ${isReversed ? "reversed" : ""}`}
         data-wow-delay=".2s"
         onClick={onClick}
-        style={{ cursor: "pointer", display: "flex",  alignItems: "center", gap: 5,justifyContent:"center" }}
+        style={{ cursor: "pointer", display: "flex",  alignItems: "center", gap: 15,justifyContent:"center" }}
       >
         <div className="tp-services-icon yellow-circle-shape">
           <i className={`flaticon-${icon_name}`} ></i>
@@ -23,8 +23,8 @@ const HomeServiceItem = ({
         </div>
         <div className="tp-services-text fix">
           <h1 className="hover-theme-color">{serial}</h1>
-          <h4 className="tp-services-text-title hover-theme-color">{title}</h4>
-          <p className="mb-20 " style={{fontSize:"14px"}}>{description}</p>
+          <h4 className="tp-services-text-title hover-theme-color" style={{fontSize:"14px"}}>{title}</h4>
+          <p className="mb-20 " style={{fontSize:"12px"}}>{description}</p>
         
         </div>
         

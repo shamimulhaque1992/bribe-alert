@@ -6,6 +6,7 @@ const ContactBreadcrumb = () => {
   const SubTitle = "Contact";
   const smallText = "Contact";
   const bannerBg = "#0b702a";
+  const bgImg = "/assets/img/bribe-img/contact-us-background.jpg";
   return (
     <>
       <Breadcrumb
@@ -16,6 +17,7 @@ const ContactBreadcrumb = () => {
         SubTitle={SubTitle}
         smallText={smallText}
         bannerBg={bannerBg}
+        bgImg={bgImg}
       ></Breadcrumb>
     </>
   );

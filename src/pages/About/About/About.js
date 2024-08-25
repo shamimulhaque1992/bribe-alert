@@ -14,10 +14,11 @@ const About = () => {
   const title = "About";
   const SubTitle = "Bribery Alert";
   const smallText = "About Us";
+  const bgImg = "/assets/img/bribe-img/About-Us-Bribe-Alert-1920X500.jpg";
   return (
     <>
       <Navigation />
-      <AboutBreadcrumb title={title} SubTitle={SubTitle}smallText={smallText} />
+      <AboutBreadcrumb title={title} SubTitle={SubTitle}smallText={smallText} bgImg={bgImg}/>
       <AboutArea />
       {/* <WorkingProcess /> */}
       <AboutFaq />

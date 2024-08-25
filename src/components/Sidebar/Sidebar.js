@@ -3,7 +3,7 @@ import { Offcanvas } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa";
 import { AiOutlineGoogle } from "react-icons/ai";
-import { BsTwitter, BsInstagram } from "react-icons/bs";
+import { BsTwitter, BsInstagram,BsTwitterX } from "react-icons/bs";
 import Collapsible from "react-collapsible";
 
 const Sidebar = ({ show, handleClose }) => {
@@ -65,11 +65,11 @@ const Sidebar = ({ show, handleClose }) => {
                      </ul>
                   </Collapsible> */}
 
-            <div className="contact_nav text-white font-bold mb-2">
+            {/* <div className="contact_nav text-white font-bold mb-2">
               <NavLink className="font-bold" to="/">
                 Home
               </NavLink>
-            </div>
+            </div> */}
             <div className="contact_nav text-white font-bold mb-2">
               <NavLink className="font-bold" to="/about">
                 About us
@@ -96,8 +96,8 @@ const Sidebar = ({ show, handleClose }) => {
               </NavLink>
             </div>
             <div className="contact_nav text-white font-bold mb-2">
-              <NavLink className="font-bold" to="/partnerships">
-                Partners
+              <NavLink className="font-bold" to="/contact">
+                Contact Us
               </NavLink>
             </div>
             <div className="contact_nav text-white font-bold mb-2">
@@ -140,10 +140,10 @@ const Sidebar = ({ show, handleClose }) => {
                         </a>
                         <a className="text-white" href="/">
                           <i>
-                            <BsTwitter className="icon" />{" "}
+                            <BsTwitterX className="icon" />{" "}
                           </i>
                         </a>
-                        <a className="text-white" href="/">
+                        {/* <a className="text-white" href="/">
                           <i>
                             <BsInstagram className="icon" />{" "}
                           </i>
@@ -152,7 +152,7 @@ const Sidebar = ({ show, handleClose }) => {
                           <i>
                             <AiOutlineGoogle className="icon" />{" "}
                           </i>
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                   </div>
