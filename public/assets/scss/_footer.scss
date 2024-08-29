@@ -157,12 +157,12 @@
 }
 
 .tp-footer-subscribe-title {
-    font-size: 36px;
+    font-size: 28px;
     @media #{$xs} {
-        font-size: 28px;
+        font-size: 20px;
     }
     @media #{$lg} {
-        font-size: 32px;
+        font-size: 28px;
     }
 }
 .tp-footer-subscribe-form {

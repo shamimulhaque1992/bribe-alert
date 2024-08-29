@@ -133,8 +133,10 @@ const ContactForm = () => {
                     </div>
                     <div className="tp-contact-info-text">
                       <h4 className="tp-contact-info-title mb-15">Email</h4>
-                      <a href="mailto:info@themepure.com">info@themepure.com</a>
-                      <a href="mailto:info@themepure.com">info@themepure.com</a>
+                      <a href="mailto:email@bribealert.com">
+                        email@bribealert.com
+                      </a>
+                      {/* <a href="mailto:info@themepure.com">info@themepure.com</a> */}
                     </div>
                   </div>
                 </div>

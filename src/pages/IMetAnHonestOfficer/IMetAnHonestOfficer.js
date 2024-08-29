@@ -6,12 +6,12 @@ import CtaArea from "../Home/Home/CtaArea/CtaArea";
 
 const IMetAnHonestOfficer = () => {
   const reportType = "honest_officer";
-  const title = "Appreciate an";
-  const SubTitle = "Honest Officer";
+  const title = "Appreciate";
+  const SubTitle = "An Honest Officer";
   const smallText = "Honest Officer";
   const bannerBg = "#e5b10a";
-  const placeHolderColor = "#e66e6e";
-  const bgImg = "/assets/img/bribe-img/Honest-Officer_1920X500.jpg";
+  const placeHolderColor = "#ffc200e8";
+  const bgImg = "";
   return (
     <div>
       <Navigation />
@@ -23,7 +23,7 @@ const IMetAnHonestOfficer = () => {
         bgImg={bgImg}
         placeHolderColor={placeHolderColor}
       />
-      <CtaArea reportType={reportType} textColor={bannerBg}></CtaArea>
+      <CtaArea reportType={reportType} textColor={bannerBg}placeHolderColor={placeHolderColor}></CtaArea>
       <Footer />
     </div>
   );

@@ -24,7 +24,7 @@ const BlogDetailsArea = () => {
                     <div className="ablog__img wow fadeInUp border">
                       <img
                         style={{ width: "100%" }}
-                        src="/assets/img/blog/b6.jpg"
+                        src={`/assets/img/blog/${blog.image_link}`}
                         className="img-fluid"
                         alt="img"
                       />
@@ -33,36 +33,30 @@ const BlogDetailsArea = () => {
                       <div className="ablog__meta ablog__meta4">
                         <ul>
                           <li>
-                            <Link to="/blogDetails">
-                              <i>
-                                {" "}
-                                <AiOutlineCalendar className="blog_icon" />{" "}
-                              </i>{" "}
-                              January 15, 2021{" "}
-                            </Link>
+                            <i>
+                              {" "}
+                              <AiOutlineCalendar className="blog_icon" />{" "}
+                            </i>{" "}
+                            January 15, 2021{" "}
                           </li>
                           <li>
-                            <Link to="/blogDetails">
-                              <i>
-                                {" "}
-                                <AiOutlineUser className="blog_icon" />{" "}
-                              </i>{" "}
-                              Briber Alert{" "}
-                            </Link>
+                            <i>
+                              {" "}
+                              <AiOutlineUser className="blog_icon" />{" "}
+                            </i>{" "}
+                            Briber Alert{" "}
                           </li>
                           <li>
-                            <Link to="/blogDetails">
-                              <i>
-                                {" "}
-                                <FaRegComments className="blog_icon" />{" "}
-                              </i>{" "}
-                              No Comments
-                            </Link>
+                            <i>
+                              {" "}
+                              <FaRegComments className="blog_icon" />{" "}
+                            </i>{" "}
+                            No Comments
                           </li>
                         </ul>
                       </div>
                       <h3 className="ablog__text--title4 mb-20">
-                        <Link to="/blogDetails">{blog.headline}</Link>
+                        {blog.headline}
                       </h3>
                       <blockquote className="wow fadeInUp">
                         <p>{blog.introduction}</p>

@@ -16,13 +16,16 @@ const AboutArea = () => {
           <div className="row justify-content-xl-between justify-content-md-center">
             <div className="col-xl-5 col-12">
               <div
-                className="tp-about-img z-index wow fadeInUp"
+                className="tp-about-img z-index wow fadeInUp text-center d-flex justify-content-center align-items-center"
                 data-wow-delay=".3s"
               >
-                <img
-                  src="/assets/img/about/about-img-1.jpg"
-                  alt="img not found"
-                />
+                <div className="d-flex align-items-center justify-content-center imageContainer bg-white">
+                  <img
+                    style={{ objectFit: "cover", width: "60%" }}
+                    src="/assets/img/logo/bribe-logo.png"
+                    alt="img not found"
+                  />
+                </div>
               </div>
             </div>
             <div className="col-xl-6 col-md-10">
@@ -32,14 +35,14 @@ const AboutArea = () => {
               >
                 <div className="section-title-wrapper mb-30">
                   <h5 className="tp-section-subtitle section__sm__title common-yellow-shape mb-20">
-                    About our Company
+                    About Us
                   </h5>
                   <h2 className="tp-section-title fs-1">
                     Empowering Citizens to Fight Corruption: <br />
                     Welcome to Bribe Alert
                   </h2>
                 </div>
-                <p className="mb-15"style={{textAlign:"justify"}}>
+                <p className="mb-15" style={{ textAlign: "justify" }}>
                   Welcome to Bribe Alert, a pioneering platform committed to
                   tackling corruption in Bangladesh by empowering citizens to
                   report and expose bribery. Whether it’s issues with obtaining
@@ -47,14 +50,14 @@ const AboutArea = () => {
                   property, Bribe Alert enables you to report these instances of
                   corruption that disrupt everyday life.
                 </p>
-                <p className="mb-15"style={{textAlign:"justify"}}>
+                <p className="mb-15" style={{ textAlign: "justify" }}>
                   By collecting data on the nature, frequency, and location of
                   corrupt acts, we create a real-time snapshot of bribery across
                   the country. This data is vital in our advocacy for better
                   governance, stronger law enforcement, and more transparent
                   regulatory frameworks.
                 </p>
-                <p className="mb-15"style={{textAlign:"justify"}}>
+                <p className="mb-15" style={{ textAlign: "justify" }}>
                   We encourage you to share your experiences—whether you’ve paid
                   a bribe, resisted one, or received fair treatment due to an
                   honest official or new procedure. Your anonymity is protected,
@@ -62,7 +65,7 @@ const AboutArea = () => {
                   number.
                 </p>
 
-                <p className="mb-15"style={{textAlign:"justify"}}>
+                <p className="mb-15" style={{ textAlign: "justify" }}>
                   Join us in our mission to build a more transparent and
                   accountable Bangladesh. Together, we can shine a light on
                   corruption and work towards a system where integrity prevails.

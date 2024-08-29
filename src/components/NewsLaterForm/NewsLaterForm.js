@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { FaPaperPlane } from "react-icons/fa";
 import instance from "../../instance/api_instance";
+import { useMediaQuery } from "react-responsive";
 
 const NewsLaterForm = () => {
   const {
@@ -15,7 +16,9 @@ const NewsLaterForm = () => {
   const [showContactInfo, setShowContactInfo] = useState(false);
   const [isAnonymous, setIsAnonymous] = useState(true);
   const [reportType, setReportType] = useState("subscription");
-
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1399 });
+  const isLaptopOrDesktop = useMediaQuery({ minWidth: 1024 });
   const onSubmit = async (data) => {
     const postData = {
       form_type: reportType, // paid_a_bribe
@@ -66,14 +69,14 @@ const NewsLaterForm = () => {
           <div className="row align-items-center">
             <div className="col-xl-5 col-lg-4">
               <div className="tp-footer-subscribe">
-                <h3 className="tp-footer-subscribe-title">For update</h3>
+                <h3 className="tp-footer-subscribe-title" style={{fontWeight:"700"}}>Subscribe For Newsletter</h3>
               </div>
             </div>
             <div className="col-xl-7 col-lg-8">
               <div className="d-flex justify-content-end">
                 <form onSubmit={handleSubmit(onSubmit)} className="w-100">
                   <div className="row align-items-center custom-mar-20">
-                    <div className="col-lg-8 custom-pad-20">
+                    <div className="col-lg-12 custom-pad-20">
                       <div
                         className="tp-appoint wow fadeInUp position-relative"
                         data-wow-delay=".5s"
@@ -87,18 +90,21 @@ const NewsLaterForm = () => {
                             },
                           })}
                           placeholder="Enter your email"
-                          className="form-control"
-                        />
-                        <i className="position-absolute top-50 end-0 translate-middle pe-3">
-                          <FaPaperPlane />
-                        </i>
+                          className="form-control "
+                        ></input>
+                        <button
+                          type="submit"
+                          className={`theme-btn h-100  text-white w-25 position-absolute top-50 end-0 translate-middle-y rounded-end d-flex align-items-center justify-content-around ${isMobile?"px-1":"px-3"}`}
+                        >
+                          Subscribe <FaPaperPlane />
+                        </button>
                         <p style={{ color: "red" }}>
                           {errors.contactEmail?.message}
                         </p>
                       </div>
                     </div>
 
-                    <div className="col-12 col-md-6 col-lg-4 custom-pad-20">
+                    {/* <div className="col-12 col-md-6 col-lg-4 custom-pad-20">
                       <div
                         className="tp-appoint text-end wow fadeInUp"
                         data-wow-delay=".9s"
@@ -107,7 +113,7 @@ const NewsLaterForm = () => {
                           <i className="flaticon-enter"></i> Subscribe
                         </button>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </form>
                 {/* <form action="#" className="p-0">

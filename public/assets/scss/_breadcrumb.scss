@@ -18,20 +18,20 @@
 }
 .breadcrumb-title {
     color: $heading-color-black;
-    font-size: 90px;
+    font-size: 60px;
     line-height: 1;
     margin-bottom: 20px;
     @media #{$lg} {
-        font-size: 60px;
+        font-size: 50px;
     }
     @media #{$md} {
-        font-size: 52px;
+        font-size: 42px;
     }
     @media #{$xs} {
-        font-size: 38px;
+        font-size: 28px;
     }
     @media #{$sm} {
-        font-size: 46px;
+        font-size: 30px;
     }
     & span {
         color: $theme-color;

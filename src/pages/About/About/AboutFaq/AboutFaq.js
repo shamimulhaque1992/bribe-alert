@@ -40,7 +40,7 @@ const AboutFaq = () => {
                         aria-controls={`collapseOne${index}`}
                         style={{ textAlign: "justify" }}
                       >
-                        <span style={{ paddingRight: "15px" }}>
+                        <span style={{ paddingRight: "15px",fontWeight:"600" }}>
                           {faq.question}
                         </span>
                       </button>

@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Fade } from 'react-reveal';
 import { Link } from 'react-router-dom';
 
-const HomeHeroSingleSlide = ({ setOpen }) => {
+const HomeHeroSingleSlide = ({ setOpen,image }) => {
     const isMobile = useMediaQuery({ maxWidth: 700 });
     return (
         <>
@@ -16,13 +16,13 @@ const HomeHeroSingleSlide = ({ setOpen }) => {
             <div id="carouselExampleControls"  class="carousel slide" data-ride="carousel">
                 <div class={`carousel-inner ${isMobile ? "pt-75" : "pt-100"}`}>
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="/assets/img/slider/Frame 2 (1).png" alt="First slide" />
+                        <img class="d-block w-100" src={image} alt="First slide" />
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="/assets/img/slider/Frame 2 (1).png" alt="Second slide" />
+                        <img class="d-block w-100" src={image} alt="Second slide" />
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="/assets/img/slider/Frame 2 (1).png" alt="Third slide" />
+                        <img class="d-block w-100" src={image} alt="Third slide" />
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

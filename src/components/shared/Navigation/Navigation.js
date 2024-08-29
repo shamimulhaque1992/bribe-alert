@@ -4,14 +4,26 @@ import { NavLink } from "react-router-dom";
 import Sidebar from "../../Sidebar/Sidebar";
 import { FaBars } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
+import CtaArea from "../../../pages/Home/Home/CtaArea/CtaArea";
+import { FaWindowClose } from "react-icons/fa";
+import { IoIosCloseCircle } from "react-icons/io";
+import { TbReportSearch } from "react-icons/tb";
 
 const Navigation = () => {
   const [show, setShow] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 1200, maxWidth: 1399 });
   const isLaptopOrDesktop = useMediaQuery({ minWidth: 1024 });
+  const [reportType, setReportType] = useState("paid_a_bribe");
+  const [textColor, setTextColor] = useState("#e50000");
+  const [placeHolderColor, setPlaceHolderColor] = useState("#f46767a6");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleClick = (type, textColor, placeholderColor) => {
+    setReportType(type);
+    setTextColor(textColor);
+    setPlaceHolderColor(placeholderColor);
+  };
   // sticky state
   const [sticky, setSticky] = useState(false);
   const stickyNavbar = () => {
@@ -173,7 +185,6 @@ const Navigation = () => {
                               </li>
                             </ul> */}
                         </li>
-                       
                         <li className="menu-item-has-children">
                           <NavLink
                             style={{ fontSize: isTablet ? "15px" : "17px" }}
@@ -193,7 +204,8 @@ const Navigation = () => {
                                 </NavLink>
                               </li>
                             </ul> */}
-                        </li> <li className="menu-item-has-children">
+                        </li>{" "}
+                        <li className="menu-item-has-children">
                           <NavLink
                             style={{ fontSize: isTablet ? "15px" : "17px" }}
                             to="/contact"
@@ -232,23 +244,146 @@ const Navigation = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-2 tp-sticky-column-btn" >
-                <div className="tp-sticky-btn text-end" >
-                  <Link
-                    to="/i-paid-a-bribe"
-                    className="theme-btn justify-content-end text-white" 
-                    style={{ fontSize: isTablet ? "15px" : "17px",backgroundColor:"#e50000" }}
+              <div className="col-xl-2 tp-sticky-column-btn">
+                <div
+                  className="tp-sticky-btn text-end"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <div
+                    className="theme-btn justify-content-end text-white d-flex align-items-center justify-content-between"
+                    style={{
+                      fontSize: isTablet ? "15px" : "17px",
+                      backgroundColor: "#e50000",
+                    }}
                   >
-                    Report a Bribe
-                    {/* <i className="flaticon-enter"></i> Free Quote */}
-                  </Link>
+                    <span>Report</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </header>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            {/* <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Modal title
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div> */}
+            <div class="modal-body pt-4">
+              <div className="w-100 text-end">
+                <IoIosCloseCircle
+                  data-bs-dismiss="modal"
+                  style={{ fontSize: "30px", color: "gray", cursor: "pointer" }}
+                />
+              </div>
 
+              <ul
+                class="nav nav-tabs d-flex flex-column flex-md-row justify-content-between gap-3"
+                style={{ maxWidth: "720px", margin: "0 auto" }}
+              >
+                <li
+                  class={`nav-item ${isMobile ? "w-100" : "w-25"}`}
+                  style={{ height: "60px" }}
+                >
+                  <button
+                    type="button"
+                    className={`h-100 border-0  px-2 w-100 ${
+                      reportType !== "paid_a_bribe" ? "bg-light text-dark" : ""
+                    }`}
+                    onClick={() =>
+                      handleClick("paid_a_bribe", "#e50000", "#f46767a6")
+                    }
+                    style={{
+                      backgroundColor:
+                        reportType === "paid_a_bribe" ? "#e50000" : "",
+                      color: reportType === "paid_a_bribe" ? "#ffffff" : "",
+                    }}
+                  >
+                    Paid a Bribe
+                  </button>
+                </li>
+                <li
+                  class={`nav-item ${isMobile ? "w-100" : "w-25"}`}
+                  style={{ height: "60px" }}
+                >
+                  <button
+                    type="button"
+                    className={`h-100 border-0 px-2 w-100 ${
+                      reportType !== "bribe_fighter" ? "bg-light text-dark" : ""
+                    }`}
+                    onClick={() =>
+                      handleClick("bribe_fighter", "#0b702a", "#0b702ab3")
+                    }
+                    style={{
+                      backgroundColor:
+                        reportType === "bribe_fighter" ? "#0b702a" : "",
+                      color: reportType === "bribe_fighter" ? "#ffffff" : "",
+                    }}
+                  >
+                    Bribe Fighter
+                  </button>
+                </li>
+                <li
+                  class={`nav-item ${isMobile ? "w-100" : "w-25"}`}
+                  style={{ height: "60px" }}
+                >
+                  <button
+                    type="button"
+                    className={`h-100 border-0  px-2 w-100 ${
+                      reportType !== "honest_officer"
+                        ? "bg-light text-dark"
+                        : ""
+                    }`}
+                    onClick={() =>
+                      handleClick("honest_officer", "#e5b10a", "#ffc200e8")
+                    }
+                    style={{
+                      backgroundColor:
+                        reportType === "honest_officer" ? "#e5b10a" : "",
+                      color: reportType === "honest_officer" ? "#ffffff" : "",
+                    }}
+                  >
+                    Honest Officer
+                  </button>
+                </li>
+              </ul>
+              <CtaArea
+                reportType={reportType}
+                textColor={textColor}
+                placeHolderColor={placeHolderColor}
+              ></CtaArea>
+            </div>
+            {/* <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div> */}
+          </div>
+        </div>
+      </div>
       <Sidebar show={show} handleClose={handleClose}></Sidebar>
     </>
   );

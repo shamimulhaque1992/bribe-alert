@@ -55,7 +55,7 @@ const ServiceArea = () => {
   }
 
   return (
-    <section className="tp-services-area theme-dark-bg pb-5 pt-5">
+    <section className="tp-services-area theme-dark-bg pb-5 pt-5 px-4">
       <div className="tp-custom-container">
         <div className="tp-services-bg grey-bg pt-60 pb-90 z-index">
           <div className="container">
@@ -68,7 +68,7 @@ const ServiceArea = () => {
                   <h5 className="tp-section-subtitle common-yellow-shape mb-20 section__sm__title">
                     Have you faced or resisted paying a bribe? Take action now.
                   </h5>
-                  <h2 className="tp-section-title">How it works?</h2>
+                  <h2 className="tp-section-title"style={{fontWeight:"700"}}>How it works?</h2>
                 </div>
               </div>
             </div>

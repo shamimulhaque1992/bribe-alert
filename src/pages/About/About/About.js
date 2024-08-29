@@ -12,7 +12,7 @@ import WorkingProcess from "./WorkingProcess/WorkingProcess";
 
 const About = () => {
   const title = "About";
-  const SubTitle = "Bribery Alert";
+  const SubTitle = "Bribe Alert";
   const smallText = "About Us";
   const bgImg = "/assets/img/bribe-img/About-Us-Bribe-Alert-1920X500.jpg";
   return (

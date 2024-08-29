@@ -17,7 +17,7 @@ const Blogs = () => {
                 <h5 className="tp-section-subtitle common-yellow-shape mb-20 section__sm__title">
                   Some Recent Blogs
                 </h5>
-                <h2 className="tp-section-title mb-25">
+                <h2 className="tp-section-title mb-25"style={{fontWeight:"700"}}>
                   Understanding How Bribes Affect <br />
                   Individuals and Communities
                 </h2>

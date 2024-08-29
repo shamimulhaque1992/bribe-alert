@@ -2,17 +2,29 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const HomeSingleBlog = ({ blog_img_num, date, title, blog }) => {
-  const { headline, image_link, introduction, body, conclusion, id } = blog;
+  const {
+    headline,
+    image_link,
+    thumb_image_link,
+    introduction,
+    body,
+    conclusion,
+    id,
+  } = blog;
 
   console.log("blog", blog);
   return (
     <>
-      <div className="col-lg-4 col-md-6">
-        <div className="tp-blog mb-30 wow fadeInUp" data-wow-delay=".4s">
+      <div className="col-lg-4 col-md-6 mb-2 ">
+        <div
+          className="tp-blog mb-30 wow fadeInUp card d-flex flex-column justify-content-between border-0"
+          style={{ height: "90%" }}
+          data-wow-delay=".4s"
+        >
           <div className="tp-blog-img mb-25">
             <Link to={`/blogDetails/${id}`}>
               <img
-                src={`/assets/img/blog/blog-img-${blog_img_num}.jpg`}
+                src={`/assets/img/blog/${thumb_image_link}`}
                 className="img-fluid"
                 alt="img not found"
               />
@@ -36,3 +48,7 @@ const HomeSingleBlog = ({ blog_img_num, date, title, blog }) => {
 };
 
 export default HomeSingleBlog;
+
+
+
+

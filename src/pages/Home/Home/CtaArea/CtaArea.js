@@ -5,7 +5,7 @@ import governmentAreas from "../../../../data/bribe-area.json";
 import instance from "../../../../instance/api_instance";
 import toast, { Toaster } from "react-hot-toast";
 import { useMediaQuery } from "react-responsive";
-const CtaArea = ({ reportType, textColor }) => {
+const CtaArea = ({ reportType, textColor, placeHolderColor, bannerBg }) => {
   const {
     register,
     handleSubmit,
@@ -37,6 +37,9 @@ const CtaArea = ({ reportType, textColor }) => {
         shareStory: data.shareStory,
         privacyPolicy: data.privacyPolicy,
         keepUpdated: data.keepUpdated,
+        senorOfficials: data.senior_officials,
+        stateVigilance: data.state_vigilance,
+        mediaNewspaper: data.media_news_television,
       },
       applicant: {
         contactName: data.contactName,
@@ -93,11 +96,11 @@ const CtaArea = ({ reportType, textColor }) => {
     <section className="tp-appoint-cta-area -bg pt-80 pb-65">
       <style>
         {`
-          .custom-textarea::placeholder {
-            color: ${textColor}; /* Replace with your desired color */
-            opacity: 1; /* Ensures the placeholder color is fully opaque */
-          }
-        `}
+    .custom-textarea::placeholder, input.custom-input::placeholder {
+      color: ${placeHolderColor}; /* Replace with your desired color */
+      opacity: 1; /* Ensures the placeholder color is fully opaque */
+    }
+  `}
       </style>
       <div className="container">
         <div className="row align-items-center custom-mar-20 justify-content-center">
@@ -129,8 +132,9 @@ const CtaArea = ({ reportType, textColor }) => {
                         },
                       })}
                       className="form-control"
+                      style={{ color: placeHolderColor }}
                     >
-                      <option disabled value="">
+                      <option value="" style={{ color: placeHolderColor }}>
                         Which area of government?
                       </option>
                       {governmentAreas.map((areaObject, index) => {
@@ -157,8 +161,9 @@ const CtaArea = ({ reportType, textColor }) => {
                         },
                       })}
                       className="form-control"
+                      style={{ color: placeHolderColor }}
                     >
-                      <option disabled value="">
+                      <option value="">
                         Why were you asked for the bribe?
                       </option>
                       {getReasons(selectedGovernmentArea).map(
@@ -184,10 +189,9 @@ const CtaArea = ({ reportType, textColor }) => {
                         },
                       })}
                       className="form-control"
+                      style={{ color: placeHolderColor }}
                     >
-                      <option disabled value="">
-                        Select division
-                      </option>
+                      <option value="">Select division</option>
                       {divisions.map((division) => (
                         <option key={division.id} value={division.name}>
                           {division.name}
@@ -207,10 +211,9 @@ const CtaArea = ({ reportType, textColor }) => {
                         },
                       })}
                       className="form-control"
+                      style={{ color: placeHolderColor }}
                     >
-                      <option disabled value="">
-                        Select district
-                      </option>
+                      <option value="">Select district</option>
                       {divisions
                         .find((d) => d.name === selectedDivision)
                         ?.districts.map((district) => (
@@ -237,7 +240,8 @@ const CtaArea = ({ reportType, textColor }) => {
                         },
                       })}
                       placeholder="Date"
-                      className="form-control "
+                      className="form-control custom-input"
+                      style={{ color: placeHolderColor }}
                     />
                     <p style={{ color: "red" }}>{errors.date?.message}</p>
                   </div>
@@ -257,7 +261,8 @@ const CtaArea = ({ reportType, textColor }) => {
                           },
                         })}
                         placeholder="Amount"
-                        className="form-control"
+                        className="form-control custom-input"
+                        style={{ color: placeHolderColor }}
                       />
                       <p style={{ color: "red" }}>{errors.amount?.message}</p>
                     </div>
@@ -276,7 +281,8 @@ const CtaArea = ({ reportType, textColor }) => {
                         },
                       })}
                       placeholder="Enter title of your report"
-                      className="form-control "
+                      className="form-control  custom-input"
+                      style={{ color: placeHolderColor }}
                     />
                     <p style={{ color: "red" }}>
                       {errors.reportTitle?.message}
@@ -294,7 +300,8 @@ const CtaArea = ({ reportType, textColor }) => {
                         },
                       })}
                       placeholder="Name & Description of the officer/ Name will be kept anonymous until verified"
-                      className="form-control px-4 pt-4 "
+                      className="form-control px-4 pt-4 custom-textarea"
+                      style={{ color: placeHolderColor }}
                     ></textarea>
 
                     <p style={{ color: "red" }}>
@@ -321,7 +328,8 @@ const CtaArea = ({ reportType, textColor }) => {
                       placeholder="Enter report details along with Date, Time & Location of the incident"
                       className="form-control px-4 pt-4 custom-textarea" // Add the custom class here
                       style={{
-                        width: "100%", // Example of inline style for the textarea itself
+                        width: "100%",
+                        color: placeHolderColor, // Example of inline style for the textarea itself
                       }}
                     ></textarea>
 
@@ -331,7 +339,7 @@ const CtaArea = ({ reportType, textColor }) => {
                         style={{
                           top: isMobile || isTablet ? "162%" : "50%",
                           left: isMobile || isTablet ? "5%" : "80%",
-                          width: isMobile || isTablet ? "90%" : "43%",
+                          width: isMobile || isTablet ? "90%" : "50%",
                           transform: "translateY(-50%)",
                           zIndex: 1000,
                           fontSize: "0.875rem",
@@ -447,14 +455,14 @@ const CtaArea = ({ reportType, textColor }) => {
                             <input
                               type="checkbox"
                               defaultChecked={true}
-                              {...register("senior-officials", {
+                              {...register("senior_officials", {
                                 required: {
                                   value: false,
                                   message:
                                     "Please read the privacy policy and check the checkbox!",
                                 },
                               })}
-                              id="senior-officials"
+                              id="senior_officials"
                               style={{
                                 width: "20px",
                                 marginRight: "10px",
@@ -463,7 +471,7 @@ const CtaArea = ({ reportType, textColor }) => {
                             />
 
                             <label
-                              htmlFor="senior-officials"
+                              htmlFor="senior_officials"
                               className="form-check-label"
                             >
                               Senior officials of the department
@@ -473,14 +481,14 @@ const CtaArea = ({ reportType, textColor }) => {
                             <input
                               type="checkbox"
                               defaultChecked={true}
-                              {...register("state-vigilance", {
+                              {...register("state_vigilance", {
                                 required: {
                                   value: true,
                                   message:
                                     "Please read the privacy policy and check the checkbox!",
                                 },
                               })}
-                              id="state-vigilance"
+                              id="state_vigilance"
                               style={{
                                 width: "20px",
                                 marginRight: "10px",
@@ -489,7 +497,7 @@ const CtaArea = ({ reportType, textColor }) => {
                             />
 
                             <label
-                              htmlFor="state-vigilance"
+                              htmlFor="state_vigilance"
                               className="form-check-label"
                             >
                               State Vigilance Officer
@@ -499,14 +507,14 @@ const CtaArea = ({ reportType, textColor }) => {
                             <input
                               type="checkbox"
                               defaultChecked={true}
-                              {...register("media-news-television", {
+                              {...register("media_news_television", {
                                 required: {
                                   value: true,
                                   message:
                                     "Please read the privacy policy and check the checkbox!",
                                 },
                               })}
-                              id="media-news-television"
+                              id="media_news_television"
                               style={{
                                 width: "20px",
                                 marginRight: "10px",
@@ -515,7 +523,7 @@ const CtaArea = ({ reportType, textColor }) => {
                             />
 
                             <label
-                              htmlFor="media-news-television"
+                              htmlFor="media_news_television"
                               className="form-check-label"
                             >
                               Media - Newspapers & Television
@@ -530,8 +538,9 @@ const CtaArea = ({ reportType, textColor }) => {
                   <div className="tp-appoint wow fadeInUp" data-wow-delay=".3s">
                     <button
                       type="button"
-                      className="theme-btn text-white rounded-pill "
+                      className="theme-btn text-white rounded-pill px-2"
                       onClick={() => setShowContactInfo(!showContactInfo)}
+                      style={{ background: textColor }}
                     >
                       <i className="flaticon-enter"></i> Add Contact Info
                     </button>
@@ -553,7 +562,8 @@ const CtaArea = ({ reportType, textColor }) => {
                             },
                           })}
                           placeholder="Enter your full name"
-                          className="form-control"
+                          className="form-control custom-input"
+                          style={{ color: placeHolderColor }}
                         />
                         <p style={{ color: "red" }}>
                           {errors.contactName?.message}
@@ -574,7 +584,8 @@ const CtaArea = ({ reportType, textColor }) => {
                             },
                           })}
                           placeholder="Enter your email"
-                          className="form-control"
+                          className="form-control custom-input"
+                          style={{ color: placeHolderColor }}
                         />
                         <p style={{ color: "red" }}>
                           {errors.contactEmail?.message}
@@ -595,7 +606,8 @@ const CtaArea = ({ reportType, textColor }) => {
                             },
                           })}
                           placeholder="Enter you contact number"
-                          className="form-control"
+                          className="form-control custom-input"
+                          style={{ color: placeHolderColor }}
                         />
                         <p style={{ color: "red" }}>
                           {errors.contactNumber?.message}
@@ -637,22 +649,27 @@ const CtaArea = ({ reportType, textColor }) => {
                     <p style={{ color: "red" }}>
                       {errors.privacyPolicy?.message}
                     </p>
-                    <div className="form-check d-flex align-items-center justify-content-start ps-0">
-                      <input
-                        type="checkbox"
-                        {...register("keepUpdated")}
-                        id="keepUpdated"
-                        style={{
-                          width: "20px",
-                          marginRight: "10px",
-                          height: "30px",
-                        }}
-                      />
-                      <label htmlFor="keepUpdated" className="form-check-label">
-                        Keep me updated about responses to my report and other
-                        news
-                      </label>
-                    </div>
+                    {!isAnonymousRadio && (
+                      <div className="form-check d-flex align-items-center justify-content-start ps-0">
+                        <input
+                          type="checkbox"
+                          {...register("keepUpdated")}
+                          id="keepUpdated"
+                          style={{
+                            width: "20px",
+                            marginRight: "10px",
+                            height: "30px",
+                          }}
+                        />
+                        <label
+                          htmlFor="keepUpdated"
+                          className="form-check-label"
+                        >
+                          Keep me updated about responses to my report and other
+                          news
+                        </label>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="col-12 custom-pad-20">
@@ -660,7 +677,11 @@ const CtaArea = ({ reportType, textColor }) => {
                     className="tp-appoint text-end wow fadeInUp"
                     data-wow-delay=".9s"
                   >
-                    <button type="submit" className="theme-btn text-white">
+                    <button
+                      type="submit"
+                      className="theme-btn text-white"
+                      style={{ background: textColor }}
+                    >
                       <i className="flaticon-enter"></i> Save My Report
                     </button>
                   </div>
